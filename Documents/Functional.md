@@ -32,10 +32,6 @@
       - [Persona 3: Retro Gaming Enthusiast](#persona-3-retro-gaming-enthusiast)
       - [Key Considerations](#key-considerations)
   - [Game's features](#games-features)
-    - [Score](#score)
-    - [Screen game over](#screen-game-over)
-    - [Musics/Sounds effects](#musicssounds-effects)
-      - [ON/OFF](#onoff)
   - [Non-functional requirements](#non-functional-requirements)
   - [Game behaviors](#game-behaviors)
     - [Ghosts behavior](#ghosts-behavior)
@@ -280,25 +276,25 @@ The movements of Pac-Man are simple, he can go left, right, top and bottom. We c
 
 The ghosts and the player can't pass throught wallsand. When a ghost touch Pac-Man The game is over but if Pac-Man had a power-up the ghost was dead and he goes back in the ghost room. -->
 
-### Score
+<!-- ### Score
 
 We added a score system to watch your score and another, if you want watch the best score on the computer.
 When you have 10.000 score the game give 1 additional life.
 
-you win Score when you eat dots, fruits and ghosts when you have the power-up activate.
+you win Score when you eat dots, fruits and ghosts when you have the power-up activate. -->
 
-### Screen game over
+<!-- ### Screen game over
 
 When you have no life and a ghost touch you a last time the screen game over appear.
-We can see two button, play again and exit.
+We can see two button, play again and exit. -->
 
-### Musics/Sounds effects
+<!-- ### Musics/Sounds effects
 
-We decided to use 3 musics, the first for the lobby, anoter when you play and a last when you eat a power up to change the atmosphere of the game.
+We decided to use 3 musics, the first for the lobby, anoter when you play and a last when you eat a power up to change the atmosphere of the game. -->
 
-#### ON/OFF
+<!-- #### ON/OFF
 
-We wanted to add a feature to cut the sounds of the game because if you play a long moments the same music endlessly cand be irritate.
+We wanted to add a feature to cut the sounds of the game because if you play a long moments the same music endlessly cand be irritate. -->
 
 ## Non-functional requirements
 
