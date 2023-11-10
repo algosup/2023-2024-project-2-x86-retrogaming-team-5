@@ -37,6 +37,7 @@
     - [Ghosts behavior](#ghosts-behavior)
       - [Blinky](#blinky)
       - [Pinky](#pinky)
+  - [Game balancing](#game-balancing)
   - [Mock up](#mock-up)
   - [Risks and assumptions](#risks-and-assumptions)
   - [Milestones](#milestones)
@@ -77,8 +78,8 @@ The player win a level when he eats all dots in the map without losing all is li
 
 ### Loose condition
 
-When the player lost all of is lives, he lose.
-to loose a life the player needs to be touch by a ghosts.
+When the player lost all of is lives, he loose.
+To loose a life the player needs to be touch by a ghost.
 
 ### Game board
 
@@ -87,7 +88,7 @@ There pipes can teleport the player at the inverse side.
 
 We use the same graphical charter of the original Board game of Pac-Man but we modify the map like google create a different map of the traditional game.
 
-/ajouter imager du jeu classic et la version google/
+<!-- /ajouter imager du jeu classic et la version google/ -->
 
 ### Character
 
@@ -96,7 +97,7 @@ We use the same graphical charter of the original Board game of Pac-Man but we m
 The player control Pac-Man and these objectives are have the maximum score value and rest in life. He cans take power-up and fruit to have more points and bonus to kill the enemies.
 The player can eat fruits and there give more score value, and when he eats a power up he can eat the ghosts and he's more speed.
 
-/insérer une image de Pac-Man/
+<!-- /insérer une image de Pac-Man/ -->
 
 #### Ghosts
 
@@ -112,8 +113,8 @@ When the player eat a power-up the ghosts are scared and flees Pac-Man.
 We have differents fruits which gives differents points depending of the level.
 
 The first fruits is a cherry and he cans give 100 points. The second is a strawberry and he gives 300 points. after we have the orange with 500 points, the apple with 700 points, the melon with 1000 points, the Galaxian with 2000 points, the bell with 3000 points and for fini we have the key he can gives 5000 points.
-
-/image des fruits/
+<!-- 
+/image des fruits/ -->
 
 #### Power-up
 
@@ -187,10 +188,10 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 **Player Controls:**
 
 - Keyboard input for Pac-Man movement
-  - move up: ↑ key
-  - move left: ← key
-  - move right: → key
-  - move down: ↓ key
+  - ↑ : move up
+  - ↓ : move down
+  - ← : move left
+  - → : move right
 - Responsive and smooth character movement
   - response time: ≤200 milliseconds
 
@@ -198,7 +199,6 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 - Custom maze layouts with walls and corridors
 - Multiple levels with increasing difficulty
-<!-- game balancing -->
 - Warp tunnels for Pac-Man and ghosts
 
 **Graphic and Display:**
@@ -216,6 +216,7 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 - Victory conditions
   - the player collect all the pellets without loose all his life
 - Current and high score display
+- Game balancing
 
 **Gameplay Features:**
 
@@ -315,6 +316,13 @@ Pinky is the pink ghost
 The ghosts and the player can't pass throught wallsand when a ghost touch Pac-Man The game is over but if Pac-Man had a power-up the ghost is dead and go back in the ghost room.
 
 /gif pacman mur, pacman meurt fantôme, pacman mange fantôme/ -->
+
+## Game balancing
+
+- **Pellet**: 10 points
+- **Power Pellet**: 50 points
+- **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points)
+- **Fruits**: Varying points
 
 ## Mock up
 
