@@ -32,9 +32,6 @@
       - [Persona 3: Retro Gaming Enthusiast](#persona-3-retro-gaming-enthusiast)
       - [Key Considerations](#key-considerations)
   - [Game's features](#games-features)
-    - [Pac-Man features](#pac-man-features)
-    - [Ghosts features](#ghosts-features)
-    - [Collision](#collision)
     - [Score](#score)
     - [Screen game over](#screen-game-over)
     - [Musics/Sounds effects](#musicssounds-effects)
@@ -194,13 +191,12 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 **Player Controls:**
 
 - Keyboard input for Pac-Man movement
-  - move up: 
-  - move left:
-  - move right:
-  - move down: 
-<!-- define Keyboard input -->
+  - move up: ↑ key
+  - move left: ← key
+  - move right: → key
+  - move down: ↓ key
 - Responsive and smooth character movement
-<!-- define performance -->
+  - response time: ≤200 milliseconds
 
 **Maze Design:**
 
@@ -217,23 +213,72 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 **Game Logic:**
 
-- Score calculation and tracking.
-- Lives system with extra lives at certain score thresholds.
-- Game over and victory conditions.
+- Score calculation and tracking
+- Lives system with extra lives at certain score thresholds
+- Game over conditions
+  - the player loose all his lives
+- Victory conditions
+  - the player collect all the pellets without loose all his life
 - Current and high score display
 
-### Pac-Man features
+**Gameplay Features:**
 
-The movements of Pac-Man are simple, he can go left, right, top and bottom. We can control it with arrows of the keyboard.
+- Ghost house where ghosts respawn
+- Speed-up feature for Pac-Man
+- Different ghost personalities for variety
+  - **Green ghost:** always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path
+  <!-- Blinky -->
+  - **Orange ghost:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
+  <!-- Pinky -->
+  - **Yellow ghost:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
+  <!-- Inky -->
+  - **Purple ghost:** exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he's too close to the player
+  <!-- Clyde -->
 
-### Ghosts features
+**Collision Detection:**
 
-- 
-- 
+- Player and ghosts can't pass throuhg the walls
+- Collision between the player and one of the ghost
+  - the ghost is killed and respawn in the ghost house
+- Collision between one of the ghost and the player
+  - the player loose 1 life
 
-### Collision
+**Audio:**
 
-The ghosts and the player can't pass throught wallsand. When a ghost touch Pac-Man The game is over but if Pac-Man had a power-up the ghost was dead and he goes back in the ghost room.
+- PC speaker or sound card support for simple game sounds
+- Sound effects for eating pellets, ghosts, and collecting fruit
+- Background music
+
+**UX and user friendly requirements:**
+
+- All the transitions have to be fluid
+  - ≤200 milliseconds
+- Pause game
+- Display all the commands
+
+**Emulator Compatibility:**
+
+- Ensure compatibility with DOSBox
+<!-- Ability to run on older DOS systems -->
+- Proper setup instructions for DOSBox
+
+**Documentation:**
+
+- [Game manual](https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-5/blob/main/README.md) with game instructions
+
+**Legal Considerations:**
+
+- Ensure proper licensing and copyrights for any Pac-Man related assets or gameplay elements.
+
+<!-- ### Pac-Man features
+
+The movements of Pac-Man are simple, he can go left, right, top and bottom. We can control it with arrows of the keyboard. -->
+
+<!-- ### Ghosts features -->
+
+<!-- ### Collision
+
+The ghosts and the player can't pass throught wallsand. When a ghost touch Pac-Man The game is over but if Pac-Man had a power-up the ghost was dead and he goes back in the ghost room. -->
 
 ### Score
 
