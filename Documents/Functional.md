@@ -62,6 +62,8 @@ upgrade the basic gameplay, better randomness, score management, high scores, so
 
 As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Namco. It was released on May 22, 1980. The game consist to eat all the dots with Pac-man while avoiding four colored ghosts.
 
+![alt text](image/pac-man-jeu-video.jpg)
+
 <!-- /insérer image du jeu/ -->
 
 ## project goal
@@ -325,6 +327,8 @@ The ghosts and the player can't pass throught wallsand when a ghost touch Pac-Ma
 - **Fruits**: Varying points
 
 ## Mock up
+
+![alt text](image/mockUp.png)
 
 ## Risks and assumptions
 
