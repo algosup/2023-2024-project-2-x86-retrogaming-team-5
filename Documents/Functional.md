@@ -40,8 +40,8 @@
     - [Musics/Sounds effects](#musicssounds-effects)
       - [ON/OFF](#onoff)
   - [Non-functional requirements](#non-functional-requirements)
-    - [Game behaviors](#game-behaviors)
-      - [Ghosts behavior](#ghosts-behavior)
+  - [Game behaviors](#game-behaviors)
+    - [Ghosts behavior](#ghosts-behavior)
       - [Blinky](#blinky)
       - [Pinky](#pinky)
   - [Mock up](#mock-up)
@@ -53,13 +53,13 @@
 
 ## Team members
 
-| Laura-Lee Hollande | laura-lee.hollande@algosup.com | https://github.com/lauraleehollande |   |
-|--------------------|--------------------------------|-------------------------------------|---|
-| Guillaume Deramchi | guillaume.deramchi@aglosup.com |                                     |   |
-| Lucas Megnan       | lucas.megnan@algosup.com       | https://github.com/LucasMegnan      |   |
-| Mathis Lebel       | mathis.lebel@algosup.com       |                                     |   |
-| Loris DeMattia     | loris.demattia@algosup.com     |                                     |   |
-| Wilfried Portet    | wilfried.portet@algosup.com    |                                     |   |
+| Laura-Lee Hollande | Technical Lead           | laura-lee.hollande@algosup.com | https://github.com/lauraleehollande |
+|--------------------|--------------------------|--------------------------------|-------------------------------------|
+| Guillaume Deramchi | Project Manager          | guillaume.deramchi@aglosup.com | https://github.com/Guillaume18100   |
+| Lucas Megnan       | Program Manager          | lucas.megnan@algosup.com       | https://github.com/LucasMegnan      |
+| Mathis Lebel       | Junior Software Engineer | mathis.lebel@algosup.com       | https://github.com/mathislebel      |
+| Loris DeMattia     | Junior Software Engineer | loris.demattia@algosup.com     | https://github.com/Loriisss         |
+| Wilfried Portet    | Quality Assurance        | wilfried.portet@algosup.com    | https://github.com/wilfried973      |
 
 ## Project overview
 
@@ -182,17 +182,45 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 ## Game's features
 
-**Player Controls**
+**Game Concept and Mechanics:**
+
+- Classic maze-based gameplay with Pac-Man and ghosts
+- Player-controlled Pac-Man character
+- Each ghost move according to an algorithm detailled in the [Ghosts behavior](#ghosts-behavior) section
+- Collectible pellets for points
+- Power pellets to make ghosts vulnerable
+- Fruit bonus items for extra points
+
+**Player Controls:**
+
 - Keyboard input for Pac-Man movement
+  - move up: 
+  - move left:
+  - move right:
+  - move down: 
 <!-- define Keyboard input -->
 - Responsive and smooth character movement
 <!-- define performance -->
 
-**Maze Design**
+**Maze Design:**
+
 - Custom maze layouts with walls and corridors
 - Multiple levels with increasing difficulty
 <!-- game balancing -->
 - Warp tunnels for Pac-Man and ghosts
+
+**Graphic and Display:**
+
+- 2D top-down view of the maze
+- Character animations (Pac-Man, ghosts, and fruit)
+- Score display and UI elements
+
+**Game Logic:**
+
+- Score calculation and tracking.
+- Lives system with extra lives at certain score thresholds.
+- Game over and victory conditions.
+- Current and high score display
 
 ### Pac-Man features
 
@@ -200,7 +228,7 @@ The movements of Pac-Man are simple, he can go left, right, top and bottom. We c
 
 ### Ghosts features
 
-- Each ghost move according to an algorithm detailled in the [Ghosts behavior](#ghosts-behavior) section
+- 
 - 
 
 ### Collision
@@ -209,17 +237,29 @@ The ghosts and the player can't pass throught wallsand. When a ghost touch Pac-M
 
 ### Score
 
+We added a score system to watch your score and another, if you want watch the best score on the computer.
+When you have 10.000 score the game give 1 additional life.
+
+you win Score when you eat dots, fruits and ghosts when you have the power-up activate.
+
 ### Screen game over
+
+When you have no life and a ghost touch you a last time the screen game over appear.
+We can see two button, play again and exit.
 
 ### Musics/Sounds effects
 
+We decided to use 3 musics, the first for the lobby, anoter when you play and a last when you eat a power up to change the atmosphere of the game.
+
 #### ON/OFF
+
+We wanted to add a feature to cut the sounds of the game because if you play a long moments the same music endlessly cand be irritate.
 
 ## Non-functional requirements
 
-### Game behaviors
+## Game behaviors
 
-#### Ghosts behavior
+### Ghosts behavior
 
 #### Blinky
 
