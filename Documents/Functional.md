@@ -47,11 +47,11 @@
 </details>
 
 ## Team members
-
-| Laura-Lee Hollande | Technical Lead           | laura-lee.hollande@algosup.com | https://github.com/lauraleehollande |
+| Name               | Role                     | Email                          | GitHub                              |
 |--------------------|--------------------------|--------------------------------|-------------------------------------|
 | Guillaume Deramchi | Project Manager          | guillaume.deramchi@aglosup.com | https://github.com/Guillaume18100   |
 | Lucas Megnan       | Program Manager          | lucas.megnan@algosup.com       | https://github.com/LucasMegnan      |
+| Laura-Lee Hollande | Technical Lead           | laura-lee.hollande@algosup.com | https://github.com/lauraleehollande |
 | Mathis Lebel       | Junior Software Engineer | mathis.lebel@algosup.com       | https://github.com/mathislebel      |
 | Loris DeMattia     | Junior Software Engineer | loris.demattia@algosup.com     | https://github.com/Loriisss         |
 | Wilfried Portet    | Quality Assurance        | wilfried.portet@algosup.com    | https://github.com/wilfried973      |
@@ -59,15 +59,15 @@
 ## Project overview
 
 We were asked to recreate the classic Pac-Man in assembly x86 on DOSBox emulator as simple as posssible while
-upgrade the basic gameplay, better randomness, score management, high scores, sounds and musics.
+improving the basic gameplay, randomness, score management, high scores, sounds and musics.
 
-As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Namco. It was released on May 22, 1980. The game consist to eat all the dots with Pac-man while avoiding four colored ghosts.
+As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Namco. It was released on May 22, 1980. The game consists to eat all the dots with Pac-man while avoiding four colored ghosts.
 
 ![alt text](image/pac-man-jeu-video.jpg)
 
 <!-- /insérer image du jeu/ -->
 
-## project goal
+## Project goal
 
 - Project duration: 7 weeks
 - Technology: assembly
@@ -79,50 +79,60 @@ As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Na
 
 The player win a level when he eats all dots in the map without losing all is lives.
 
-### Loose condition
+### Loss condition
 
-When the player lost all of is lives, he loose.
-To loose a life the player needs to be touch by a ghost.
+When the player lost all of is lives, he loses.
+To lose a life, the player needs to be touched by a ghost.
 
 ### Game board
 
-The game board is a square with maze. the walls are'nt traversable. We add pipes and each side of the map.
-There pipes can teleport the player at the inverse side.
+The game board is a square with maze. The walls aren't traversable. We add pipes at each side of the map.
+These pipes can teleport the player on the other side of the map.
 
-We use the same graphical charter of the original Board game of Pac-Man but we modify the map like google create a different map of the traditional game.
+We use the same graphical charter of the original Board game of Pac-Man but we custom the design of the map.
 
 <!-- /ajouter imager du jeu classic et la version google/ -->
 
-### Character
+### Characters
 
 #### Player
 
-The player control Pac-Man and these objectives are have the maximum score value and rest in life. He cans take power-up and fruit to have more points and bonus to kill the enemies.
-The player can eat fruits and there give more score value, and when he eats a power up he can eat the ghosts and he's more speed.
+The player control Pac-Man and his objectives are to have the maximum score value and not be touched by any ghost. He can take power-ups and fruits to have more points and bonus to kill the ghosts.
+The player can eat fruits and it will give points, and when he eats a power up he can eat the ghosts and he's faster.
 
 <!-- /insérer une image de Pac-Man/ -->
 
 #### Ghosts
 
-Ghosts are the enemies of the player and this objectives it's kill the player. they have a random pattern to search and kill the player. Some are more passive and others more aggressive.
-When the player eat a power-up the ghosts are scared and flees Pac-Man.
+Ghosts are the enemies of the player and their objective is to kill the player. They have a random pattern to search and kill the player.  
+Behavior of the different ghosts:
+
+- Red: Chases Pac-Man all the time, Also speeds up after you've eaten a certain amount of dots, which gets less for each level.
+
+- Pink: Fast but random movement
+
+- Cyan: Shy and tries to stay away from pac-man, unless approached too much, after which it will chase Pac-Man too.
+
+- Orange: Slow and Random Movement.  
+
+When the player eats a power-up, the ghosts are scared and fleeing Pac-Man.
 
 <!-- /insérer une image des 4 fantômes (voir wikipédia pour info sur le fonctionnement des fantômes)/ -->
 
-### Item
+### Items
 
 #### Fruits
 
-We have differents fruits which gives differents points depending of the level.
+There are different fruits which give different amounts of points depending on the level.
 
-The first fruits is a cherry and he cans give 100 points. The second is a strawberry and he gives 300 points. after we have the orange with 500 points, the apple with 700 points, the melon with 1000 points, the Galaxian with 2000 points, the bell with 3000 points and for fini we have the key he can gives 5000 points.
+The first fruit is a cherry and it can give 100 points. The second is a strawberry and it gives 300 points. After, we have the orange with 500 points, the apple with 700 points, the melon with 1000 points, the Galaxian with 2000 points, the bell with 3000 points, and finally, there is the key that gives 5000 points.
 
 ![alt text](image/image.png)
 
-#### Power-up
+#### Power-ups
 
-When the player eats a power-up the ghosts are scared and flees the player. The player has extra speed and can eat ghosts. When he eats a ghost ha has bonus scored.
-We have only 4 power-up per level split in the board.
+When the player eats a power-up, the ghosts are scared and flee the player. The player has extra speed and can eat ghosts. When he eats a ghost, he wins 100 points.
+There is only 4 power-ups per level splited in the board.
 
 <!-- /image power-up/ -->
 
@@ -130,7 +140,7 @@ We have only 4 power-up per level split in the board.
 
 The first idea was to create a new design for Pac-Man inspired by Japanese culture, but after brainstorming, we decided to reject this idea, because it was out of reach to code it in Assembly.
 
-For the second idea we wanted to play Pac-Man in first-person, but we thought it was irrelevant and out of reach to code it in Assembly.
+For the second idea, we wanted to play Pac-Man in first-person, but we thought it was irrelevant and out of reach to code it in Assembly.
 
 ## PEGI & Copyright Information
 
