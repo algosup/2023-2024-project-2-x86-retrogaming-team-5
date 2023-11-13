@@ -19,7 +19,7 @@
       - [Ghosts](#ghosts)
     - [Items](#items)
       - [Fruits](#fruits)
-      - [Power-ups](#power-ups)
+      - [Power Pellet](#power-pellet)
   - [Out of Scope](#out-of-scope)
   - [PEGI \& Copyright Information](#pegi--copyright-information)
     - [PEGI Rating](#pegi-rating)
@@ -82,7 +82,7 @@
 We were asked to recreate the classic Pac-Man in assembly x86 on DOSBox emulator as simple as posssible while
 improving the basic gameplay, randomness, score management, high scores, sounds and musics.
 
-As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Namco. It was released on May 22, 1980. The game consists to eat all the dots with Pac-man while avoiding four colored ghosts.
+As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Namco. It was released on May 22, 1980. The game consists to eat all the pelletss with Pac-man while avoiding four colored ghosts.
 
 ![alt text](image/pac-man-jeu-video.jpg)
 
@@ -96,7 +96,7 @@ As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Na
 
 ### Win Condition
 
-The player win a level when he eats all dots in the map without losing all is lives.
+The player win a level when he eats all the pellets in the map without losing all is lives.
 
 ### Loss Condition
 
@@ -114,7 +114,7 @@ We use the same graphical charter of the original Board game of Pac-Man but we c
 
 #### Player
 
-The player control Pac-Man and his objectives are to have the maximum score value and not be touched by any ghost. He can take power-ups and fruits to have more points and bonus to kill the ghosts.
+The player control Pac-Man and his objectives are to have the maximum score value and not be touched by any ghost. He can take the power pellets and fruits to have more points and bonus to kill the ghosts.
 The player can eat fruits and it will give points, and when he eats a power up he can eat the ghosts and he's faster.
 
 #### Ghosts
@@ -122,7 +122,7 @@ The player can eat fruits and it will give points, and when he eats a power up h
 Ghosts are the enemies of the player and their objective is to kill the player. They have a random pattern to search and kill the player.  
 Behavior of the different ghosts:
 
-- Red: Chases Pac-Man all the time, Also speeds up after you've eaten a certain amount of dots, which gets less for each level.
+- Red: Chases Pac-Man all the time, Also speeds up after you've eaten a certain amount of pellets, which gets less for each level.
 
 - Pink: Fast but random movement
 
@@ -130,7 +130,7 @@ Behavior of the different ghosts:
 
 - Orange: Slow and Random Movement.  
 
-When the player eats a power-up, the ghosts are scared and fleeing Pac-Man.
+When the player eats a power pellet, the ghosts are scared and fleeing Pac-Man.
 
 ### Items
 
@@ -142,12 +142,12 @@ The first fruit is a cherry and it can give 100 points. The second is a strawber
 
 ![alt text](image/image.png)
 
-#### Power-ups
+#### Power Pellet
 
-When the player eats a power-up, the ghosts are scared and flee the player. The player has extra speed and can eat ghosts. When he eats a ghost, he wins 50 points.
-There is only 4 power-ups per level splited in the board.
+When the player eats a power pellet, the ghosts are scared and flee the player. The player has extra speed and can eat ghosts. When he eats a ghost, he wins 50 points.
+There is only 4 power pellets per level splited in the board.
 
-<!-- /image power-up/ -->
+<!-- /image power pellet/ -->
 
 ## Out of Scope
 
@@ -441,7 +441,7 @@ The visual style will be pixel art to align with the retro theme. The resolution
 
 ### UI Elements
 
-User interface elements will have a clean and unobtrusive design, displaying essential information such as score, lives, and level progression. Buttons and menu items will maintain a consistent retro-inspired aesthetic.
+User interface elements will have a clean and siple design, displaying essential information such as score, lives, and level progression. Buttons and menu items will maintain a consistent retro-inspired aesthetic.
 
 ### Sound and Music
 
@@ -524,12 +524,18 @@ The game logo will incorporate the iconic Pac-Man character and maintain a cohes
 
 ## Glossary
 
-Assembly: In computer programming, assembly language, often referred to simply as assembly and commonly abbreviated as ASM or asm, is any low-level programming language with a very strong correspondence between the instructions in the language and the architecture's machine code instructions.
-
-PEGI: PEGI, short for Pan-European Game Information, is a European video game content rating system established to help European consumers make informed decisions when buying video games or apps through the use of age recommendations and content descriptors.
-
-Copyright: A copyright is a type of intellectual property that gives its owner the exclusive right to copy, distribute, adapt, display, and perform a creative work, usually for a limited time.
-
-Ghost room: The ghost room is the area where they appear at the start of the game and when they are dead.
-
-DosBox: DOSBox is an emulator simulating an MS-DOS compatible environment with the aim of running video games formerly developed for this system. DOSBox is free software and available on many operating systems, such as Linux, FreeBSD, Android, MS Windows, Mac OS X and BeOS.
+| Term                  | Definition                                                                                                                             |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Assembly              | In computer programming, assembly language, often referred to simply as assembly (ASM), is any low-level programming language with a strong correspondence between the instructions and machine code.                                      |
+| PEGI                  | Pan-European Game Information (PEGI) is a European video game content rating system established to help consumers make informed decisions based on age recommendations and content descriptors.  |
+| Copyright             | Copyright is a type of intellectual property that grants its owner the exclusive right to copy, distribute, adapt, display, and perform a creative work, usually for a limited time.         |
+| Ghost Room            | The ghost room is the area where ghosts appear at the start of the game and when they are respawned after being defeated by the player. |
+| DOSBox                | DOSBox is an emulator simulating an MS-DOS compatible environment, allowing the running of video games developed for MS-DOS on various operating systems.                                        |
+| Emulator              | An emulator is a software or hardware that mimics the functionality of another system, enabling it to run applications or games designed for that system.                                    |
+| Frame Rate            | Frame rate refers to the number of individual frames or images displayed per second in a video game, impacting the smoothness of motion and overall visual experience.                      |
+| Pixel Art             | Pixel art is a form of digital art where images are created at a small scale, often using a limited color palette, to evoke a retro and nostalgic aesthetic.                                 |
+| High Score            | The high score represents the highest achieved score in a game, often displayed prominently to encourage competition among players.       |
+| Maze Design           | The maze design refers to the layout of walls and corridors in the game environment, creating a challenging path for the player to navigate.                                                |
+| Power Pellet          | A power pellet is an item in the game that, when consumed by the player, grants temporary invincibility and the ability to eat ghosts.                                                             |
+| User Interface (UI)   | The user interface is the space where interactions between the player and the game occur, including menus, buttons, and other visual elements.                                                 |
+| User Experience (UX)  | User experience encompasses the overall experience a player has with a game, including usability, accessibility, and enjoyment.                                                                    |
