@@ -7,46 +7,67 @@
 </summary>
 
 - [Functional Specification](#functional-specification)
-  - [Team members](#team-members)
-  - [Project overview](#project-overview)
-  - [project goal](#project-goal)
-  - [Game's rules](#games-rules)
-    - [Win condition](#win-condition)
-    - [Loose condition](#loose-condition)
-    - [Game board](#game-board)
-    - [Character](#character)
+  - [Team Members](#team-members)
+  - [Project Overview](#project-overview)
+  - [Project Goal](#project-goal)
+  - [Game's Rules](#games-rules)
+    - [Win Condition](#win-condition)
+    - [Loss Condition](#loss-condition)
+    - [Game Board](#game-board)
+    - [Characters](#characters)
       - [Player](#player)
       - [Ghosts](#ghosts)
-    - [Item](#item)
+    - [Items](#items)
       - [Fruits](#fruits)
-      - [Power-up](#power-up)
-  - [Out of scope](#out-of-scope)
+      - [Power-ups](#power-ups)
+  - [Out of Scope](#out-of-scope)
   - [PEGI \& Copyright Information](#pegi--copyright-information)
     - [PEGI Rating](#pegi-rating)
     - [Copyright](#copyright)
-  - [Audience and persona](#audience-and-persona)
+  - [Audience and Persona](#audience-and-persona)
     - [Target Audience](#target-audience)
     - [Player Personas](#player-personas)
       - [Persona 1: Timmy the Young Gamer](#persona-1-timmy-the-young-gamer)
       - [Persona 2: Sarah the Casual Gamer](#persona-2-sarah-the-casual-gamer)
       - [Persona 3: Retro Gaming Enthusiast](#persona-3-retro-gaming-enthusiast)
       - [Key Considerations](#key-considerations)
-  - [Game's features](#games-features)
-  - [Non-functional requirements](#non-functional-requirements)
-  - [Game behaviors](#game-behaviors)
-    - [Ghosts behavior](#ghosts-behavior)
-    - [Items behavior](#items-behavior)
-    - [Score/High score](#scorehigh-score)
-    - [New life](#new-life)
-  - [Game balancing](#game-balancing)
+  - [Game's Features](#games-features)
+  - [Non-Functional Requirements](#non-functional-requirements)
+    - [Performance](#performance)
+    - [Reliability](#reliability)
+    - [Security](#security)
+    - [Usability](#usability)
+    - [Maintainability](#maintainability)
+    - [Scalability](#scalability)
+    - [Performance Optimization](#performance-optimization)
+    - [Documentation](#documentation)
+    - [Legal and Compliance](#legal-and-compliance)
+  - [Game Behaviors](#game-behaviors)
+    - [Ghosts Behavior](#ghosts-behavior)
+    - [Items Behavior](#items-behavior)
+    - [Score/High Score](#scorehigh-score)
+    - [New Life](#new-life)
+  - [Game Balancing](#game-balancing)
+  - [Game Visual Identity](#game-visual-identity)
+    - [Color Scheme](#color-scheme)
+    - [Typography](#typography)
+    - [Icons and Symbols](#icons-and-symbols)
+    - [Art Style](#art-style)
+    - [UI Elements](#ui-elements)
+    - [Sound and Music](#sound-and-music)
+    - [Logo and Branding](#logo-and-branding)
+    - [Additional Considerations](#additional-considerations)
   - [Mock up](#mock-up)
-  - [Risks and assumptions](#risks-and-assumptions)
+  - [Risks and Assumptions](#risks-and-assumptions)
+    - [Risks](#risks)
+    - [Assumptions](#assumptions)
+    - [Mitigation Strategies](#mitigation-strategies)
   - [Milestones](#milestones)
   - [Glossary](#glossary)
   
 </details>
 
-## Team members
+## Team Members
 | Name               | Role                     | Email                          | GitHub                              |
 |--------------------|--------------------------|--------------------------------|-------------------------------------|
 | Guillaume Deramchi | Project Manager          | guillaume.deramchi@aglosup.com | https://github.com/Guillaume18100   |
@@ -56,7 +77,7 @@
 | Loris DeMattia     | Junior Software Engineer | loris.demattia@algosup.com     | https://github.com/Loriisss         |
 | Wilfried Portet    | Quality Assurance        | wilfried.portet@algosup.com    | https://github.com/wilfried973      |
 
-## Project overview
+## Project Overview
 
 We were asked to recreate the classic Pac-Man in assembly x86 on DOSBox emulator as simple as posssible while
 improving the basic gameplay, randomness, score management, high scores, sounds and musics.
@@ -65,33 +86,29 @@ As a reminder Pac-man is a video game made by Toru Iwatani for the enterprise Na
 
 ![alt text](image/pac-man-jeu-video.jpg)
 
-<!-- /insérer image du jeu/ -->
-
-## Project goal
+## Project Goal
 
 - Project duration: 7 weeks
 - Technology: assembly
 - Platform: DOSBox emulator, which is playable on computers
 
-## Game's rules
+## Game's Rules
 
-### Win condition
+### Win Condition
 
 The player win a level when he eats all dots in the map without losing all is lives.
 
-### Loss condition
+### Loss Condition
 
 When the player lost all of is lives, he loses.
 To lose a life, the player needs to be touched by a ghost.
 
-### Game board
+### Game Board
 
 The game board is a square with maze. The walls aren't traversable. We add pipes at each side of the map.
 These pipes can teleport the player on the other side of the map.
 
 We use the same graphical charter of the original Board game of Pac-Man but we custom the design of the map.
-
-<!-- /ajouter imager du jeu classic et la version google/ -->
 
 ### Characters
 
@@ -99,8 +116,6 @@ We use the same graphical charter of the original Board game of Pac-Man but we c
 
 The player control Pac-Man and his objectives are to have the maximum score value and not be touched by any ghost. He can take power-ups and fruits to have more points and bonus to kill the ghosts.
 The player can eat fruits and it will give points, and when he eats a power up he can eat the ghosts and he's faster.
-
-<!-- /insérer une image de Pac-Man/ -->
 
 #### Ghosts
 
@@ -117,8 +132,6 @@ Behavior of the different ghosts:
 
 When the player eats a power-up, the ghosts are scared and fleeing Pac-Man.
 
-<!-- /insérer une image des 4 fantômes (voir wikipédia pour info sur le fonctionnement des fantômes)/ -->
-
 ### Items
 
 #### Fruits
@@ -131,12 +144,12 @@ The first fruit is a cherry and it can give 100 points. The second is a strawber
 
 #### Power-ups
 
-When the player eats a power-up, the ghosts are scared and flee the player. The player has extra speed and can eat ghosts. When he eats a ghost, he wins 100 points.
+When the player eats a power-up, the ghosts are scared and flee the player. The player has extra speed and can eat ghosts. When he eats a ghost, he wins 50 points.
 There is only 4 power-ups per level splited in the board.
 
 <!-- /image power-up/ -->
 
-## Out of scope
+## Out of Scope
 
 The first idea was to create a new design for Pac-Man inspired by Japanese culture, but after brainstorming, we decided to reject this idea, because it was out of reach to code it in Assembly.
 
@@ -152,7 +165,7 @@ For the second idea, we wanted to play Pac-Man in first-person, but we thought i
 
 Our game is a tribute to the famous game Pac-Man developed by Bandai Namco Entertainment Inc. As a reminder, Pac-Man® is a registered trademark of Bandai Namco Entertainment Inc. Therefore, this game will be inspired by Pac-Man and will not be affiliated with or endorsed by Bandai Namco Entertainment Inc. or any related entities.
 
-## Audience and persona
+## Audience and Persona
 
 ### Target Audience
 
@@ -187,7 +200,7 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 - The game should provide an option for local multiplayer or co-op gameplay, allowing parents and children to enjoy the game together.
 - Art and sound design should strike a balance between modern aesthetics and retro charm to appeal to both newcomers and retro gaming enthusiasts.
 
-## Game's features
+## Game's Features
 
 **Game Concept and Mechanics:**
 
@@ -236,14 +249,10 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 - Ghost house where ghosts respawn
 - Speed-up feature for Pac-Man
 - Different ghost personalities for variety
-  - **Green ghost:** always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path
-  <!-- Blinky -->
-  - **Orange ghost:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
-  <!-- Pinky -->
-  - **Yellow ghost:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
-  <!-- Inky -->
-  - **Purple ghost:** exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he's too close to the player
-  <!-- Clyde -->
+  - **Blinky:** always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path
+  - **Pinky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
+  - **Inky:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
+  - **Clyde:** exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he's too close to the player
 
 **Collision Detection:**
 
@@ -259,7 +268,7 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 - Sound effects for eating pellets, ghosts, and collecting fruit
 - Background music
 
-**UX and user friendly requirements:**
+**UX and User Friendly Requirements:**
 
 - All the transitions have to be fluid
   - ≤200 milliseconds
@@ -280,80 +289,228 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 - Ensure proper licensing and copyrights for any Pac-Man related assets or gameplay elements.
 
-<!-- ### Pac-Man features
+## Non-Functional Requirements
 
-The movements of Pac-Man are simple, he can go left, right, top and bottom. We can control it with arrows of the keyboard. -->
+### Performance
 
-<!-- ### Ghosts features -->
+**Loading Time:**
 
-<!-- ### Collision
+- The game should load within 5 seconds on standard hardware
 
-The ghosts and the player can't pass throught wallsand. When a ghost touch Pac-Man The game is over but if Pac-Man had a power-up the ghost was dead and he goes back in the ghost room. -->
+**Frame Rate:**
 
-<!-- ### Score
+- The game should maintain a consistent frame rate of at least 30 frames per second to ensure smooth gameplay
 
-We added a score system to watch your score and another, if you want watch the best score on the computer.
-When you have 10.000 score the game give 1 additional life.
+### Reliability
 
-you win Score when you eat dots, fruits and ghosts when you have the power-up activate. -->
+**Stability:**
 
-<!-- ### Screen game over
+- The game should be stable and free from crashes, with an acceptable crash rate of less than 1% per gameplay hour
 
-When you have no life and a ghost touch you a last time the screen game over appear.
-We can see two button, play again and exit. -->
+**Error Handling:**
 
-<!-- ### Musics/Sounds effects
+- The game should provide clear and user-friendly error messages in case of unexpected issues
 
-We decided to use 3 musics, the first for the lobby, anoter when you play and a last when you eat a power up to change the atmosphere of the game. -->
+### Security
 
-<!-- #### ON/OFF
+**Data Integrity:**
 
-We wanted to add a feature to cut the sounds of the game because if you play a long moments the same music endlessly cand be irritate. -->
+- Player progress and high scores should be securely stored and protected against data corruption or unauthorized access
 
-## Non-functional requirements
+### Usability
 
-## Game behaviors
+**User Interface Responsiveness:**
 
-### Ghosts behavior
+- The user interface should respond to player input with minimal delay, aiming for a maximum response time of 100 milliseconds
 
-- The patterns are different for all ghosts some are more agressive and others are more passive.
-- The ghosts leave the room ghosts at different times.
-- When the player eat a PowerUp ghosts flees Pac-Man and the patterns are random for all ghosts.
-- useful link:  https://gameinternals.com/understanding-pac-man-ghost-behavior
+### Maintainability
 
-### Items behavior
+**Code Documentation:**
 
-- The fruits spwans randomly during the level with a interval time of 20 secondes.
-- To spawn certain fruit we need to complete different level of the game.
-- The PowerUp are only four per level and situate on each corner of the map. When you finish a level all PowerUp respawn.
+- The source code should be well-documented to facilitate future maintenance and updates
 
-### Score/High score
+**Modularity:**
 
-- When you have the new high score it will be displayed at the end of the game as a high score.
+- The game architecture should be modular to allow for easy integration of updates or additional content
 
-### New life
+### Scalability
 
-- We start the game with 3 lives and the maximum lives you can have is 5.
-- To receive a bonus life you need to have 10,000 scores. Every 10,000 score you receive 1 life.
+**Level Design Scalability:**
 
-<!-- ## Collision
+- The game should support the addition of new levels without requiring extensive modifications to the core code
 
-The ghosts and the player can't pass throught wallsand when a ghost touch Pac-Man The game is over but if Pac-Man had a power-up the ghost is dead and go back in the ghost room.
+### Performance Optimization
 
-/gif pacman mur, pacman meurt fantôme, pacman mange fantôme/ -->
+**Resource Usage:**
 
-## Game balancing
+- Optimize resource usage to ensure the game runs efficiently on a variety of hardware, with a focus on minimizing CPU and memory usage
+
+**Load Balancing:**
+
+- Distribute processing load evenly to avoid performance bottlenecks during gameplay
+
+### Documentation
+
+**User Manual:**
+
+- Provide a comprehensive user manual or in-game tutorial to guide players through the controls and gameplay mechanics
+
+**Developer Documentation:**
+
+- Maintain detailed developer documentation for codebase understanding and future development
+
+### Legal and Compliance
+
+**Licensing Compliance:**
+
+- Ensure compliance with all relevant licensing agreements and copyright regulations for third-party assets used in the game
+
+**Regulatory Compliance:**
+
+- Adhere to applicable regulations and industry standards related to game development and distribution
+
+## Game Behaviors
+
+### Ghosts Behavior
+
+- The patterns are different for all ghosts some are more agressive and others are more passive
+- The ghosts leave the room ghosts at different times
+- When the player eat a PowerUp ghosts flees Pac-Man and the patterns are random for all ghosts
+
+### Items Behavior
+
+- The fruits spwans randomly during the level with a interval time of 20 secondes
+- To spawn certain fruit we need to complete different level of the game
+- The PowerUp are only four per level and situate on each corner of the map. When you finish a level all PowerUp respawn
+
+### Score/High Score
+
+- When you have the new high score it will be displayed at the end of the game as a high score
+
+### New Life
+
+- We start the game with 3 lives and the maximum lives you can have is 5
+- To receive a bonus life you need to have 10,000 scores. Every 10,000 score you receive 1 life
+
+## Game Balancing
 
 - **Pellet**: 10 points
 - **Power Pellet**: 50 points
 - **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points)
 - **Fruits**: Varying points
+  - cherry: 100 points
+  - strawberry: 300 points
+  - orange: 500 points
+  - apple: 700 points
+  - melon: 1000 points
+  - Galaxian: 2000 points
+  - bell: 3000 points
+
+## Game Visual Identity
+
+### Color Scheme
+
+The game will adopt a vibrant and retro-inspired color palette to evoke a nostalgic feel while maintaining visual appeal. The primary colors include:
+
+- **Pac-Man Yellow (#FFFF00):** Main color for Pac-Man character and key elements
+- **Ghostly Blue (#00BFFF):** Color for ghost characters
+- **Maze Green (#00FF00):** Background color for the maze
+- **Power Pellet Orange (#FFA500):** Color for power pellets
+- **Fruit Bonus Red (#FF0000):** Color for bonus fruit items
+
+### Typography
+
+The game will feature a bold and easily readable font to enhance the retro aesthetic. The chosen typeface is:
+
+- **Font: PixelFont-Bold**
+- **Size: 8x8 pixels**
+- **Color: White (#FFFFFF) for main text**
+
+### Icons and Symbols
+
+Small icons and symbols will be used to represent key elements in the user interface and game HUD:
+
+- **Pellet Icon:** represents standard pellets
+- **Power Pellet Icon:** indicates power pellets
+- **Fruit Icon:** represents bonus fruit items
+- **Heart Icon:** represents player lives
+
+### Art Style
+
+The visual style will be pixel art to align with the retro theme. The resolution will be set at 8-bit, giving a classic arcade appearance. Animations will be simple but expressive to convey character movements effectively.
+
+### UI Elements
+
+User interface elements will have a clean and unobtrusive design, displaying essential information such as score, lives, and level progression. Buttons and menu items will maintain a consistent retro-inspired aesthetic.
+
+### Sound and Music
+
+The game will feature simple, retro 8-bit sound effects for pellet eating, ghost encounters, and power pellet activation. Background music will also be a 8-bit retro music.
+
+### Logo and Branding
+
+The game logo will incorporate the iconic Pac-Man character and maintain a cohesive design with the chosen color palette. The branding will reflect the game's classic arcade roots.
+
+### Additional Considerations
+
+- Consistent use of retro-inspired visual elements across marketing materials
+- Accessibility considerations for colorblind players in the design choices
 
 ## Mock up
 
 ![alt text](image/mockUp.png)
 
-## Risks and assumptions
+## Risks and Assumptions
+
+### Risks
+
+**Technical Challenges:**
+
+- The development in assembly language may pose challenges in terms of code complexity and debugging. The team will need to allocate sufficient time for testing and troubleshooting
+
+**Emulator Compatibility:**
+
+- Ensuring seamless compatibility with DOSBox may require additional testing and adjustments, considering potential differences in emulation environments
+
+**Performance on Older Hardware:**
+
+- Performance optimization for older hardware may be challenging. Testing on a range of systems is crucial to identify and address performance issues
+
+**Legal Considerations:**
+
+- Adherence to licensing and copyright regulations for Pac-Man-inspired elements must be carefully monitored to avoid legal issues
+
+### Assumptions
+
+**Team Expertise:**
+
+- It is assumed that the development team has a proficient understanding of assembly language and can effectively overcome challenges associated with low-level programming
+
+**DOSBox Stability:**
+  
+- The project assumes that DOSBox provides a stable and consistent emulation environment for the targeted hardware configurations
+
+**Player Familiarity:**
+
+- Players are expected to be familiar with basic Pac-Man mechanics, allowing for a smoother onboarding process without extensive tutorial requirements
+
+**Testing Resources:**
+
+- Sufficient resources will be allocated for comprehensive testing on various systems to identify and address potential compatibility issues
+
+**Community Engagement:**
+
+- The assumption is that there will be engagement and interest from the community for a Pac-Man-inspired game in assembly on DOSBox, contributing to user feedback and potential issue identification
+
+### Mitigation Strategies
+
+**Technical Support:**
+
+- Provide documentation for assembly-specific challenges and establish a support system within the team to address technical issues promptly
+
+**Community Outreach:**
+
+- Actively engage with the gaming community to gather feedback during development, allowing for timely adjustments and improvements based on user experience
 
 ## Milestones
 
