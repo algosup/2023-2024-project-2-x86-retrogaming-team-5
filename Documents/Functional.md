@@ -35,8 +35,9 @@
   - [Non-functional requirements](#non-functional-requirements)
   - [Game behaviors](#game-behaviors)
     - [Ghosts behavior](#ghosts-behavior)
-      - [Blinky](#blinky)
-      - [Pinky](#pinky)
+    - [Items behavior](#items-behavior)
+    - [Score/High score](#scorehigh-score)
+    - [New life](#new-life)
   - [Game balancing](#game-balancing)
   - [Mock up](#mock-up)
   - [Risks and assumptions](#risks-and-assumptions)
@@ -115,8 +116,8 @@ When the player eat a power-up the ghosts are scared and flees Pac-Man.
 We have differents fruits which gives differents points depending of the level.
 
 The first fruits is a cherry and he cans give 100 points. The second is a strawberry and he gives 300 points. after we have the orange with 500 points, the apple with 700 points, the melon with 1000 points, the Galaxian with 2000 points, the bell with 3000 points and for fini we have the key he can gives 5000 points.
-<!-- 
-/image des fruits/ -->
+
+![alt text](image/image.png)
 
 #### Power-up
 
@@ -305,13 +306,25 @@ We wanted to add a feature to cut the sounds of the game because if you play a l
 
 ### Ghosts behavior
 
-#### Blinky
+- The patterns are different for all ghosts some are more agressive and others are more passive.
+- The ghosts leave the room ghosts at different times.
+- When the player eat a PowerUp ghosts flees Pac-Man and the patterns are random for all ghosts.
+- useful link:  https://gameinternals.com/understanding-pac-man-ghost-behavior
 
-Blinky is the red ghost, he directly attacks Pac-Man. He follows him continuously.
+### Items behavior
 
-#### Pinky
+- The fruits spwans randomly during the level with a interval time of 20 secondes.
+- To spawn certain fruit we need to complete different level of the game.
+- The PowerUp are only four per level and situate on each corner of the map. When you finish a level all PowerUp respawn.
 
-Pinky is the pink ghost
+### Score/High score
+
+- When you have the new high score it will be displayed at the end of the game as a high score.
+
+### New life
+
+- We start the game with 3 lives and the maximum lives you can have is 5.
+- To receive a bonus life you need to have 10,000 scores. Every 10,000 score you receive 1 life.
 
 <!-- ## Collision
 
@@ -344,12 +357,12 @@ The ghosts and the player can't pass throught wallsand when a ghost touch Pac-Ma
 
 ## Glossary
 
-Assembly:
+Assembly: In computer programming, assembly language, often referred to simply as assembly and commonly abbreviated as ASM or asm, is any low-level programming language with a very strong correspondence between the instructions in the language and the architecture's machine code instructions.
 
-PEGI:
+PEGI: PEGI, short for Pan-European Game Information, is a European video game content rating system established to help European consumers make informed decisions when buying video games or apps through the use of age recommendations and content descriptors.
 
-Copyright:
+Copyright: A copyright is a type of intellectual property that gives its owner the exclusive right to copy, distribute, adapt, display, and perform a creative work, usually for a limited time.
 
-Ghost room:
+Ghost room: The ghost room is the area where they appear at the start of the game and when they are dead.
 
-DosBox:
+DosBox: DOSBox is an emulator simulating an MS-DOS compatible environment with the aim of running video games formerly developed for this system. DOSBox is free software and available on many operating systems, such as Linux, FreeBSD, Android, MS Windows, Mac OS X and BeOS.
