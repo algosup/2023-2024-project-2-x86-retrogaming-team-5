@@ -6,7 +6,7 @@ Welcome to our Pac-Man game, a tribute to the real Pac-Man game! Navigate the ma
 
 ## Objective
 
-Your mission, is to guide Pac-Man through the maze, eating all the pellets in sight while avoiding the relentless ghosts. Each pellet brings you closer to victory, but beware - the ghosts are hungry for a chase!
+Your mission is to guide Pac-Man through the maze, eating all the pellets in sight while avoiding the relentless ghosts. Each pellet brings you closer to victory, but beware - the ghosts are hungry for a chase!
 
 ## Controls
 
