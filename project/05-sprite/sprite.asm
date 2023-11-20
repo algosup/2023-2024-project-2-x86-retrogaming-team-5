@@ -2,6 +2,7 @@ org 100h
 
 
 %define SPRITEW 16
+%define SPRITEH 16
 section .data
 
 section .data
@@ -11,6 +12,9 @@ xVelocity dw 1
 yPos dw 100
 
 spritew dw 16
+
+spriteh dw 16
+
 blinky      db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
@@ -241,8 +245,6 @@ start:
     gameloop:
       
         call clearScreen
-        mov si, pacmanOpen  ; Adresse du sprite
-        mov di, [xPos]
         call read_character_key_was_pressed
         call draw_sprite
         ; Délai pour ralentir l'animation
@@ -262,14 +264,15 @@ read_character_key_was_pressed:
     cmp ah, 0E0h
     jne handle_input
     int 16h
+
 handle_input:
-    cmp ah, 4Dh  ; Touche Droite   ;4DH
+    cmp ah, 50h   ; Touche Droite   ;4DH
     je move_right
-    cmp ah, 4Bh  ; Touche Gauche   ;4BH
+    cmp ah, 48h  ; Touche Gauche   ;4BH
     je move_left
-    cmp ah, 48h  ; Touche Haut  ;48H
+    cmp ah, 4Bh  ; Touche Haut  ;48H
     je move_up
-    cmp ah, 50h  ; Touche Bas  ;50h
+    cmp ah, 4Dh  ; Touche Bas  ;50h
     je move_down
     ret
 
@@ -293,7 +296,7 @@ move_up:
 
 move_down:
     mov bx, [yPos]
-    sub bx, 1
+    add bx, 1
     mov [yPos], bx
     ret
 
@@ -310,11 +313,17 @@ clearScreen:
 ; Fonction pour dessiner le sprite
 draw_sprite:
     mov ax, 0A000h
-    mov es, ax  ; Position du sprite
-    mov cx, 16      ; Hauteur du sprite
+    mov es, ax
+    mov si, pacmanOpen
+    mov ax, [xPos]
+    mov bx, 320     ; Largeur de l'écran
+    mul bx          ; Multiplie yPos par la largeur de l'écran
+    add ax, [yPos]  ; Ajoute xPos à la position calculée
+    mov di, ax      ; DI devient la position du sprite à l'écran
+    mov cx, SPRITEH
     .draw_line:
         push cx
-        mov cx, SPRITEW  ; Largeur du sprite
+        mov cx, SPRITEW
         rep movsb
         pop cx
         add di, 320 - SPRITEW  ; Passer à la ligne suivante
