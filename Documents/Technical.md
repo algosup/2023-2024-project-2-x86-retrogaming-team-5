@@ -21,7 +21,7 @@
       - [Technical Enhancements](#technical-enhancements)
       - [Technological Advancements](#technological-advancements)
   - [Assumptions](#assumptions)
-  - [Solutions](#solutions)
+  - [Solution](#solution)
     - [Propopsed Solution](#propopsed-solution)
       - [External Components and Interactions](#external-components-and-interactions)
       - [Dependencies](#dependencies)
@@ -29,8 +29,14 @@
         - [Pros](#pros)
         - [Cons](#cons)
     - [Development Environment](#development-environment)
-      - [Language](#language)
-      - [Platform](#platform)
+      - [Language - Assembly](#language---assembly)
+      - [Assembler - NASM](#assembler---nasm)
+      - [Emulator - DOSBox](#emulator---dosbox)
+      - [Integrated Development Environment](#integrated-development-environment)
+    - [System Requirements](#system-requirements)
+      - [Hardware Requirements](#hardware-requirements)
+      - [Software Requirements](#software-requirements)
+      - [Compatibility](#compatibility)
     - [Code Organization](#code-organization)
       - [Directory Structure](#directory-structure)
       - [Source Code](#source-code)
@@ -217,7 +223,7 @@ The successful execution of the Pac-Man Game project relies on the following ass
 - **Assumption:** adequate resources will be allocated for comprehensive testing on various systems
 - **Rationale:** comprehensive testing is essential to identify and address potential compatibility issues on different hardware configurations
 
-## Solutions
+## Solution
 
 ### Propopsed Solution
 
@@ -264,13 +270,51 @@ Development tools for assembly language programming are required for coding and 
 
 ### Development Environment
 
-#### Language
+#### Language - Assembly
 
-The game will be developed in assembly language, specifically targeting the x86 architecture.
+The Pac-Man project is developed using assembly language, specifically targeting the x86 architecture. This choice is driven by the need for low-level control and efficiency.
 
-#### Platform
+#### Assembler - NASM
 
-The game will be designed to run on the DOSBox emulator, providing compatibility with various computer systems.
+The Netwide Assembler (NASM) is the chosen assembler for this project.
+It's compatibility with x86 architecture and its efficiency in handling low-level operations make it the ideal choice for translating assembly code into machine code.
+
+- Renowned for its efficiency and flexibility, vital for handling complex programming tasks in game development, such as memory management and hardware interaction
+- Serve as the foundation for the entire coding process, encompassing game mechanics implementation, graphics rendering, and user input handling
+
+#### Emulator - DOSBox
+
+DOSBox serves as the emulator for this project, providing a DOS environment on modern operating systems. This emulator is essential to accurately replicate the original game's runtime environment, allowing for comprehensive testing and development.
+
+- Essential for emulating a DOS environment, it enables us to test and run the game in an environment that faithfully replicates the original hardware conditions
+- Ensure compatibility with modern operating systems
+
+#### Integrated Development Environment
+
+For coding and source code management, we utilize Visual Studio Code (VSCode). VSCode is a robust text editor that seamlessly integrates with version control systems like Git. Its versatility and extensibility make it an ideal choice for efficient development and collaboration within our team.
+
+### System Requirements
+
+The system prerequisites for our Pac-Man game have been meticulously defined to ensure seamless compatibility and optimal performance throughout the game's development and execution.
+
+#### Hardware Requirements
+
+- **Processor:** should support the x86 architecture, preferably a 16-bit processor to faithfully replicate the original game's environment
+- **Memory:** minimum of 512 KB RAM, with a recommended 1 MB or higher for enhanced performance
+- **Storage:** at least 10 MB of free disk space is necessary for game installation and saving game data
+- **Input Devices:** keyboard integration is essential for gameplay control
+
+#### Software Requirements
+
+- **Operating System:** the DOSBox emulator is a mandatory prerequisite, providing a DOS environment on modern operating systems to accurately emulate the game's intended runtime environment
+- **Programming Language:** NASM (Netwide Assembler) is required for Assembly language development, chosen for its direct compatibility with x86 architecture and efficiency in handling low-level operations
+- **Development Tools:** a robust text editor (e.g., VSCode) is essential for coding, integrated with version control systems like Git for source code management. Compatibility with debugging tools that support Assembly language, NASM, and DOSBox integration is crucial for efficient development and troubleshooting
+
+#### Compatibility
+
+- **Operating Systems:** compatible with DOS environments provided by DOSBox on macOS and Windows. The game should seamlessly execute on both modern and legacy systems that meet the specified hardware requirements. Emphasis on backward compatibility is crucial to preserve the authenticity of the gameplay experience
+
+- **DOSBox Emulator:** the game is designed to ensure robustness and consistent performance within the DOSBox emulator, which serves as the cornerstone of our development and testing environment. This emphasis is critical for maintaining the stability and playability of the game across various platforms
 
 ### Code Organization
 
