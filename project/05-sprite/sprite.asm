@@ -6,13 +6,11 @@ section .data
 
 section .data
 
-xPos dw 0
+xPos dw 100
 xVelocity dw 1
-yPos dw 200 
-yVelocity dw 320
+yPos dw 100
 
 spritew dw 16
-
 blinky      db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
@@ -93,7 +91,7 @@ pacmanOpen db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
            db 0x00, 0x00, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x5c, 0x00, 0x00, 0x00
            db 0x00, 0x00, 0x00, 0x2b, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x2c, 0x5c, 0x5c, 0x00, 0x00, 0x00, 0x00
            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x2b, 0x2b, 0x2b, 0x2c, 0x2c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-           db 0x00, 0x00, 0x00, 0x00, 0x00, 0x0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+           db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
 pacmanClose db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
@@ -231,143 +229,94 @@ cloche      db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
+section .bss
+keyPressed resb 1  ; Réserve un byte pour l'état de la touche
 section .text
-    
-   mov ah, 00h ; set video mode requirement
-   mov al, 13h ; set video mode option o 320 x 200 256 colors
-   int 10h
-   
-   gameloop:
-   mov al, 0FFh
-   call clearScreen
-   ;call printSprite
-   ; call the
+start:
+    ; Initialisation du mode vidéo
+    mov ah, 00h
+    mov al, 13h
+    int 10h
+    ; Boucle principale du jeu
+    gameloop:
+      
+        call clearScreen
+        mov si, pacmanOpen  ; Adresse du sprite
+        mov di, [xPos]
+        call read_character_key_was_pressed
+        call draw_sprite
+        ; Délai pour ralentir l'animation
+        mov cx, 64000
+       waitloop:
+       loop waitloop
+        jmp gameloop
+    ; Fin du jeu, retour au mode texte
+    mov ax, 03h
+    int 10h
+    mov ax, 4C00h
+    int 21h
+; Fonction pour lire la touche pressée
+read_character_key_was_pressed:
+    mov ah, 00h
+    int 16h
+    cmp ah, 0E0h
+    jne handle_input
+    int 16h
+handle_input:
+    cmp ah, 4Dh  ; Touche Droite   ;4DH
+    je move_right
+    cmp ah, 4Bh  ; Touche Gauche   ;4BH
+    je move_left
+    cmp ah, 48h  ; Touche Haut  ;48H
+    je move_up
+    cmp ah, 50h  ; Touche Bas  ;50h
+    je move_down
+    ret
 
-   ; Display the sprite:
-   mov si, pacmanOpen
-   mov di, [yPos]
-   call change_sprite
-   call draw_sprite
+    ret
+move_right:
+    mov bx, [xPos]
+    add bx, 1
+    mov [xPos], bx
+    ret
+move_left:
+    mov bx, [xPos]
+    sub bx, 1
+    mov [xPos], bx
+    ret
 
-   
-   ; This loop is to slow down the animation
-   mov cx, 64000
-   waitloop: 
-   loop waitloop
+move_up:
+    mov bx, [yPos]
+    sub bx, 1
+    mov [yPos], bx
+    ret
 
-   ;move_sprite
-   mov bx, [yPos]
-   add bx, [yVelocity]
-   mov [yPos], bx
-   ; Bounce:
-   cmp word [yPos], 20000 - SPRITEW
-   jb .noflip
-   neg word [yVelocity]
-   .noflip:
-
-   jmp gameloop
-
-   
-   mov si, pacmanOpen
-   mov di, 0
-   call draw_sprite
-
-   mov si, pacmanOpen
-   mov di, 0
-   call draw_sprite
-
-   mov si, cerise
-   mov di, 16
-   call draw_sprite
-
-   mov si, fraise
-   mov di, 32
-   call draw_sprite
-
-   mov si, orange
-   mov di, 48
-   call draw_sprite
-
-   mov si, pomme
-   mov di, 64
-   call draw_sprite
-
-   mov si, melon
-   mov di, 80
-   call draw_sprite
-
-   mov si, galaxian
-   mov di, 96
-   call draw_sprite
-
-   mov si, cloche
-   mov di, 104
-   call draw_sprite
-
-   mov si, blinky
-   mov di, 120
-   call draw_sprite
-
-   mov si, pinky
-   mov di, 136
-   call draw_sprite
-
-   mov si, clyde
-   mov di, 152
-   call draw_sprite
-
-   mov si, inky
-   mov di, 168
-   call draw_sprite
-
-   mov si, pacmanClose
-   mov di, 184 
-   call draw_sprite
-
-;reset the keyboard buffer and then wait for a keypress :
-   mov ax, 0C01h ;
-   int 21h
- 
-;dos box default video mode
-   mov ax, 03h
-   int 21h
- 
-   int 20h ;quit
-;the_functions:
-
- 
-
-; need to set the color of filling in al
-
-clearScreen:
-   mov ax, 0xA000
-   mov es, ax
-   mov di, 0
-   mov cx, 200*320
-   rep stosb
-   ret
-
-; si most have the sprite address
-; di most have the target address
-draw_sprite:
-   mov ax, 0xA000
-   mov es, ax
-   mov dx, 16
-    .eachLine:
-        mov cx, 16
-        rep movsb
-        add di, 320-16
-        dec dx
-        jnz .eachLine
-        ret
-
-
-change_sprite:
-    cmp word [yVelocity], 0
-    jg .pacmanClose
-    mov si, pacmanClose
-    .pacmanClose:
+move_down:
+    mov bx, [yPos]
+    sub bx, 1
+    mov [yPos], bx
     ret
 
 
-
+; Fonction pour effacer l'écran
+clearScreen:
+    mov ax, 0A000h
+    mov es, ax
+    xor di, di
+    mov cx, 320 * 200  ; Taille de l'écran
+    mov al, 0          ; Couleur de fond
+    rep stosb
+    ret
+; Fonction pour dessiner le sprite
+draw_sprite:
+    mov ax, 0A000h
+    mov es, ax  ; Position du sprite
+    mov cx, 16      ; Hauteur du sprite
+    .draw_line:
+        push cx
+        mov cx, SPRITEW  ; Largeur du sprite
+        rep movsb
+        pop cx
+        add di, 320 - SPRITEW  ; Passer à la ligne suivante
+        loop .draw_line
+    ret
