@@ -1,5 +1,8 @@
 org 100h
 
+%define SCREEN_WIDTH 320
+%define SCREEN_HEIGHT 200
+
 
 %define SPRITEW 16
 %define SPRITEH 16
@@ -15,13 +18,17 @@ spritew dw 16
 
 spriteh dw 16
 
+old_XPOS dw 0
+
+old_YPOS dw 0
+
 blinky      db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            db 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x28, 0x28, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            db 0x00, 0x00, 0x00, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00
+            db 0x00, 0x00, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x00, 0x00, 0x00, 0x00
+            db 0x00, 0x28, 0x0F, 0x0F, 0x28, 0x28, 0x28, 0x28, 0x0f, 0x0f, 0x28, 0x28, 0x28, 0x00, 0x00, 0x00
+            db 0x00, 0x0f, 0x0f, 0x0f, 0x0f, 0x28, 0x28, 0x0f, 0x0f, 0x0f, 0x0f, 0x28, 0x28, 0x28, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
@@ -244,9 +251,10 @@ start:
     ; Boucle principale du jeu
     gameloop:
       
-        call clearScreen
-        call read_character_key_was_pressed
+        call clear_old_sprite
         call draw_sprite
+        call read_character_key_was_pressed
+        
         ; Délai pour ralentir l'animation
         mov cx, 64000
        waitloop:
@@ -266,66 +274,101 @@ read_character_key_was_pressed:
     int 16h
 
 handle_input:
-    cmp ah, 50h   ; Touche Droite   ;4DH
+    cmp ah, 4Dh   ; Touche Droite   ;4DH
     je move_right
-    cmp ah, 48h  ; Touche Gauche   ;4BH
+    cmp ah, 4Bh  ; Touche Gauche   ;4BH
     je move_left
-    cmp ah, 4Bh  ; Touche Haut  ;48H
+    cmp ah, 48h  ; Touche Haut  ;48H
     je move_up
-    cmp ah, 4Dh  ; Touche Bas  ;50h
+    cmp ah, 50h  ; Touche Bas  ;50h
     je move_down
     ret
 
     ret
+
+clear_old_sprite:
+    ; Efface le sprite à l'ancienne position
+    mov ax, 0A000h
+    mov es, ax
+    mov ax, [old_YPOS]
+    imul ax, 320       ; Y * largeur de l'écran
+    add ax, [old_XPOS]  ; + X
+    mov di, ax         ; DI = adresse de départ pour l'effacement
+    mov cx, SPRITEH    ; Hauteur du sprite
+.clear_line:
+    push cx
+    mov cx, SPRITEW    ; Largeur du sprite
+    mov al, 0          ; Couleur de fond pour effacement
+    rep stosb          ; Efface les pixels avec la couleur de fond
+    pop cx
+    add di, 320 - SPRITEW  ; Passer à la ligne suivante pour l'effacement
+    loop .clear_line
+    ret
+
 move_right:
     mov bx, [xPos]
     add bx, 1
+    cmp bx, SCREEN_WIDTH - SPRITEW 
+    jae .skip_move_right
     mov [xPos], bx
+.skip_move_right:
     ret
 move_left:
     mov bx, [xPos]
     sub bx, 1
+    cmp bx, 0
+    jbe .skip_move_left
     mov [xPos], bx
+.skip_move_left:
     ret
 
 move_up:
     mov bx, [yPos]
     sub bx, 1
+    cmp bx, 0
+    jbe .skip_move_up
     mov [yPos], bx
+.skip_move_up:
     ret
 
 move_down:
     mov bx, [yPos]
     add bx, 1
+    cmp bx, SCREEN_HEIGHT - SPRITEH 
+    jae .skip_move_down
     mov [yPos], bx
+.skip_move_down:
     ret
 
 
 ; Fonction pour effacer l'écran
-clearScreen:
-    mov ax, 0A000h
-    mov es, ax
-    xor di, di
-    mov cx, 320 * 200  ; Taille de l'écran
-    mov al, 0          ; Couleur de fond
-    rep stosb
-    ret
-; Fonction pour dessiner le sprite
 draw_sprite:
+    ; Avant de dessiner le sprite, sauvegardez la position actuelle
+    mov ax, [xPos]
+    mov [old_XPOS], ax  ; Sauvegarde l'ancienne position X
+    mov ax, [yPos]
+    mov [old_YPOS], ax  ; Sauvegarde l'ancienne position Y
+    ; Réinitialise le segment graphique
     mov ax, 0A000h
     mov es, ax
+    ; Calcule l'adresse à l'écran où le sprite sera dessiné
+    mov ax, [yPos]
+    imul ax, 320       ; Multiplie yPos par la largeur de l'écran pour obtenir l'offset
+    add ax, [xPos]     ; Ajoute xPos à l'offset
+    mov di, ax         ; DI = adresse de départ pour le dessin
+    ; Obtient l'adresse du sprite à dessiner
     mov si, pacmanOpen
-    mov ax, [xPos]
-    mov bx, 320     ; Largeur de l'écran
-    mul bx          ; Multiplie yPos par la largeur de l'écran
-    add ax, [yPos]  ; Ajoute xPos à la position calculée
-    mov di, ax      ; DI devient la position du sprite à l'écran
+    ; Définit la hauteur du sprite
     mov cx, SPRITEH
-    .draw_line:
-        push cx
-        mov cx, SPRITEW
-        rep movsb
-        pop cx
-        add di, 320 - SPRITEW  ; Passer à la ligne suivante
-        loop .draw_line
+.draw_line:
+    ; Sauvegarde CX car il est modifié par REP MOVSB
+    push cx
+    ; Définit la largeur du sprite pour la ligne actuelle
+    mov cx, SPRITEW
+    rep movsb  ; Dessine la ligne du sprite à l'écran
+    ; Restaure CX pour la prochaine ligne
+    pop cx
+    ; Ajuste DI pour la ligne suivante en prenant en compte l'offset de la largeur de l'écran
+    add di, 320 - SPRITEW
+    loop .draw_line  ; Répète le dessin pour chaque ligne du sprite
     ret
