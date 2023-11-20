@@ -73,7 +73,7 @@
 
 ### Overview
 
-`This document is based on the [functional specification](https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-5/blob/main/Documents/Functional.md). This document should be read before this one to ensure a better understanding of the project's functional requirements.`
+This document is based on the [functional specification](https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-5/blob/main/Documents/Functional.md). This document should be read before this one to ensure a better understanding of the project's functional requirements.
 
 #### Document Purpose
 
