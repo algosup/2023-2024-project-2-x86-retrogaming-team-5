@@ -43,6 +43,14 @@
     - [Integration with DOSBox](#integration-with-dosbox)
     - [Performance Optimization](#performance-optimization)
   - [Testing](#testing)
+  - [Release](#release)
+    - [Deployment Architecture](#deployment-architecture)
+    - [Deployment Environments](#deployment-environments)
+    - [Phased Roll-out Plan](#phased-roll-out-plan)
+      - [Testers Selection for Phased Roll-out](#testers-selection-for-phased-roll-out)
+      - [Continuous Feedback Loop](#continuous-feedback-loop)
+    - [Plan for Communicating Changes](#plan-for-communicating-changes)
+    - [GitHub Release Management](#github-release-management)
   - [Documentation](#documentation)
     - [User Manual](#user-manual)
     - [Developer Documentation](#developer-documentation)
@@ -351,6 +359,90 @@ Efforts will be made to optimize resource usage, ensuring the game runs smoothly
 ## Testing
 
 A comprehensive testing plan will be created to cover various aspects of the game, including functionality, performance, and compatibility. This plan will be documented separately.
+
+## Release
+
+### Deployment Architecture
+
+The deployment architecture for the Pac-Man game in assembly x86 on DOSBox involves packaging the assembly code, game assets, and required files into a deployable format compatible with the DOSBox emulator. The primary deployment architecture is centered around creating a standalone package that users can run within the DOSBox environment.
+
+### Deployment Environments
+
+The game is intended to run on various environments supported by the DOSBox emulator. Deployment environments include Windows and macOS where DOSBox is available. The deployment package will be tailored to each platform to ensure compatibility.
+
+### Phased Roll-out Plan
+
+The roll-out of the Pac-Man game will be conducted in phases to manage potential issues and gather user feedback progressively. The phased roll-out plan includes the following steps:
+
+**Internal Testing:**
+Limited release to the development team for thorough testing.
+Identify and address any critical issues.
+
+**Alpha Release:**
+Release to a select group of testers.
+Gather feedback on gameplay, performance, and potential bugs.
+
+**Beta Release:**
+Expanded release to a larger audience, through a closed beta.
+Monitor for a broader range of issues and collect user feedback.
+
+**Final Release:**
+Full release on GitHub.
+Monitor user reviews and feedback for further improvements.
+
+#### Testers Selection for Phased Roll-out
+
+In order to ensure a successful and effective phased roll-out of the Pac-Man game, careful selection of testers is crucial at each stage. The goal is to gather diverse feedback, identify potential issues, and gradually expand the user base. Below is a plan for selecting testers during each phase:
+
+**Internal Testing:**
+For the initial internal testing phase, focus on individuals within the development team. Select testers based on the following criteria.
+
+- Development team members, include developers, QA engineers, and individuals familiar with the project's technical details
+- Ensure representation from different roles to cover a spectrum of perspectives
+
+**Alpha Release:**
+As the game progresses to the alpha release, involve a select group of early adopters who can provide valuable feedback. Consider the following criteria for alpha testers.
+
+- ALGOSUP students, invite individuals who have shown interest in the project or have a history of providing constructive feedback
+- Include both technical and non-technical users to assess different aspects of the game
+
+**Beta Release:**
+
+For the beta release, expand the testing pool to a larger audience. Look for testers with diverse backgrounds and interests in gaming. Consider the following criteria:
+
+- Diverse audience, could be peopkle from the B3, friends or family
+- Prioritize individuals with varying levels of gaming expertise to assess the game's accessibility
+
+**Public Release:**
+When releasing the game to the public, aim for a broad and representative user base. The focus is on reaching a wide audience to gather comprehensive feedback. Consider the following criteria:
+
+- General public: allow anyone interested to participate in testing
+
+#### Continuous Feedback Loop
+
+Throughout all phases, encourage testers to provide feedback on various aspects, including gameplay experience, performance, and bug reports. Utilize feedback forms, surveys, and discussion to collect insights. Adjust the selection criteria based on the evolving needs of each testing phase.
+
+By carefully selecting testers at each stage, the project can benefit from a well-rounded and comprehensive testing process, leading to a more polished and user-friendly Pac-Man game upon the final release.
+
+### Plan for Communicating Changes
+
+To communicate changes to users, the following plan will be implemented:
+
+**Release Notes:**
+Detailed release notes will be provided with each GitHub release.
+Release notes will include information on new features, improvements, and bug fixes.
+
+**GitHub Release Page:**
+Utilize GitHub's release page to provide a centralized location for release information.
+Include links to download the latest version of the game.
+
+`Provide links and instructions for downloading and playing the game.`
+
+### GitHub Release Management
+
+GitHub releases will be the primary mechanism for managing and distributing Pac-Man releases. Each release on GitHub will include a packaged version of the game for easy download and execution within the DOSBox emulator. The release page will host release notes, known issues, and links to relevant resources for users.
+
+This deployment plan ensures a controlled and well-communicated release process, allowing for effective testing, user feedback, and continuous improvement of the Pac-Man game.
 
 ## Documentation
 
