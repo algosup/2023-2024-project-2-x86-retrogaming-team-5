@@ -33,6 +33,8 @@
       - [Assembler - NASM](#assembler---nasm)
       - [Emulator - DOSBox](#emulator---dosbox)
       - [Integrated Development Environment](#integrated-development-environment)
+      - [version control - Git](#version-control---git)
+      - [GitHub Integration](#github-integration)
     - [System Requirements](#system-requirements)
       - [Hardware Requirements](#hardware-requirements)
       - [Software Requirements](#software-requirements)
@@ -293,6 +295,39 @@ DOSBox serves as the emulator for this project, providing a DOS environment on m
 
 For coding and source code management, we utilize Visual Studio Code (VSCode). VSCode is a robust text editor that seamlessly integrates with version control systems like Git. Its versatility and extensibility make it an ideal choice for efficient development and collaboration within our team.
 
+**Required extension:**
+
+- [nasm x86 syntax highlighting](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm): to provide syntax highlighting and snippets for NASM assembly language, enhancing code readability and productivity
+- [VSCode DOSBox](https://marketplace.visualstudio.com/items?itemName=xsro.vscode-dosbox): to run DOSBox and its variants in VSCode, supporting platforms such as JSDos, DOSBox, and DOSBox-x, with installation instructions and customizable settings for different operating systems.
+
+#### version control - Git
+
+For effective source code management, Git has been selected, offering key advantages tailored to our collaborative and iterative development approach.
+
+- Facilitates parallel development, supporting structured workflows
+- Maintains a detailed history for easy issue identification and code stability
+- Integrates seamlessly with GitHub for streamlined collaboration and code reviews
+- Assists in identifying and resolving conflicts to ensure smooth code integration
+
+#### GitHub Integration
+
+For streamlined project management and collaborative development, we leverage GitHub.
+
+**Github admin:**
+
+- Guillaume Deramchi
+- Laura-Lee Hollande
+
+**Implementation:**
+
+- **Branching Strategy:** employing feature, development, and main branches for a structured workflow
+- **Commit Guidelines:** encouraging clear and concise commit messages for improved readability
+- **GitHub Hosting:** utilizing GitHub as a hosting platform for our project
+- **Issue Tracking:** leveraging GitHub's issue tracking system for efficient bug reporting and task management
+
+**Branch protection rules:**
+The main branch is safeguarded. Pushing changes requires the creation of a pull request, with a mandatory review before merging. This ensures a thorough review process, promoting code quality and collaboration.
+
 ### System Requirements
 
 The system prerequisites for our Pac-Man game have been meticulously defined to ensure seamless compatibility and optimal performance throughout the game's development and execution.
@@ -445,14 +480,18 @@ For the initial internal testing phase, focus on individuals within the developm
 - Ensure representation from different roles to cover a spectrum of perspectives
 
 **Alpha Release:**
-As the game progresses to the alpha release, involve a select group of early adopters who can provide valuable feedback. Consider the following criteria for alpha testers.
+As the game progresses to the alpha release, involve a select group of early adopters who can provide valuable feedback. 
+
+Consider the following criteria for alpha testers.
 
 - ALGOSUP students, invite individuals who have shown interest in the project or have a history of providing constructive feedback
 - Include both technical and non-technical users to assess different aspects of the game
 
 **Beta Release:**
 
-For the beta release, expand the testing pool to a larger audience. Look for testers with diverse backgrounds and interests in gaming. Consider the following criteria:
+For the beta release, expand the testing pool to a larger audience. Look for testers with diverse backgrounds and interests in gaming.
+
+Consider the following criteria:
 
 - Diverse audience, could be peopkle from the B3, friends or family
 - Prioritize individuals with varying levels of gaming expertise to assess the game's accessibility
