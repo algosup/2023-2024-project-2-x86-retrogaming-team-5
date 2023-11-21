@@ -44,6 +44,13 @@
       - [Source Code](#source-code)
     - [Game Architecture](#game-architecture)
       - [Main Game Loop](#main-game-loop)
+    - [Design](#design)
+      - [User Interface (UI)](#user-interface-ui)
+      - [Graphics and Animation](#graphics-and-animation)
+        - [Sprites](#sprites)
+      - [Audio Design](#audio-design)
+      - [Design Review](#design-review)
+    - [Game Mechanics](#game-mechanics)
       - [Player Movement](#player-movement)
       - [Ghosts Behavior](#ghosts-behavior)
       - [Items Implementation](#items-implementation)
@@ -70,7 +77,7 @@
   
 </details>
 
-| Title       | Technical Specification For Pac-Man Game                                                                     |
+| Title       | Technical Specification For Pac-Man® Game                                                                     |
 |-------------|--------------------------------------------------------------------------------------------------------------|
 | Author(s)   | Laura-Lee Hollande                                                                                           |
 | Team        | Team 5 - Laura-Lee Hollande, Guillaume Deramchi, Lucas Megnan, Mathis Lebel, Loris DeMattia, Wilfried Portet |
@@ -85,11 +92,11 @@ This document is based on the [functional specification](https://github.com/algo
 
 #### Document Purpose
 
-The technical specification outlines the implementation details and requirements for the development of the Pac-Man game. This document is intended for the development team and provides a detailed breakdown of the technical aspects involved in creating the game.
+The technical specification outlines the implementation details and requirements for the development of the Pac-Man® game. This document is intended for the development team and provides a detailed breakdown of the technical aspects involved in creating the game.
 
 #### Project Overview
 
-The Pac-Man Game project aims to recreate the classic Pac-Man experience in assembly x86 on the DOSBox emulator. The primary objective is to provide users with an enhanced and nostalgic gaming experience, staying true to the iconic gameplay of the original Pac-Man released in 1980. Players will navigate Pac-Man through a maze, consuming pellets, avoiding ghosts, and achieving high scores. The challenge lies in implementing the game's mechanics in assembly language, optimizing performance for the DOSBox environment, and incorporating additional features while maintaining the essence of the beloved arcade classic.
+The Pac-Man® Game project aims to recreate the classic Pac-Man® experience in assembly x86 on the DOSBox emulator. The primary objective is to provide users with an enhanced and nostalgic gaming experience, staying true to the iconic gameplay of the original Pac-Man® released in 1980. Players will navigate Pac-Man® through a maze, consuming pellets, avoiding ghosts, and achieving high scores. The challenge lies in implementing the game's mechanics in assembly language, optimizing performance for the DOSBox environment, and incorporating additional features while maintaining the essence of the beloved arcade classic.
 
 #### Context
 
@@ -102,7 +109,7 @@ This project is an educational project for the purpose of learning assembly and 
 
 #### Suggested Solution
 
-It involves meticulous implementation of Pac-Man's gameplay mechanics using assembly x86, ensuring compatibility with the DOSBox emulator. The team aims to enhance the classic experience by introducing randomness, improving score management, and incorporating sound and music elements. The visual identity will adopt a pixel art style with a vibrant color scheme, striking a balance between modern aesthetics and retro charm. The proposed solution addresses both the technical intricacies of assembly language and the user's desire for an authentic Pac-Man experience.
+It involves meticulous implementation of Pac-Man®'s gameplay mechanics using assembly x86, ensuring compatibility with the DOSBox emulator. The team aims to enhance the classic experience by introducing randomness, improving score management, and incorporating sound and music elements. The visual identity will adopt a pixel art style with a vibrant color scheme, striking a balance between modern aesthetics and retro charm. The proposed solution addresses both the technical intricacies of assembly language and the user's desire for an authentic Pac-Man® experience.
 
 #### Stakeholders
 
@@ -162,7 +169,7 @@ It involves meticulous implementation of Pac-Man's gameplay mechanics using asse
 
 **New Design Architecture:**
 
-- **Description:** introduction of a new design architecture not aligned with the classic Pac-Man style
+- **Description:** introduction of a new design architecture not aligned with the classic Pac-Man® style
 - **Reasoning:** departing from the original design would require substantial changes in the codebase, surpassing the scope of the project
 
 **First-Person Coding:**
@@ -203,7 +210,7 @@ It involves meticulous implementation of Pac-Man's gameplay mechanics using asse
 
 ## Assumptions
 
-The successful execution of the Pac-Man Game project relies on the following assumptions:
+The successful execution of the Pac-Man® Game project relies on the following assumptions:
 
 **Team Expertise:**
 
@@ -213,12 +220,12 @@ The successful execution of the Pac-Man Game project relies on the following ass
 **DOSBox Stability:**
 
 - **Assumption:** DOSBox provides a stable and consistent emulation environment for MS-DOS compatible systems
-- **Rationale:** the project assumes that DOSBox is a reliable emulator for running the Pac-Man game on modern computers
+- **Rationale:** the project assumes that DOSBox is a reliable emulator for running the Pac-Man® game on modern computers
   
 **Player Familiarity:**
 
-- **Assumption:** players are expected to be familiar with basic Pac-Man mechanics
-- **Rationale:** the game design assumes a level of familiarity with classic Pac-Man gameplay, minimizing the need for extensive tutorials
+- **Assumption:** players are expected to be familiar with basic Pac-Man® mechanics
+- **Rationale:** the game design assumes a level of familiarity with classic Pac-Man® gameplay, minimizing the need for extensive tutorials
   
 **Testing Resources:**
 
@@ -229,19 +236,19 @@ The successful execution of the Pac-Man Game project relies on the following ass
 
 ### Propopsed Solution
 
-The proposed solution is to recreate the classic Pac-Man game in assembly x86 to run on the DOSBox emulator. The primary components include the assembly codebase, interaction with the DOSBox environment, and emulation of the original Pac-Man gameplay.
+The proposed solution is to recreate the classic Pac-Man® game in assembly x86 to run on the DOSBox emulator. The primary components include the assembly codebase, interaction with the DOSBox environment, and emulation of the original Pac-Man® gameplay.
 
 #### External Components and Interactions
 
 **Assembly Codebase:**
 
-- **Interaction:** the assembly code constitutes the core of the solution, defining Pac-Man's behavior, ghost movements, and game mechanics
+- **Interaction:** the assembly code constitutes the core of the solution, defining Pac-Man®'s behavior, ghost movements, and game mechanics
 - **Alteration:** the assembly code alters the game state based on user input, events, and interactions
 
 **DOSBox Emulator:**
 
 - **Interaction:** the game will interact with the DOSBox emulator to execute assembly code within a simulated MS-DOS environment
-- **Alteration:** DOSBox provides a platform for executing assembly code and emulating the original Pac-Man environment
+- **Alteration:** DOSBox provides a platform for executing assembly code and emulating the original Pac-Man® environment
 
 <!-- Add scheme -->
 
@@ -261,7 +268,7 @@ Development tools for assembly language programming are required for coding and 
 
 ##### Pros
 
-- Recreates the classic Pac-Man experience
+- Recreates the classic Pac-Man® experience
 - Provides a retro gaming experience on modern systems
 - Offers a challenging development project for the team
 
@@ -274,7 +281,7 @@ Development tools for assembly language programming are required for coding and 
 
 #### Language - Assembly
 
-The Pac-Man project is developed using assembly language, specifically targeting the x86 architecture. This choice is driven by the need for low-level control and efficiency.
+The Pac-Man® project is developed using assembly language, specifically targeting the x86 architecture. This choice is driven by the need for low-level control and efficiency.
 
 #### Assembler - NASM
 
@@ -330,7 +337,7 @@ The main branch is safeguarded. Pushing changes requires the creation of a pull 
 
 ### System Requirements
 
-The system prerequisites for our Pac-Man game have been meticulously defined to ensure seamless compatibility and optimal performance throughout the game's development and execution.
+The system prerequisites for our Pac-Man® game have been meticulously defined to ensure seamless compatibility and optimal performance throughout the game's development and execution.
 
 #### Hardware Requirements
 
@@ -384,13 +391,23 @@ The system prerequisites for our Pac-Man game have been meticulously defined to 
 The source code will be organized into separate files, each focusing on specific aspects of the game:
 
 - `main.asm`: Main entry point and game loop
-- `player.asm`: Player-controlled Pac-Man character logic
+- `player.asm`: Player-controlled Pac-Man® character logic
 - `ghosts.asm`: Logic for ghost characters and their behaviors
 - `items.asm`: Implementation of pellets, power pellets, and fruits
 - `ui.asm`: User interface elements and display logic
 - Other relevant files as needed
 
 ### Game Architecture
+
+The architecture revolves around modular components to ensure maintainability and extensibility.
+
+The key elements include:
+
+- **Game engine:** Responsible for core game mechanics, collision detection, and overall game flow.
+  
+- **Graphics rendering:** Efficient rendering of sprites and game elements for a visually appealing experience.
+  
+- **Input handling:** Responsive control mechanisms for player interaction, supporting keyboard and optional input devices.
 
 #### Main Game Loop
 
@@ -409,13 +426,64 @@ game_loop:
   jmp game_loop
 ```
 
+### Design
+
+#### User Interface (UI)
+
+The UI design focuses on simplicity and clarity to enhance the player's experience:
+
+- **Main Menu:** intuitive and user-friendly navigation for starting a new game, accessing settings, and exiting the game.
+
+- **Game heads-up display (HUD):** display of essential information such as score, remaining lives, and level progression.
+
+- **Game Over Screen:** informative and engaging screen displaying the player's achievements and options for restarting or exiting.
+
+#### Graphics and Animation
+
+Capturing the essence of the original Pac-Man® visuals:
+
+- **Sprite design:** Faithful recreation of Pac-Man, ghosts, and pellets with attention to detail.
+- **Animation:** Smooth and engaging movement of characters, enhancing the overall gaming experience.
+
+##### Sprites
+
+#### Audio Design
+
+An immersive audio experience to complement the visuals:
+
+- **Sound Effects:** Authentic sounds for Pac-Man eating pellets, ghost movements, and other in-game actions.
+
+- **Background Music:** Optional background music to enhance the gaming atmosphere without being intrusive.
+
+#### Design Review
+
+A design review will be conducted to assess the proposed design against the project requirements and to gather feedback from stakeholders.
+
+### Game Mechanics
+
 #### Player Movement
 
-The player-controlled Pac-Man will move in response to keyboard input. The movement will be based on a grid system within the game board.
+The player-controlled Pac-Man® will move in response to keyboard input. The movement will be based on a grid system within the game board.
+
+**Keyboard input for Pac-Man® movement:**
+
+- ↑ : move up
+- ↓ : move down
+- ← : move left
+- → : move right
+
+**Grid-Based navigation:** The movement operates on a grid, allowing precise positioning and orientation of Pac-Man® within the game environment.
+
+**Response time:** ≤200 milliseconds.
 
 #### Ghosts Behavior
 
-Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man, random movement, and specific strategies for each ghost.
+Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man®, random movement, and specific strategies for each ghost.
+
+- **Blinky:** always follows directly behind Pac-Man®, except if the short-sighted decision-making causes him to take an inefficient path
+  - **Pinky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
+  - **Inky:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
+  - **Clyde:** exhibits erratic behavior by alternating between chasing Pac-Man® and moving to a random location when he's too close to the player
 
 #### Items Implementation
 
@@ -443,7 +511,7 @@ A comprehensive testing plan will be created to cover various aspects of the gam
 
 ### Deployment Architecture
 
-The deployment architecture for the Pac-Man game in assembly x86 on DOSBox involves packaging the assembly code, game assets, and required files into a deployable format compatible with the DOSBox emulator. The primary deployment architecture is centered around creating a standalone package that users can run within the DOSBox environment.
+The deployment architecture for the Pac-Man® game in assembly x86 on DOSBox involves packaging the assembly code, game assets, and required files into a deployable format compatible with the DOSBox emulator. The primary deployment architecture is centered around creating a standalone package that users can run within the DOSBox environment.
 
 ### Deployment Environments
 
@@ -451,7 +519,7 @@ The game is intended to run on various environments supported by the DOSBox emul
 
 ### Phased Roll-out Plan
 
-The roll-out of the Pac-Man game will be conducted in phases to manage potential issues and gather user feedback progressively. The phased roll-out plan includes the following steps:
+The roll-out of the Pac-Man® game will be conducted in phases to manage potential issues and gather user feedback progressively. The phased roll-out plan includes the following steps:
 
 **Internal Testing:**
 Limited release to the development team for thorough testing.
@@ -471,7 +539,7 @@ Monitor user reviews and feedback for further improvements.
 
 #### Testers Selection for Phased Roll-out
 
-In order to ensure a successful and effective phased roll-out of the Pac-Man game, careful selection of testers is crucial at each stage. The goal is to gather diverse feedback, identify potential issues, and gradually expand the user base. Below is a plan for selecting testers during each phase:
+In order to ensure a successful and effective phased roll-out of the Pac-Man® game, careful selection of testers is crucial at each stage. The goal is to gather diverse feedback, identify potential issues, and gradually expand the user base. Below is a plan for selecting testers during each phase:
 
 **Internal Testing:**
 For the initial internal testing phase, focus on individuals within the development team. Select testers based on the following criteria.
@@ -499,13 +567,13 @@ Consider the following criteria:
 **Public Release:**
 When releasing the game to the public, aim for a broad and representative user base. The focus is on reaching a wide audience to gather comprehensive feedback. Consider the following criteria:
 
-- General public: allow anyone interested to participate in testing
+- General public, anyone interested to participate in testing
 
 #### Continuous Feedback Loop
 
 Throughout all phases, encourage testers to provide feedback on various aspects, including gameplay experience, performance, and bug reports. Utilize feedback forms, surveys, and discussion to collect insights. Adjust the selection criteria based on the evolving needs of each testing phase.
 
-By carefully selecting testers at each stage, the project can benefit from a well-rounded and comprehensive testing process, leading to a more polished and user-friendly Pac-Man game upon the final release.
+By carefully selecting testers at each stage, the project can benefit from a well-rounded and comprehensive testing process, leading to a more polished and user-friendly Pac-Man® game upon the final release.
 
 ### Plan for Communicating Changes
 
@@ -523,9 +591,9 @@ Include links to download the latest version of the game.
 
 ### GitHub Release Management
 
-GitHub releases will be the primary mechanism for managing and distributing Pac-Man releases. Each release on GitHub will include a packaged version of the game for easy download and execution within the DOSBox emulator. The release page will host release notes, known issues, and links to relevant resources for users.
+GitHub releases will be the primary mechanism for managing and distributing Pac-Man® releases. Each release on GitHub will include a packaged version of the game for easy download and execution within the DOSBox emulator. The release page will host release notes, known issues, and links to relevant resources for users.
 
-This deployment plan ensures a controlled and well-communicated release process, allowing for effective testing, user feedback, and continuous improvement of the Pac-Man game.
+This deployment plan ensures a controlled and well-communicated release process, allowing for effective testing, user feedback, and continuous improvement of the Pac-Man® game.
 
 ## Documentation
 
@@ -539,7 +607,7 @@ Comprehensive documentation will be maintained for the source code, ensuring tha
 
 ## Legal Considerations
 
-Adherence to licensing and copyright regulations for Pac-Man-inspired elements will be a priority throughout development.
+Adherence to licensing and copyright regulations for Pac-Man®-inspired elements will be a priority throughout development.
 
 ## Milestones
 
