@@ -84,7 +84,7 @@ More communication between all the team members. Using branch for the GitHub rep
 
 ## V. Acknowledgements
 <!--Acknowledge the contributions of team members, stakeholders, or external partners who played a significant role in the week's achievements.-->
-Coding in Assembly(Coding the sprites, move them, initialize all that in DosBox, using MOV, JMP etc...), pay attention to write in a good englis.
+Coding in Assembly(Coding the sprites, move them, initialize all that in DosBox, using MOV, JMP etc...), pay attention to write in a good english.
 
 ## VI. Attachments
 <!--Include any relevant documents, charts, graphs, or visual aids that support the information presented in the report.-->
