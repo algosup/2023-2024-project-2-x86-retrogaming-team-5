@@ -26,8 +26,6 @@
       - [External Components and Interactions](#external-components-and-interactions)
       - [Dependencies](#dependencies)
       - [Pros and Cons](#pros-and-cons)
-        - [Pros](#pros)
-        - [Cons](#cons)
     - [Development Environment](#development-environment)
       - [Language - Assembly](#language---assembly)
       - [Assembler - NASM](#assembler---nasm)
@@ -50,11 +48,21 @@
         - [Sprites](#sprites)
       - [Audio Design](#audio-design)
       - [Design Review](#design-review)
+    - [Game Dynamics](#game-dynamics)
     - [Game Mechanics](#game-mechanics)
+      - [Maze](#maze)
       - [Player Movement](#player-movement)
       - [Ghosts Behavior](#ghosts-behavior)
       - [Items Implementation](#items-implementation)
-      - [User Interface](#user-interface)
+      - [Scoring System](#scoring-system)
+        - [Game Balencing](#game-balencing)
+      - [Collision Handling](#collision-handling)
+        - [Ghost Collision](#ghost-collision)
+        - [Object Collisions](#object-collisions)
+        - [Wall and Pipe Collisions](#wall-and-pipe-collisions)
+        - [Exceptions](#exceptions)
+      - [Level Progression](#level-progression)
+      - [Game Over](#game-over)
     - [Integration with DOSBox](#integration-with-dosbox)
     - [Performance Optimization](#performance-optimization)
   - [Testing](#testing)
@@ -266,13 +274,13 @@ Development tools for assembly language programming are required for coding and 
 
 #### Pros and Cons
 
-##### Pros
+**Pros:**
 
 - Recreates the classic Pac-Man® experience
 - Provides a retro gaming experience on modern systems
 - Offers a challenging development project for the team
 
-##### Cons
+**Cons:**
 
 - Assembly language complexity may pose challenges
 - Limited modern features compared to contemporary game development
@@ -459,7 +467,17 @@ An immersive audio experience to complement the visuals:
 
 A design review will be conducted to assess the proposed design against the project requirements and to gather feedback from stakeholders.
 
+### Game Dynamics
+
+- **Ghost Artificial Intelligence:** Implementing diverse ghost behaviors, including pursuit and evasion strategies.
+- **Maze Variations:** Introducing different maze layouts to keep the gameplay experience dynamic.
+- **Bonus Features:** Incorporating bonus items and features to add variety to the game.
+
 ### Game Mechanics
+
+#### Maze
+
+<!-- to do -->
 
 #### Player Movement
 
@@ -491,9 +509,102 @@ Ghosts will follow predefined patterns according to their individual characteris
 - **Power Pellets:** Grant temporary invincibility and the ability to eat ghosts.
 - **Fruits:** Bonus items with varying point values, spawning at specific intervals.
 
-#### User Interface
+<!-- Cooldown power up and others-->
 
-The user interface will display relevant information such as score, lives, and level progression. It will be kept simple and retro-inspired.
+#### Scoring System
+
+- **Point values:** Assigning specific point values to different in-game actions, such as eating pellets or catching ghosts.
+- **High score tracking:** Recording and displaying the highest scores achieved by players.
+
+##### Game Balencing
+
+- **Pellet**: 10 points
+- **Power Pellet**: 50 points
+- **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points)
+- **Fruits**: Varying points
+  - cherry: 100 points
+  - strawberry: 300 points
+  - orange: 500 points
+  - apple: 700 points
+  - melon: 1000 points
+  - Galaxian: 2000 points
+  - bell: 3000 points
+
+#### Collision Handling
+
+##### Ghost Collision
+
+In the Pac-Man game development, collision mechanisms play a crucial role in determining the outcome of interactions between Pac-Man and the ghosts. Two main types of collisions are considered:
+
+1. Normal collision:
+**Scenario:** When Pac-Man encounters a ghost without the protection of a power pellet.
+**Outcome:** Results in a life loss for Pac-Man, triggering a "death" state.
+**Consequence:** Pac-Man is respawned to a predefined location in the maze.
+
+2. Collision with Super Pac-Gum activation:
+**Scenario:** Pac-Man consumes a super pac-gum, granting temporary invulnerability.
+**Outcome:** Ghosts become vulnerable, and Pac-Man can "eat" them upon contact.
+**Consequence:** Eaten ghosts return to their starting box, reactivating after a brief cooldown (3 seconds).
+
+##### Object Collisions
+
+1. Pellet collection:
+**Scenario:** Pac-Man moves over a pellet in the maze.
+**Outcome:** Incremental increase in the player's score.
+**Consequence:** The pellet disappears from the maze.
+
+2. Super Pac-Gum consumption:
+**Scenario:** Pac-Man consumes a super pac-gum.
+**Outcome:** Activation of temporary invulnerability and ghost-vulnerability mode.
+**Consequence:** Super pac-gum disappears from the maze.
+
+3. Fruit collection:
+**Scenario:** Pac-Man reaches and consumes a fruit.
+**Outcome:** Significant score boost.
+**Consequence:** The fruit disappears from the maze.
+
+##### Wall and Pipe Collisions
+
+1. Wall collision:
+**Scenario:** Pac-Man or ghosts attempt to move into a wall.
+**Outcome:** Prevents passage through the wall.
+**Consequence:** Character remains stationary, altering the navigation path.
+
+2. Pipe collision:
+**Scenario:** Pac-Man or ghosts encounter a pipe entrance or exit.
+**Outcome:** Facilitates movement between different sections of the maze.
+**Consequence:** Characters transition to the connected pipe exit.
+
+`Vulnerable ghosts and Super Pac-Man don't have different pattern.`
+
+##### Exceptions
+
+1. Ghost house - ghosts:
+**Scenario:** Ghosts attempt to move into a wall.
+**Outcome:** Prevents passage through the wall.
+**Consequence:** Character remains stationary, altering the navigation path.
+
+2. Ghost house - vulnerable ghosts:
+**Scenario:** Pac-Man or ghosts attempt to move into a wall.
+**Outcome:** Prevents passage through the wall.
+**Consequence:** Character remains stationary, altering the navigation path.
+
+3. Ghost house - Pac-Man:
+**Scenario:** Pac-Man attempts to enter in the ghost house.
+**Outcome:** Prevents passage through the wall.
+**Consequence:** Character remains stationary, altering the navigation path.
+
+<!-- Screenshot of the door -->
+
+#### Level Progression
+
+A new level started when all the pellets on the current maze are collected.
+
+#### Game Over
+
+If the player loose all his life before collectinga all the pellets on the maze, the Game Over animation will be displays. At this state the player can see his current score before he loose and the highest score he achieved on the game. Moreover, he can decide to leave the game, start a new game or go back to the menue.
+
+<!-- Ask Mathis -->
 
 ### Integration with DOSBox
 
