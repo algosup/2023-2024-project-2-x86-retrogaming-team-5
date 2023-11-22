@@ -475,6 +475,8 @@ A design review will be conducted to assess the proposed design against the proj
 
 ### Game Mechanics
 
+<!-- Pseudo code -->
+
 #### Maze
 
 <!-- to do -->
