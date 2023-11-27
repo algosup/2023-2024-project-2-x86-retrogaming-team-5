@@ -253,40 +253,34 @@ The proposed solution is to recreate the classic Pac-Man® game in assembly x86 
 
 **Assembly Codebase:**
 
-- **Interaction:** the assembly code constitutes the core of the solution, defining Pac-Man®'s behavior, ghost movements, and game mechanics
-- **Alteration:** the assembly code alters the game state based on user input, events, and interactions
+- **Interaction:** The assembly code constitutes the core of the solution, defining Pac-Man®'s behavior, ghost movements, and game mechanics.
+- **Alteration:** The assembly code alters the game state based on user input, events, and interactions.
 
 **DOSBox Emulator:**
 
 - **Interaction:** the game will interact with the DOSBox emulator to execute assembly code within a simulated MS-DOS environment
 - **Alteration:** DOSBox provides a platform for executing assembly code and emulating the original Pac-Man® environment
 
-<!-- Add scheme -->
-
 #### Dependencies
 
 **DOS Environment:**
-
 The solution is dependent on the DOS environment provided by the DOSBox emulator.
 
 **Assembly Language Tools:**
-
 Development tools for assembly language programming are required for coding and assembling the game.
-
-<!-- Add scheme -->
 
 #### Pros and Cons
 
 **Pros:**
 
-- Recreates the classic Pac-Man® experience
-- Provides a retro gaming experience on modern systems
-- Offers a challenging development project for the team
+- Recreates the classic Pac-Man® experience.
+- Provides a retro gaming experience on modern systems.
+- Offers a challenging development project for the team.
 
 **Cons:**
 
-- Assembly language complexity may pose challenges
-- Limited modern features compared to contemporary game development
+- Assembly language complexity may pose challenges.
+- Limited modern features compared to contemporary game development.
 
 ### Development Environment
 
@@ -513,6 +507,8 @@ A design review will be conducted to assess the proposed design against the proj
 - **Bonus Features:** Incorporating bonus items and features to add variety to the game.
 
 ### Game Mechanics
+
+![alt text](image/pacmanClass.png)
 
 #### Maze
 
