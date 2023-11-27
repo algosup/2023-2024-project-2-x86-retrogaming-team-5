@@ -46,6 +46,13 @@
       - [User Interface (UI)](#user-interface-ui)
       - [Graphics and Animation](#graphics-and-animation)
         - [Sprites](#sprites)
+        - [Pac-Man® Sprite](#pac-man-sprite)
+        - [Ghost Sprites](#ghost-sprites)
+        - [Pellet and Power Pellet Sprites](#pellet-and-power-pellet-sprites)
+        - [Fruit Sprites](#fruit-sprites)
+        - [Maze Walls and Pipes](#maze-walls-and-pipes)
+        - [Ghost House Door](#ghost-house-door)
+        - [Animation Frame Rate](#animation-frame-rate)
       - [Audio Design](#audio-design)
       - [Design Review](#design-review)
     - [Game Dynamics](#game-dynamics)
@@ -63,6 +70,7 @@
         - [Exceptions](#exceptions)
       - [Level Progression](#level-progression)
       - [Game Over](#game-over)
+      - [Pseudo Code](#pseudo-code)
     - [Integration with DOSBox](#integration-with-dosbox)
     - [Performance Optimization](#performance-optimization)
   - [Testing](#testing)
@@ -75,13 +83,8 @@
     - [Plan for Communicating Changes](#plan-for-communicating-changes)
     - [GitHub Release Management](#github-release-management)
   - [Documentation](#documentation)
-    - [User Manual](#user-manual)
-    - [Developer Documentation](#developer-documentation)
   - [Legal Considerations](#legal-considerations)
   - [Milestones](#milestones)
-    - [Milestone 1: Functional Prototype](#milestone-1-functional-prototype)
-    - [Milestone 2: Gameplay Features](#milestone-2-gameplay-features)
-    - [Milestone 3: Final Product](#milestone-3-final-product)
   
 </details>
 
@@ -455,6 +458,42 @@ Capturing the essence of the original Pac-Man® visuals:
 
 ##### Sprites
 
+##### Pac-Man® Sprite
+
+- **Design Dimensions:** The Pac-Man® sprite will have a design dimension of 32x32 pixels to maintain visual clarity and consistency.
+- **Animation Frames:** For smooth movement animation, Pac-Man® will have four frames of animation for each direction (up, down, left, and right).
+
+##### Ghost Sprites
+
+- **Individual Ghosts:** Each ghost (Blinky, Pinky, Inky, Clyde) will have a sprite sheet with dimensions of 32x32 pixels for clear representation.
+- **Animation Frames:** Similar to Pac-Man®, each ghost will have four frames of animation for each direction, contributing to fluid movement.
+
+##### Pellet and Power Pellet Sprites
+
+- **Pellet Size:** Standard pellets will be represented by 8x8 pixel sprites, contributing to a uniform and grid-based visual style.
+- **Power Pellet Size:** Larger 16x16 pixel sprites will distinguish power pellets, emphasizing their special significance in the game.
+
+##### Fruit Sprites
+
+- **Fruit Variety:** Different fruits will have unique sprites, each with a specific design dimension of 16x16 pixels.
+- **Spawn Animation:** Each fruit will feature a spawn animation with three frames, contributing to a visually engaging appearance when appearing in the maze.
+
+##### Maze Walls and Pipes
+
+- **Wall Dimensions:** Maze walls will be represented by 16x16 pixel sprites, ensuring a consistent grid-based layout throughout the maze.
+- **Pipe Appearance:** Pipes, facilitating movement between maze sections, will be visually distinct with a 16x16 pixel sprite.
+
+##### Ghost House Door
+
+- **Door Design:** The door of the ghost house will be represented by a 16x16 pixel sprite.
+- **State Changes:** To depict different states (open, closed), two frames of animation will be used for smooth transitions.
+
+##### Animation Frame Rate
+
+- **Consistency:** All sprite animations will be designed with a frame rate of 10 frames per second (FPS) to ensure smooth transitions and visual appeal.
+
+These sprite design specifications aim to create a visually cohesive and engaging game environment, capturing the iconic look and feel of the original Pac-Man® while accommodating modern design standards.
+
 #### Audio Design
 
 An immersive audio experience to complement the visuals:
@@ -475,11 +514,25 @@ A design review will be conducted to assess the proposed design against the proj
 
 ### Game Mechanics
 
-<!-- Pseudo code -->
-
 #### Maze
 
-<!-- to do -->
+The game area consists of a maze where Pac-Man® navigates and engages with various elements.
+
+Key attributes of the maze include:
+
+**Design complexity:** The maze features a structured layout with walls, corridors, and intersections, providing the spatial framework for gameplay.
+
+**Pellet placement:** Pellets are strategically placed throughout the maze, serving as collectibles for Pac-Man®. Their distribution contributes to the challenge and dynamics of the game.
+
+**Super pellet location:** Super Pac-Gums, which grant temporary invincibility and ghost-vulnerability, are positioned in specific areas of the maze, influencing strategic player movement.
+
+**Fruit spawning points:** Bonus fruits appear at designated intervals within the maze, offering additional points for the player upon consumption.
+
+**Walls and pipes:** Physical barriers in the form of walls and pipes create obstacles and pathways within the maze, shaping the navigation experience for both Pac-Man® and ghosts.
+
+**Ghost house:** A dedicated area in the maze where ghosts reside and regenerate after being consumed by Pac-Man®. The ghost house is an integral part of the maze dynamics.
+
+**Dynamic elements:** The maze layout may evolve as players progress through levels, introducing variations in pellet distribution and additional challenges.
 
 #### Player Movement
 
@@ -501,17 +554,28 @@ The player-controlled Pac-Man® will move in response to keyboard input. The mov
 Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man®, random movement, and specific strategies for each ghost.
 
 - **Blinky:** always follows directly behind Pac-Man®, except if the short-sighted decision-making causes him to take an inefficient path
-  - **Pinky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
-  - **Inky:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
-  - **Clyde:** exhibits erratic behavior by alternating between chasing Pac-Man® and moving to a random location when he's too close to the player
+- **Pinky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
+- **Inky:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
+- **Clyde:** exhibits erratic behavior by alternating between chasing Pac-Man® and moving to a random location when he's too close to the player
 
 #### Items Implementation
 
 - **Pellets:** The basic collectibles that contribute to the player's score.
+  - **Cooldown:** N/A (Pellets disappear upon collection).
+  - **Spawn frequency:** Scattered throughout the maze, multiple pellets available at once.
 - **Power Pellets:** Grant temporary invincibility and the ability to eat ghosts.
+  - **Cooldown:** N/A (Power Pellets disappear upon activation).
+  - **Spawn Frequency:** Limited number available in the maze, respawn after a new level starts.
 - **Fruits:** Bonus items with varying point values, spawning at specific intervals.
-
-<!-- Cooldown power up and others-->
+  - **Cooldown:** N/A (Fruits disappear upon collection).
+  - **Spawn Frequency:**
+    - Cherry: Appears every 70 seconds.
+    - Strawberry: Appears every 120 seconds.
+    - Orange: Appears every 170 seconds.
+    - Apple: Appears every 220 seconds.
+    - Melon: Appears every 270 seconds.
+    - Galaxian: Appears every 320 seconds.
+    - Bell: Appears every 370 seconds.
 
 #### Scoring System
 
@@ -604,17 +668,121 @@ A new level started when all the pellets on the current maze are collected.
 
 #### Game Over
 
-If the player loose all his life before collectinga all the pellets on the maze, the Game Over animation will be displays. At this state the player can see his current score before he loose and the highest score he achieved on the game. Moreover, he can decide to leave the game, start a new game or go back to the menue.
+If the player loose all his life before collecting all the pellets on the maze, the Game Over animation will be displays. At this state the player can see his current score before he loose and the highest score he achieved on the game. Moreover, he can decide to leave the game, start a new game or go back to the menue.
 
-<!-- Ask Mathis -->
+#### Pseudo Code
+
+1. **Initialize Game:**
+   - Load maze layout.
+   - Place pellets, super pellets, and bonus fruits.
+   - Set player and ghost starting positions.
+   - Initialize score, lives, and level.
+
+2. **Game Loop:**
+   - while (player.lives > 0) and (pellets.remaining > 0):
+     - Display current maze state.
+     - Display player score, lives, and level.
+
+     - **Player Input:**
+       - Accept keyboard input (↑, ↓, ←, →).
+       - Move Pac-Man based on input.
+       - Check for collisions with walls, pellets, super pellets, and bonus fruits.
+
+     - **Ghost Behavior:**
+       - Move each ghost based on predefined patterns.
+       - Check for collisions with Pac-Man.
+
+     - **Collision Handling:**
+       - If Pac-Man collides with a ghost:
+         - If Pac-Man has a super pellet active:
+           - Ghost becomes vulnerable.
+           - Pac-Man earns points.
+           - Ghost returns to starting box after a cooldown.
+         - If Pac-Man doesn't have a super pellet:
+           - Pac-Man loses a life.
+           - Pac-Man respawns at a predefined location.
+
+       - If Pac-Man collects a pellet:
+         - Increment player score.
+         - Decrease remaining pellets count.
+
+       - If Pac-Man collects a super pellet:
+         - Activate temporary invincibility.
+         - Ghosts become vulnerable for a limited time.
+
+       - If Pac-Man collects a bonus fruit:
+         - Increase player score based on fruit value.
+
+     - **Level Progression:**
+       - If all pellets are collected:
+         - Start a new level.
+         - Reset player and ghost positions.
+         - Increase the level.
+
+   - **Game Over:**
+     - Display Game Over animation.
+     - Show final score, highest score, and options to leave, start a new game, or go back to the menu.
 
 ### Integration with DOSBox
 
-The game will be developed and tested to ensure compatibility with the DOSBox emulator. This includes addressing any platform-specific considerations and providing setup instructions for users.
+The game development process includes thorough testing and optimization to ensure seamless integration with the DOSBox emulator. DOSBox is chosen as the primary emulation environment to recreate the authentic DOS experience on modern systems.
+
+**Compatibility assurance:**
+
+- Rigorous testing will be conducted to guarantee compatibility with DOSBox across various operating systems, including Windows, macOS, and Linux.
+- Addressing potential platform-specific considerations to provide a consistent gaming experience for all users.
+
+**Configuration settings:**
+
+- Users will be provided with clear setup instructions, including recommended DOSBox configuration settings to optimize performance and ensure proper emulation of the original Pac-Man® environment.
+
+**Enhancing authenticity:**
+
+- DOSBox serves as a crucial component in preserving the classic gaming experience, replicating the original hardware conditions and constraints.
+- Integration with DOSBox allows the game to run smoothly on modern systems, bringing nostalgia to players while maintaining the integrity of the Pac-Man® gameplay.
+
+**Potential Challenges:**
+
+- Identification and resolution of any challenges that may arise during integration, ensuring a user-friendly experience without compromising on the game's retro charm.
 
 ### Performance Optimization
 
-Efforts will be made to optimize resource usage, ensuring the game runs smoothly on a variety of hardware. Load balancing will be implemented to distribute processing load evenly.
+In the pursuit of delivering a seamless gaming experience, performance optimization is a critical aspect of the development process. The goal is to ensure that the game runs smoothly on a variety of hardware configurations.
+
+**Resource utilization:**
+
+- Thorough optimization of resource usage, aiming for CPU utilization below 20%, memory consumption limited to 100 MB, and efficient graphics rendering to maintain a steady frame rate of 60 FPS.
+- Regular profiling and analysis of resource consumption to identify and address potential inefficiencies.
+
+**Load balancing:**
+
+- Implementation of load balancing mechanisms to distribute processing load evenly across different components. Targeting an even distribution of CPU and GPU load to prevent overutilization.
+- Strategies to adapt to variations in system capabilities, accommodating a wide range of hardware specifications.
+
+**Graphics rendering:**
+
+- Efficient rendering techniques to minimize GPU load. Aim for rendering complexity that allows smooth gameplay on GPUs with 2 GB VRAM.
+- Resolution and frame rate management, targeting a base resolution of 720p and a stable frame rate of 60 FPS for optimal performance.
+
+**Input responsiveness:**
+
+- Optimization of input handling to achieve low-latency responsiveness. Targeting an input delay of less than 20 milliseconds for immediate player control.
+- Continuous testing to validate input responsiveness across various input devices.
+
+**Cross-platform considerations:**
+
+- Adapting optimization strategies for different operating systems to guarantee a consistent gaming experience on Windows, macOS, and Linux.
+- Compatibility testing on a variety of hardware setups to identify and resolve platform-specific performance challenges.
+
+**Potential challenges:**
+
+- Anticipation and mitigation of challenges that may arise during the optimization process. Balancing graphical fidelity with performance on lower-end systems, with a commitment to keeping the game playable on GPUs with 1 GB VRAM.
+- Strategies for handling performance degradation gracefully in the event of unexpected system limitations.
+
+**Iterative testing and improvement:**
+
+- Continuous iteration based on testing feedback to refine and enhance performance optimization strategies throughout the development lifecycle.
+- Collaborative efforts to address performance-related issues reported by the user community during testing phases.
 
 ## Testing
 
@@ -710,12 +878,10 @@ This deployment plan ensures a controlled and well-communicated release process,
 
 ## Documentation
 
-### User Manual
-
+**User manual**
 A detailed user manual will be provided, offering instructions on gameplay, controls, and other relevant information.
 
-### Developer Documentation
-
+**Developer documentation**
 Comprehensive documentation will be maintained for the source code, ensuring that future development and updates can be easily implemented.
 
 ## Legal Considerations
@@ -724,17 +890,17 @@ Adherence to licensing and copyright regulations for Pac-Man®-inspired elements
 
 ## Milestones
 
-### Milestone 1: Functional Prototype
+Milestone 1: Functional Prototype
 
 - **Date:** 27/11
 - **Deliverables:** Functional prototype with basic player movement, ghost behavior, and item interaction.
 
-### Milestone 2: Gameplay Features
+Milestone 2: Gameplay Features
 
 - **Date:** 8/12
 - **Deliverables:** Implementation of game features, including scoring, lives system, victory and loss conditions.
 
-### Milestone 3: Final Product
+Milestone 3: Final Product
 
 - **Date:** 21/12
 - **Deliverables:** Polished and fully functional game, ready for release.
