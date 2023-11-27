@@ -46,7 +46,7 @@
       - [User Interface (UI)](#user-interface-ui)
       - [Graphics and Animation](#graphics-and-animation)
         - [Sprites](#sprites)
-        - [Pac-Man® Sprite](#pac-man-sprite)
+        - [Pac-Man Sprite](#pac-man-sprite)
         - [Ghost Sprites](#ghost-sprites)
         - [Pellet and Power Pellet Sprites](#pellet-and-power-pellet-sprites)
         - [Fruit Sprites](#fruit-sprites)
@@ -88,7 +88,7 @@
   
 </details>
 
-| Title       | Technical Specification For Pac-Man® Game                                                                     |
+| Title       | Technical Specification For Pac-Man Game                                                                     |
 |-------------|--------------------------------------------------------------------------------------------------------------|
 | Author(s)   | Laura-Lee Hollande                                                                                           |
 | Team        | Team 5 - Laura-Lee Hollande, Guillaume Deramchi, Lucas Megnan, Mathis Lebel, Loris DeMattia, Wilfried Portet |
@@ -103,11 +103,11 @@ This document is based on the [functional specification](https://github.com/algo
 
 #### Document Purpose
 
-The technical specification outlines the implementation details and requirements for the development of the Pac-Man® game. This document is intended for the development team and provides a detailed breakdown of the technical aspects involved in creating the game.
+The technical specification outlines the implementation details and requirements for the development of the Pac-Man game. This document is intended for the development team and provides a detailed breakdown of the technical aspects involved in creating the game.
 
 #### Project Overview
 
-The Pac-Man® Game project aims to recreate the classic Pac-Man® experience in assembly x86 on the DOSBox emulator. The primary objective is to provide users with an enhanced and nostalgic gaming experience, staying true to the iconic gameplay of the original Pac-Man® released in 1980. Players will navigate Pac-Man® through a maze, consuming pellets, avoiding ghosts, and achieving high scores. The challenge lies in implementing the game's mechanics in assembly language, optimizing performance for the DOSBox environment, and incorporating additional features while maintaining the essence of the beloved arcade classic.
+The Pac-Man Game project aims to recreate the classic Pac-Man experience in assembly x86 on the DOSBox emulator. The primary objective is to provide users with an enhanced and nostalgic gaming experience, staying true to the iconic gameplay of the original Pac-Man released in 1980. Players will navigate Pac-Man through a maze, consuming pellets, avoiding ghosts, and achieving high scores. The challenge lies in implementing the game's mechanics in assembly language, optimizing performance for the DOSBox environment, and incorporating additional features while maintaining the essence of the beloved arcade classic.
 
 #### Context
 
@@ -120,7 +120,7 @@ This project is an educational project for the purpose of learning assembly and 
 
 #### Suggested Solution
 
-It involves meticulous implementation of Pac-Man®'s gameplay mechanics using assembly x86, ensuring compatibility with the DOSBox emulator. The team aims to enhance the classic experience by introducing randomness, improving score management, and incorporating sound and music elements. The visual identity will adopt a pixel art style with a vibrant color scheme, striking a balance between modern aesthetics and retro charm. The proposed solution addresses both the technical intricacies of assembly language and the user's desire for an authentic Pac-Man® experience.
+It involves meticulous implementation of Pac-Man's gameplay mechanics using assembly x86, ensuring compatibility with the DOSBox emulator. The team aims to enhance the classic experience by introducing randomness, improving score management, and incorporating sound and music elements. The visual identity will adopt a pixel art style with a vibrant color scheme, striking a balance between modern aesthetics and retro charm. The proposed solution addresses both the technical intricacies of assembly language and the user's desire for an authentic Pac-Man experience.
 
 #### Stakeholders
 
@@ -146,9 +146,9 @@ It involves meticulous implementation of Pac-Man®'s gameplay mechanics using as
 | Git                                      | It's a distributed version control system that tracks changes in any set of computer files ,usually used for coordinating work among programmers who are collaboratively developing source code during software development. | [Wikipedia](https://en.wikipedia.org/wiki/Git)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Sprite                                   | In computer graphics, a sprite is a two-dimensional bitmap that is part of a larger scene.                                                                                                                                   | [Educative](https://www.educative.io/answers/definition-sprite)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Grid-based navigation                    | A method of navigation using an grid overlay, appropriate to the map projection, instead of true or magnetic north for direction reference.                                                                                  | [SKYbrary](https://skybrary.aero/articles/grid-navigation#:~:text=Definition,magnetic%20north%20for%20direction%20reference.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Ghost house                              | A designated area in the game maze where ghosts reside and regenerate, integral to the dynamics of Pac-Man® gameplay.                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Pellet                                   | Small collectible objects in the game maze that contribute to the player's score when consumed by Pac-Man®.                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Power pellet                             | A special type of pellet that grants temporary invincibility to Pac-Man®, allowing him to eat ghosts.                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Ghost house                              | A designated area in the game maze where ghosts reside and regenerate, integral to the dynamics of Pac-Man gameplay.                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Pellet                                   | Small collectible objects in the game maze that contribute to the player's score when consumed by Pac-Man.                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Power pellet                             | A special type of pellet that grants temporary invincibility to Pac-Man, allowing him to eat ghosts.                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | FPS (frames per second)                  | The rate at which different frames appear on a screen.                                                                                                                                                                       | [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/fps)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Sprite sheet                             | It's a bitmap image file that contains several smaller graphics in a tiled grid arrangement.                                                                                                                                 | [Adobe](https://www.google.com/search?q=Sprite+sheet+def&sca_esv=585565771&rlz=1C5CHFA_enFR973FR973&sxsrf=AM9HkKnZ9yIhOzNxebQ_Gw3wNTgHhWFkkg%3A1701079084615&ei=LGhkZeP_JJOlkdUP796iwAg&ved=0ahUKEwjjxcq09eOCAxWTUqQEHW-vCIgQ4dUDCBA&uact=5&oq=Sprite+sheet+def&gs_lp=Egxnd3Mtd2l6LXNlcnAiEFNwcml0ZSBzaGVldCBkZWYyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgNIngpQmQJYswdwAXgBkAEAmAFFoAGCAqoBATS4AQPIAQD4AQHCAgoQABhHGNYEGLADwgIPEAAYgAQYigUYsAMYChhDwgINEAAYgAQYigUYsAMYQ8ICChAAGIAEGIoFGEPCAggQABiABBjLAcICCBAAGBYYHhgP4gMEGAAgQYgGAZAGCg&sclient=gws-wiz-serp) |
 | Cooldown                                 | The minimum length of time that the player needs to wait after using an ability or item before it can be used again.                                                                                                         | [Wikipédia](https://en.wiktionary.org/wiki/cooldown#:~:text=cooldown%20(plural%20cooldowns),it%20can%20be%20used%20again.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -159,59 +159,59 @@ It involves meticulous implementation of Pac-Man®'s gameplay mechanics using as
 
 **Assembly Coding Standards:**
 
-- **Objective:** adhere to [assembly coding standards](https://projectacrn.github.io/latest/developer-guides/asm_coding_guidelines.html)
-- **Details:** follow established coding conventions for assembly x86 programming to ensure consistency, readability, and maintainability of the codebase
-- **Dependencies:** team familiarity with assembly coding standards
+- **Objective:** Adhere to [assembly coding standards](https://projectacrn.github.io/latest/developer-guides/asm_coding_guidelines.html).
+- **Details:** Follow established coding conventions for assembly x86 programming to ensure consistency, readability, and maintainability of the codebase.
+- **Dependencies:** Team familiarity with assembly coding standards.
 
 `The code should also be commented to improve the understanding and the readeability of the code in the future.`
   
 **DOSBox Compatibility:**
 
-- **Objective:** ensure compatibility with DOSBox emulator
-- **Details:** test the game on DOSBox to verify proper execution and address any compatibility issues. Optimize code for DOS environment limitations
-- **Dependencies:** DOSBox emulator, thorough testing on various DOS configurations
+- **Objective:** Ensure compatibility with DOSBox emulator.
+- **Details:** Test the game on DOSBox to verify proper execution and address any compatibility issues. Optimize code for DOS environment limitations.
+- **Dependencies:** DOSBox emulator, thorough testing on various DOS configurations.
   
 **Performance Optimization:**
 
-- **Objective:** optimize game performance
-- **Details:** identify and address performance bottlenecks, minimize CPU and memory usage, and ensure smooth gameplay on a range of hardware configurations
-- **Dependencies:** profiling tools, knowledge of assembly-level performance optimization
+- **Objective:** Optimize game performance.
+- **Details:** Identify and address performance bottlenecks, minimize CPU and memory usage, and ensure smooth gameplay on a range of hardware configurations.
+- **Dependencies:** Profiling tools, knowledge of assembly-level performance optimization.
 
 **Error Handling:**
 
-- **Objective:** implement robust error handling
-- **Details:** develop error handling mechanisms for unexpected scenarios, providing clear and user-friendly error messages. Ensure graceful recovery from errors
-- **Dependencies:** understanding of potential issues, proactive testing for error scenarios
+- **Objective:** Implement robust error handling.
+- **Details:** Develop error handling mechanisms for unexpected scenarios, providing clear and user-friendly error messages. Ensure graceful recovery from errors.
+- **Dependencies:** Understanding of potential issues, proactive testing for error scenarios
 
 **Documentation:**
 
-- **Objective:** provide comprehensive documentation
-- **Details:** document the assembly code, system architecture, and any external dependencies. Create user manuals and developer documentation for future reference
-- **Dependencies:** documentation tools, attention to detail in documenting code
+- **Objective:** Provide comprehensive documentation.
+- **Details:** Document the assembly code, system architecture, and any external dependencies. Create user manuals and developer documentation for future reference.
+- **Dependencies:** Documentation tools, attention to detail in documenting code.
 
 **Security Considerations:**
 
-- **Objective:** address security concerns
-- **Details:** Identify potential security threats, implement mitigation strategies, and ensure the overall security of the game, particularly in user data handling
-- **Dependencies:** Knowledge of assembly-level security best practices
+- **Objective:** Address security concerns.
+- **Details:** Identify potential security threats, implement mitigation strategies, and ensure the overall security of the game, particularly in user data handling.
+- **Dependencies:** Knowledge of assembly-level security best practices.
 
 **Testing:**
 
-- **Objective:** Conduct thorough testing
-- **Details:** Develop and execute unit tests, integration tests, and performance tests to ensure the correctness and reliability of the game
-- **Dependencies:** Testing frameworks, test environments
+- **Objective:** Conduct thorough testing.
+- **Details:** Develop and execute unit tests, integration tests, and performance tests to ensure the correctness and reliability of the game.
+- **Dependencies:** Testing frameworks, test environments.
 
 ### Out of Scope
 
 **New Design Architecture:**
 
-- **Description:** introduction of a new design architecture not aligned with the classic Pac-Man® style
-- **Reasoning:** departing from the original design would require substantial changes in the codebase, surpassing the scope of the project
+- **Description:** Introduction of a new design architecture not aligned with the classic Pac-Man style.
+- **Reasoning:** Departing from the original design would require substantial changes in the codebase, surpassing the scope of the project.
 
 **First-Person Coding:**
 
-- **Description:** coding the game logic to support first-person perspective interactions
-- **Reasoning:** the project focuses on preserving the classic top-down arcade style, making first-person coding unnecessary
+- **Description:** Coding the game logic to support first-person perspective interactions.
+- **Reasoning:** The project focuses on preserving the classic top-down arcade style, making first-person coding unnecessary.
 
 ### Future Goals
 
@@ -219,72 +219,72 @@ It involves meticulous implementation of Pac-Man®'s gameplay mechanics using as
 
 **Graphics and Animation Refinement:**
 
-- **Objective:** improve the overall visual experience with enhanced graphics and smoother animations
-- **Rationale:** elevate the aesthetic appeal of the game and provide a more engaging user experience
+- **Objective:** Improve the overall visual experience with enhanced graphics and smoother animations.
+- **Rationale:** Elevate the aesthetic appeal of the game and provide a more engaging user experience.
 
 **Accessibility Features:**
 
-- **Objective:** incorporate accessibility features such as colorblind-friendly options and customizable controls
-- **Rationale:** ensure inclusivity by accommodating a diverse range of players with different needs
+- **Objective:** Incorporate accessibility features such as colorblind-friendly options and customizable controls.
+- **Rationale:** Ensure inclusivity by accommodating a diverse range of players with different needs.
 
 #### Technological Advancements
 
 **Compatibility with Modern Systems:**
 
-- **Objective:** ensure compatibility with modern systems and explore potential ports to contemporary platforms
-- **Rationale:** extend the reach of the game to a broader audience and adapt to evolving technology
+- **Objective:** Ensure compatibility with modern systems and explore potential ports to contemporary platforms.
+- **Rationale:** Extend the reach of the game to a broader audience and adapt to evolving technology.
   
 **Cross-Platform Support:**
 
-- **Objective:** investigate the feasibility of cross-platform support, enabling the game to run seamlessly on various operating systems
-- **Rationale:** facilitate accessibility for players on different devices and environments
+- **Objective:** Investigate the feasibility of cross-platform support, enabling the game to run seamlessly on various operating systems.
+- **Rationale:** Facilitate accessibility for players on different devices and environments.
 
 **Integration of New Technologies:**
 
-- **Objective:** explore the integration of modern technologies, such as improved sound libraries and graphics frameworks
-- **Rationale:** keep the game technically up-to-date while preserving its classic charm
+- **Objective:** Explore the integration of modern technologies, such as improved sound libraries and graphics frameworks.
+- **Rationale:** Keep the game technically up-to-date while preserving its classic charm.
 
 ## Assumptions
 
-The successful execution of the Pac-Man® Game project relies on the following assumptions:
+The successful execution of the Pac-Man Game project relies on the following assumptions:
 
 **Team Expertise:**
 
-- **Assumption:** the development team possesses proficient knowledge of assembly language
-- **Rationale:** assembly language expertise is crucial for coding the game logic and achieving optimal performance on the chosen platform
+- **Assumption:** The development team possesses proficient knowledge of assembly language.
+- **Rationale:** Assembly language expertise is crucial for coding the game logic and achieving optimal performance on the chosen platform.
   
 **DOSBox Stability:**
 
-- **Assumption:** DOSBox provides a stable and consistent emulation environment for MS-DOS compatible systems
-- **Rationale:** the project assumes that DOSBox is a reliable emulator for running the Pac-Man® game on modern computers
+- **Assumption:** DOSBox provides a stable and consistent emulation environment for MS-DOS compatible systems.
+- **Rationale:** The project assumes that DOSBox is a reliable emulator for running the Pac-Man game on modern computers.
   
 **Player Familiarity:**
 
-- **Assumption:** players are expected to be familiar with basic Pac-Man® mechanics
-- **Rationale:** the game design assumes a level of familiarity with classic Pac-Man® gameplay, minimizing the need for extensive tutorials
+- **Assumption:** Players are expected to be familiar with basic Pac-Man mechanics.
+- **Rationale:** The game design assumes a level of familiarity with classic Pac-Man gameplay, minimizing the need for extensive tutorials.
   
 **Testing Resources:**
 
-- **Assumption:** adequate resources will be allocated for comprehensive testing on various systems
-- **Rationale:** comprehensive testing is essential to identify and address potential compatibility issues on different hardware configurations
+- **Assumption:** Adequate resources will be allocated for comprehensive testing on various systems.
+- **Rationale:** Comprehensive testing is essential to identify and address potential compatibility issues on different hardware configurations.
 
 ## Solution
 
 ### Propopsed Solution
 
-The proposed solution is to recreate the classic Pac-Man® game in assembly x86 to run on the DOSBox emulator. The primary components include the assembly codebase, interaction with the DOSBox environment, and emulation of the original Pac-Man® gameplay.
+The proposed solution is to recreate the classic Pac-Man game in assembly x86 to run on the DOSBox emulator. The primary components include the assembly codebase, interaction with the DOSBox environment, and emulation of the original Pac-Man gameplay.
 
 #### External Components and Interactions
 
 **Assembly Codebase:**
 
-- **Interaction:** The assembly code constitutes the core of the solution, defining Pac-Man®'s behavior, ghost movements, and game mechanics.
+- **Interaction:** The assembly code constitutes the core of the solution, defining Pac-Man's behavior, ghost movements, and game mechanics.
 - **Alteration:** The assembly code alters the game state based on user input, events, and interactions.
 
 **DOSBox Emulator:**
 
-- **Interaction:** the game will interact with the DOSBox emulator to execute assembly code within a simulated MS-DOS environment
-- **Alteration:** DOSBox provides a platform for executing assembly code and emulating the original Pac-Man® environment
+- **Interaction:** The game will interact with the DOSBox emulator to execute assembly code within a simulated MS-DOS environment.
+- **Alteration:** DOSBox provides a platform for executing assembly code and emulating the original Pac-Man environment.
 
 #### Dependencies
 
@@ -298,7 +298,7 @@ Development tools for assembly language programming are required for coding and 
 
 **Pros:**
 
-- Recreates the classic Pac-Man® experience.
+- Recreates the classic Pac-Man experience.
 - Provides a retro gaming experience on modern systems.
 - Offers a challenging development project for the team.
 
@@ -311,15 +311,15 @@ Development tools for assembly language programming are required for coding and 
 
 #### Language - Assembly
 
-The Pac-Man® project is developed using assembly language, specifically targeting the x86 architecture. This choice is driven by the need for low-level control and efficiency.
+The Pac-Man project is developed using assembly language, specifically targeting the x86 architecture. This choice is driven by the need for low-level control and efficiency.
 
 #### Assembler - NASM
 
 The Netwide Assembler (NASM) is the chosen assembler for this project.
 It's compatibility with x86 architecture and its efficiency in handling low-level operations make it the ideal choice for translating assembly code into machine code.
 
-- Renowned for its efficiency and flexibility, vital for handling complex programming tasks in game development, such as memory management and hardware interaction
-- Serve as the foundation for the entire coding process, encompassing game mechanics implementation, graphics rendering, and user input handling
+- Renowned for its efficiency and flexibility, vital for handling complex programming tasks in game development, such as memory management and hardware interaction.
+- Serve as the foundation for the entire coding process, encompassing game mechanics implementation, graphics rendering, and user input handling.
 
 #### Emulator - DOSBox
 
@@ -334,17 +334,17 @@ For coding and source code management, we utilize Visual Studio Code (VSCode). V
 
 **Required extension:**
 
-- [nasm x86 syntax highlighting](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm): to provide syntax highlighting and snippets for NASM assembly language, enhancing code readability and productivity
-- [VSCode DOSBox](https://marketplace.visualstudio.com/items?itemName=xsro.vscode-dosbox): to run DOSBox and its variants in VSCode, supporting platforms such as JSDos, DOSBox, and DOSBox-x, with installation instructions and customizable settings for different operating systems.
+- [nasm x86 syntax highlighting](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm): To provide syntax highlighting and snippets for NASM assembly language, enhancing code readability and productivity.
+- [VSCode DOSBox](https://marketplace.visualstudio.com/items?itemName=xsro.vscode-dosbox): To run DOSBox and its variants in VSCode, supporting platforms such as JSDos, DOSBox, and DOSBox-x, with installation instructions and customizable settings for different operating systems.
 
 #### version control - Git
 
 For effective source code management, Git has been selected, offering key advantages tailored to our collaborative and iterative development approach.
 
-- Facilitates parallel development, supporting structured workflows
-- Maintains a detailed history for easy issue identification and code stability
-- Integrates seamlessly with GitHub for streamlined collaboration and code reviews
-- Assists in identifying and resolving conflicts to ensure smooth code integration
+- Facilitates parallel development, supporting structured workflows.
+- Maintains a detailed history for easy issue identification and code stability.
+- Integrates seamlessly with GitHub for streamlined collaboration and code reviews.
+- Assists in identifying and resolving conflicts to ensure smooth code integration.
 
 #### GitHub Integration
 
@@ -357,36 +357,36 @@ For streamlined project management and collaborative development, we leverage Gi
 
 **Implementation:**
 
-- **Branching Strategy:** employing feature, development, and main branches for a structured workflow
-- **Commit Guidelines:** encouraging clear and concise commit messages for improved readability
-- **GitHub Hosting:** utilizing GitHub as a hosting platform for our project
-- **Issue Tracking:** leveraging GitHub's issue tracking system for efficient bug reporting and task management
+- **Branching Strategy:** Employing feature, development, and main branches for a structured workflow.
+- **Commit Guidelines:** Encouraging clear and concise commit messages for improved readability.
+- **GitHub Hosting:** Utilizing GitHub as a hosting platform for our project.
+- **Issue Tracking:** Leveraging GitHub's issue tracking system for efficient bug reporting and task management.
 
 **Branch protection rules:**
 The main branch is safeguarded. Pushing changes requires the creation of a pull request, with a mandatory review before merging. This ensures a thorough review process, promoting code quality and collaboration.
 
 ### System Requirements
 
-The system prerequisites for our Pac-Man® game have been meticulously defined to ensure seamless compatibility and optimal performance throughout the game's development and execution.
+The system prerequisites for our Pac-Man game have been meticulously defined to ensure seamless compatibility and optimal performance throughout the game's development and execution.
 
 #### Hardware Requirements
 
-- **Processor:** should support the x86 architecture, preferably a 16-bit processor to faithfully replicate the original game's environment
-- **Memory:** minimum of 512 KB RAM, with a recommended 1 MB or higher for enhanced performance
-- **Storage:** at least 10 MB of free disk space is necessary for game installation and saving game data
-- **Input Devices:** keyboard integration is essential for gameplay control
+- **Processor:** Should support the x86 architecture, preferably a 16-bit processor to faithfully replicate the original game's environment.
+- **Memory:** Minimum of 512 KB RAM, with a recommended 1 MB or higher for enhanced performance.
+- **Storage:** At least 10 MB of free disk space is necessary for game installation and saving game data.
+- **Input Devices:** Keyboard integration is essential for gameplay control.
 
 #### Software Requirements
 
-- **Operating System:** the DOSBox emulator is a mandatory prerequisite, providing a DOS environment on modern operating systems to accurately emulate the game's intended runtime environment
-- **Programming Language:** NASM (Netwide Assembler) is required for Assembly language development, chosen for its direct compatibility with x86 architecture and efficiency in handling low-level operations
-- **Development Tools:** a robust text editor (e.g., VSCode) is essential for coding, integrated with version control systems like Git for source code management. Compatibility with debugging tools that support Assembly language, NASM, and DOSBox integration is crucial for efficient development and troubleshooting
+- **Operating System:** The DOSBox emulator is a mandatory prerequisite, providing a DOS environment on modern operating systems to accurately emulate the game's intended runtime environment.
+- **Programming Language:** NASM (Netwide Assembler) is required for Assembly language development, chosen for its direct compatibility with x86 architecture and efficiency in handling low-level operations.
+- **Development Tools:** A robust text editor (e.g., VSCode) is essential for coding, integrated with version control systems like Git for source code management. Compatibility with debugging tools that support Assembly language, NASM, and DOSBox integration is crucial for efficient development and troubleshooting.
 
 #### Compatibility
 
-- **Operating Systems:** compatible with DOS environments provided by DOSBox on macOS and Windows. The game should seamlessly execute on both modern and legacy systems that meet the specified hardware requirements. Emphasis on backward compatibility is crucial to preserve the authenticity of the gameplay experience
+- **Operating Systems:** Compatible with DOS environments provided by DOSBox on macOS and Windows. The game should seamlessly execute on both modern and legacy systems that meet the specified hardware requirements. Emphasis on backward compatibility is crucial to preserve the authenticity of the gameplay experience.
 
-- **DOSBox Emulator:** the game is designed to ensure robustness and consistent performance within the DOSBox emulator, which serves as the cornerstone of our development and testing environment. This emphasis is critical for maintaining the stability and playability of the game across various platforms
+- **DOSBox Emulator:** The game is designed to ensure robustness and consistent performance within the DOSBox emulator, which serves as the cornerstone of our development and testing environment. This emphasis is critical for maintaining the stability and playability of the game across various platforms.
 
 ### Code Organization
 
@@ -421,7 +421,7 @@ The system prerequisites for our Pac-Man® game have been meticulously defined t
 The source code will be organized into separate files, each focusing on specific aspects of the game:
 
 - `main.asm`: Main entry point and game loop
-- `player.asm`: Player-controlled Pac-Man® character logic
+- `player.asm`: Player-controlled Pac-Man character logic
 - `ghosts.asm`: Logic for ghost characters and their behaviors
 - `items.asm`: Implementation of pellets, power pellets, and fruits
 - `ui.asm`: User interface elements and display logic
@@ -462,64 +462,64 @@ game_loop:
 
 The UI design focuses on simplicity and clarity to enhance the player's experience:
 
-- **Main Menu:** intuitive and user-friendly navigation for starting a new game, accessing settings, and exiting the game.
+- **Main menu:** Intuitive and user-friendly navigation for starting a new game, accessing settings, and exiting the game.
 
-- **Game heads-up display (HUD):** display of essential information such as score, remaining lives, and level progression.
+- **Game heads-up display (HUD):** Display of essential information such as score, remaining lives, and level progression.
 
-- **Game Over Screen:** informative and engaging screen displaying the player's achievements and options for restarting or exiting.
+- **Game over screen:** Informative and engaging screen displaying the player's achievements and options for restarting or exiting.
 
 #### Graphics and Animation
 
-Capturing the essence of the original Pac-Man® visuals:
+Capturing the essence of the original Pac-Man visuals:
 
 - **Sprite design:** Faithful recreation of Pac-Man, ghosts, and pellets with attention to detail.
 - **Animation:** Smooth and engaging movement of characters, enhancing the overall gaming experience.
 
 ##### Sprites
 
-##### Pac-Man® Sprite
+##### Pac-Man Sprite
 
-- **Design Dimensions:** The Pac-Man® sprite will have a design dimension of 32x32 pixels to maintain visual clarity and consistency.
-- **Animation Frames:** For smooth movement animation, Pac-Man® will have four frames of animation for each direction (up, down, left, and right).
+- **Design dimensions:** The Pac-Man sprite will have a design dimension of 32x32 pixels to maintain visual clarity and consistency.
+- **Animation frames:** For smooth movement animation, Pac-Man will have four frames of animation for each direction (up, down, left, and right).
 
 ##### Ghost Sprites
 
-- **Individual Ghosts:** Each ghost (Blinky, Pinky, Inky, Clyde) will have a sprite sheet with dimensions of 32x32 pixels for clear representation.
-- **Animation Frames:** Similar to Pac-Man®, each ghost will have four frames of animation for each direction, contributing to fluid movement.
+- **Individual ghosts:** Each ghost (Blinky, Pinky, Inky, Clyde) will have a sprite sheet with dimensions of 32x32 pixels for clear representation.
+- **Animation frames:** Similar to Pac-Man, each ghost will have four frames of animation for each direction, contributing to fluid movement.
 
 ##### Pellet and Power Pellet Sprites
 
-- **Pellet Size:** Standard pellets will be represented by 8x8 pixel sprites, contributing to a uniform and grid-based visual style.
-- **Power Pellet Size:** Larger 16x16 pixel sprites will distinguish power pellets, emphasizing their special significance in the game.
+- **Pellet size:** Standard pellets will be represented by 8x8 pixel sprites, contributing to a uniform and grid-based visual style.
+- **Power pellet size:** Larger 16x16 pixel sprites will distinguish power pellets, emphasizing their special significance in the game.
 
 ##### Fruit Sprites
 
-- **Fruit Variety:** Different fruits will have unique sprites, each with a specific design dimension of 16x16 pixels.
-- **Spawn Animation:** Each fruit will feature a spawn animation with three frames, contributing to a visually engaging appearance when appearing in the maze.
+- **Fruit variety:** Different fruits will have unique sprites, each with a specific design dimension of 16x16 pixels.
+- **Spawn animation:** Each fruit will feature a spawn animation with three frames, contributing to a visually engaging appearance when appearing in the maze.
 
 ##### Maze Walls and Pipes
 
-- **Wall Dimensions:** Maze walls will be represented by 16x16 pixel sprites, ensuring a consistent grid-based layout throughout the maze.
-- **Pipe Appearance:** Pipes, facilitating movement between maze sections, will be visually distinct with a 16x16 pixel sprite.
+- **Wall dimensions:** Maze walls will be represented by 16x16 pixel sprites, ensuring a consistent grid-based layout throughout the maze.
+- **Pipe appearance:** Pipes, facilitating movement between maze sections, will be visually distinct with a 16x16 pixel sprite.
 
 ##### Ghost House Door
 
-- **Door Design:** The door of the ghost house will be represented by a 16x16 pixel sprite.
-- **State Changes:** To depict different states (open, closed), two frames of animation will be used for smooth transitions.
+- **Door design:** The door of the ghost house will be represented by a 16x16 pixel sprite.
+- **State changes:** To depict different states (open, closed), two frames of animation will be used for smooth transitions.
 
 ##### Animation Frame Rate
 
 - **Consistency:** All sprite animations will be designed with a frame rate of 10 frames per second (FPS) to ensure smooth transitions and visual appeal.
 
-These sprite design specifications aim to create a visually cohesive and engaging game environment, capturing the iconic look and feel of the original Pac-Man® while accommodating modern design standards.
+These sprite design specifications aim to create a visually cohesive and engaging game environment, capturing the iconic look and feel of the original Pac-Man while accommodating modern design standards.
 
 #### Audio Design
 
 An immersive audio experience to complement the visuals:
 
-- **Sound Effects:** Authentic sounds for Pac-Man eating pellets, ghost movements, and other in-game actions.
+- **Sound effects:** Authentic sounds for Pac-Man eating pellets, ghost movements, and other in-game actions.
 
-- **Background Music:** Optional background music to enhance the gaming atmosphere without being intrusive.
+- **Background music:** Optional background music to enhance the gaming atmosphere without being intrusive.
 
 #### Design Review
 
@@ -527,9 +527,9 @@ A design review will be conducted to assess the proposed design against the proj
 
 ### Game Dynamics
 
-- **Ghost Artificial Intelligence:** Implementing diverse ghost behaviors, including pursuit and evasion strategies.
-- **Maze Variations:** Introducing different maze layouts to keep the gameplay experience dynamic.
-- **Bonus Features:** Incorporating bonus items and features to add variety to the game.
+- **Ghost artificial intelligence:** Implementing diverse ghost behaviors, including pursuit and evasion strategies.
+- **Maze variations:** Introducing different maze layouts to keep the gameplay experience dynamic.
+- **Bonus features:** Incorporating bonus items and features to add variety to the game.
 
 ### Game Mechanics
 
@@ -537,47 +537,47 @@ A design review will be conducted to assess the proposed design against the proj
 
 #### Maze
 
-The game area consists of a maze where Pac-Man® navigates and engages with various elements.
+The game area consists of a maze where Pac-Man navigates and engages with various elements.
 
 Key attributes of the maze include:
 
 **Design complexity:** The maze features a structured layout with walls, corridors, and intersections, providing the spatial framework for gameplay.
 
-**Pellet placement:** Pellets are strategically placed throughout the maze, serving as collectibles for Pac-Man®. Their distribution contributes to the challenge and dynamics of the game.
+**Pellet placement:** Pellets are strategically placed throughout the maze, serving as collectibles for Pac-Man. Their distribution contributes to the challenge and dynamics of the game.
 
 **Super pellet location:** Super Pac-Gums, which grant temporary invincibility and ghost-vulnerability, are positioned in specific areas of the maze, influencing strategic player movement.
 
 **Fruit spawning points:** Bonus fruits appear at designated intervals within the maze, offering additional points for the player upon consumption.
 
-**Walls and pipes:** Physical barriers in the form of walls and pipes create obstacles and pathways within the maze, shaping the navigation experience for both Pac-Man® and ghosts.
+**Walls and pipes:** Physical barriers in the form of walls and pipes create obstacles and pathways within the maze, shaping the navigation experience for both Pac-Man and ghosts.
 
-**Ghost house:** A dedicated area in the maze where ghosts reside and regenerate after being consumed by Pac-Man®. The ghost house is an integral part of the maze dynamics.
+**Ghost house:** A dedicated area in the maze where ghosts reside and regenerate after being consumed by Pac-Man. The ghost house is an integral part of the maze dynamics.
 
 **Dynamic elements:** The maze layout may evolve as players progress through levels, introducing variations in pellet distribution and additional challenges.
 
 #### Player Movement
 
-The player-controlled Pac-Man® will move in response to keyboard input. The movement will be based on a grid system within the game board.
+The player-controlled Pac-Man will move in response to keyboard input. The movement will be based on a grid system within the game board.
 
-**Keyboard input for Pac-Man® movement:**
+**Keyboard input for Pac-Man movement:**
 
 - ↑ : move up
 - ↓ : move down
 - ← : move left
 - → : move right
 
-**Grid-Based navigation:** The movement operates on a grid, allowing precise positioning and orientation of Pac-Man® within the game environment.
+**Grid-Based navigation:** The movement operates on a grid, allowing precise positioning and orientation of Pac-Man within the game environment.
 
 **Response time:** ≤200 milliseconds.
 
 #### Ghosts Behavior
 
-Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man®, random movement, and specific strategies for each ghost.
+Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man, random movement, and specific strategies for each ghost.
 
-- **Blinky:** always follows directly behind Pac-Man®, except if the short-sighted decision-making causes him to take an inefficient path
-- **Pinky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
-- **Inky:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
-- **Clyde:** exhibits erratic behavior by alternating between chasing Pac-Man® and moving to a random location when he's too close to the player
+- **Blinky:** Always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path.
+- **Pinky:** Embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him.
+- **Inky:** Exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm.
+- **Clyde:** Exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he's too close to the player.
 
 #### Items Implementation
 
@@ -608,14 +608,14 @@ Ghosts will follow predefined patterns according to their individual characteris
 - **Pellet**: 10 points
 - **Power Pellet**: 50 points
 - **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points)
-- **Fruits**: Varying points
-  - cherry: 100 points
-  - strawberry: 300 points
-  - orange: 500 points
-  - apple: 700 points
-  - melon: 1000 points
-  - Galaxian: 2000 points
-  - bell: 3000 points
+- **Fruits**: Varying points,
+  - Cherry: 100 points.
+  - Strawberry: 300 points.
+  - Orange: 500 points.
+  - Apple: 700 points.
+  - Melon: 1000 points.
+  - Galaxian: 2000 points.
+  - Bell: 3000 points.
 
 #### Collision Handling
 
@@ -755,12 +755,12 @@ The game development process includes thorough testing and optimization to ensur
 
 **Configuration settings:**
 
-- Users will be provided with clear setup instructions, including recommended DOSBox configuration settings to optimize performance and ensure proper emulation of the original Pac-Man® environment.
+- Users will be provided with clear setup instructions, including recommended DOSBox configuration settings to optimize performance and ensure proper emulation of the original Pac-Man environment.
 
 **Enhancing authenticity:**
 
 - DOSBox serves as a crucial component in preserving the classic gaming experience, replicating the original hardware conditions and constraints.
-- Integration with DOSBox allows the game to run smoothly on modern systems, bringing nostalgia to players while maintaining the integrity of the Pac-Man® gameplay.
+- Integration with DOSBox allows the game to run smoothly on modern systems, bringing nostalgia to players while maintaining the integrity of the Pac-Man gameplay.
 
 **Potential Challenges:**
 
@@ -813,7 +813,7 @@ A comprehensive testing plan will be created to cover various aspects of the gam
 
 ### Deployment Architecture
 
-The deployment architecture for the Pac-Man® game in assembly x86 on DOSBox involves packaging the assembly code, game assets, and required files into a deployable format compatible with the DOSBox emulator. The primary deployment architecture is centered around creating a standalone package that users can run within the DOSBox environment.
+The deployment architecture for the Pac-Man game in assembly x86 on DOSBox involves packaging the assembly code, game assets, and required files into a deployable format compatible with the DOSBox emulator. The primary deployment architecture is centered around creating a standalone package that users can run within the DOSBox environment.
 
 ### Deployment Environments
 
@@ -821,7 +821,7 @@ The game is intended to run on various environments supported by the DOSBox emul
 
 ### Phased Roll-out Plan
 
-The roll-out of the Pac-Man® game will be conducted in phases to manage potential issues and gather user feedback progressively. The phased roll-out plan includes the following steps:
+The roll-out of the Pac-Man game will be conducted in phases to manage potential issues and gather user feedback progressively. The phased roll-out plan includes the following steps:
 
 **Internal Testing:**
 Limited release to the development team for thorough testing.
@@ -841,7 +841,7 @@ Monitor user reviews and feedback for further improvements.
 
 #### Testers Selection for Phased Roll-out
 
-In order to ensure a successful and effective phased roll-out of the Pac-Man® game, careful selection of testers is crucial at each stage. The goal is to gather diverse feedback, identify potential issues, and gradually expand the user base. Below is a plan for selecting testers during each phase:
+In order to ensure a successful and effective phased roll-out of the Pac-Man game, careful selection of testers is crucial at each stage. The goal is to gather diverse feedback, identify potential issues, and gradually expand the user base. Below is a plan for selecting testers during each phase:
 
 **Internal Testing:**
 For the initial internal testing phase, focus on individuals within the development team. Select testers based on the following criteria.
@@ -875,7 +875,7 @@ When releasing the game to the public, aim for a broad and representative user b
 
 Throughout all phases, encourage testers to provide feedback on various aspects, including gameplay experience, performance, and bug reports. Utilize feedback forms, surveys, and discussion to collect insights. Adjust the selection criteria based on the evolving needs of each testing phase.
 
-By carefully selecting testers at each stage, the project can benefit from a well-rounded and comprehensive testing process, leading to a more polished and user-friendly Pac-Man® game upon the final release.
+By carefully selecting testers at each stage, the project can benefit from a well-rounded and comprehensive testing process, leading to a more polished and user-friendly Pac-Man game upon the final release.
 
 ### Plan for Communicating Changes
 
@@ -893,9 +893,9 @@ Include links to download the latest version of the game.
 
 ### GitHub Release Management
 
-GitHub releases will be the primary mechanism for managing and distributing Pac-Man® releases. Each release on GitHub will include a packaged version of the game for easy download and execution within the DOSBox emulator. The release page will host release notes, known issues, and links to relevant resources for users.
+GitHub releases will be the primary mechanism for managing and distributing Pac-Man releases. Each release on GitHub will include a packaged version of the game for easy download and execution within the DOSBox emulator. The release page will host release notes, known issues, and links to relevant resources for users.
 
-This deployment plan ensures a controlled and well-communicated release process, allowing for effective testing, user feedback, and continuous improvement of the Pac-Man® game.
+This deployment plan ensures a controlled and well-communicated release process, allowing for effective testing, user feedback, and continuous improvement of the Pac-Man game.
 
 ## Documentation
 
@@ -907,7 +907,7 @@ Comprehensive documentation will be maintained for the source code, ensuring tha
 
 ## Legal Considerations
 
-Adherence to licensing and copyright regulations for Pac-Man®-inspired elements will be a priority throughout development.
+Adherence to licensing and copyright regulations for Pac-Man-inspired elements will be a priority throughout development.
 
 ## Milestones
 
