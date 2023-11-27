@@ -533,7 +533,7 @@ A design review will be conducted to assess the proposed design against the proj
 
 ### Game Mechanics
 
-![alt text](image/pacmanClass.png)
+![Class diagram](image/pacmanClass.png)
 
 #### Maze
 
@@ -605,9 +605,9 @@ Ghosts will follow predefined patterns according to their individual characteris
 
 ##### Game Balencing
 
-- **Pellet**: 10 points
-- **Power Pellet**: 50 points
-- **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points)
+- **Pellet**: 10 points.
+- **Power Pellet**: 50 points.
+- **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points).
 - **Fruits**: Varying points,
   - Cherry: 100 points.
   - Strawberry: 300 points.
@@ -681,7 +681,7 @@ In the Pac-Man game development, collision mechanisms play a crucial role in det
 **Outcome:** Prevents passage through the wall.
 **Consequence:** Character remains stationary, altering the navigation path.
 
-<!-- Screenshot of the door -->
+![Ghost house](image/ghostHouse.png)
 
 #### Level Progression
 
@@ -792,7 +792,7 @@ In the pursuit of delivering a seamless gaming experience, performance optimizat
 
 **Cross-platform considerations:**
 
-- Adapting optimization strategies for different operating systems to guarantee a consistent gaming experience on Windows, macOS, and Linux.
+- Adapting optimization strategies for different operating systems to guarantee a consistent gaming experience on Windows and macOS.
 - Compatibility testing on a variety of hardware setups to identify and resolve platform-specific performance challenges.
 
 **Potential challenges:**
