@@ -19,7 +19,7 @@
   - [Software and hardware used](#software-and-hardware-used)
 - [Testing Strategy](#testing-strategy)
   - [Testing Scope](#testing-scope)
-  - [Test Objectives](#test-objectives)
+  - [Testing Objectives](#testing-objectives)
   - [Test Cases](#test-cases)
   - [Elements Outside of the Test Scope for this Project](#elements-outside-of-the-test-scope-for-this-project)
 - [Types of Tests for Project Pac-Man](#types-of-tests-for-project-pac-man)
@@ -125,9 +125,9 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 **These tests will ensure that the Pac-Man game, developed in NASM Assembly, not only meets the high quality standards required by our team, but also aims to ensure an optimal user experience. These standards will ensure that every player benefits from a seamless, immersive and entertaining gaming experience.**
 
 
-# Testing Objectives
+## Testing Objectives
 
-## Specific objectives of the tests
+### Specific objectives of the tests
 
 ### 1. Feature Testing
 - **Objective** : Ensure the correct functioning of all game features.
