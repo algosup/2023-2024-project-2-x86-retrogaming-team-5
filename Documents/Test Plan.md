@@ -33,7 +33,7 @@
 - [Test Planning](#test-planning)
   - [Who will test](#who-will-test)
   - [When will the tests be carried out](#when-will-the-tests-be-carried-out)
-  - [Conclusion](#conclusion-4)
+  - [In Conclusion](#in-conclusion)
 - [Declare Test Success Criteria](#declare-test-success-criteria)
     - [Tracking](#tracking)
 
@@ -294,7 +294,7 @@ A combination of functional (unit, integration, and systems) and non-functional 
 ### Beta User Testing
 - **When** : After the prototype, between December 12 and 20, for user feedback before the final version.
 
-## Conclusion
+## In Conclusion
 
 This test organisation ensures complete and effective coverage at every stage of development. Leading to a stable final release by December 21.
 
