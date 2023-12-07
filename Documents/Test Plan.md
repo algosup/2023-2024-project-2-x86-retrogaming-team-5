@@ -26,7 +26,7 @@
   - [Functional Tests](#functional-tests)
   - [Non-functional Tests](#non-functional-tests)
   - [Conclusion](#conclusion-1)
-- [Risk Analysis for the Pac-Man Project in NASM Assembly](#risk-analysis-for-the-pac-man-project-in-nasm-assembly)
+- [Risk analysis](#risk-analysis)
   - [Identified Risks](#identified-risks)
   - [Action Plan](#action-plan)
   - [Conclusion](#conclusion-2)
@@ -236,7 +236,7 @@ To achieve optimal test coverage, you will need to use a combination of function
 A combination of functional (unit, integration, and systems) and non-functional (performance, compatibility, usability) testing is recommended for the Pac-Man project in NASM Assembly. This approach provides comprehensive test coverage, ensuring quality, performance and an optimal user experience.
 
 ---
-# Risk Analysis for the Pac-Man Project in NASM Assembly
+# Risk Analysis
 ---
 ## Identified Risks
 
