@@ -125,6 +125,38 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 **These tests will ensure that the Pac-Man game, developed in NASM Assembly, not only meets the high quality standards required by our team, but also aims to ensure an optimal user experience. These standards will ensure that every player benefits from a seamless, immersive and entertaining gaming experience.**
 
 
+# Testing Objectives
+
+## Specific objectives of the tests
+
+### 1. Feature Testing
+- **Objective** : Ensure the correct functioning of all game features.
+- **Reason** : Prevent malfunctions that affect the gaming experience.
+
+### 2. User Interface (UI) Testing
+- **Objective** : Guarantee an intuitive and responsive UI.
+- **Reason** : A poorly designed UI can push users away.
+
+### 3. Performance Test
+- **Objective** : Ensure fluidity and stability of the game, without slowdowns or crashes.
+- **Reason** : Performance is crucial for user engagement and satisfaction.
+
+### 4. Compatibility Testing
+- **Objective** : Confirm compatibility with different hardware configurations.
+- **Reason** : Have an identical user experience on different hardware configurations.
+
+### 5. Intégration Test
+- **Objective** : Check the correct interaction between all the modules of the game.
+- **Reason** : Identify and resolve integration issues to ensure overall stability.
+
+### 7. Tests de Charge et de Stress
+- **Objective** : Test the resilience of the game over a long period of use.
+- **Reason** : Guarantee stable performance under intensive use conditions.
+
+## Conclusion
+Each test is designed with a clear objective, aiming to minimize bugs and maximize game quality.
+
+
 ## Test Cases
 ### Legend
 - **Status:** To Do, In Progress, Done
