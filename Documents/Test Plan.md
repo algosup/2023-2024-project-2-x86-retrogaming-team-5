@@ -57,21 +57,21 @@ This game aims to allow ALGOSUP students to learn programming in NASM Assembly l
 
 This project will also allow fans of retro games to discover a variation of the classic Pac-Man game, with a distinct artistic direction.
 # How does it work?
-The product tested is a reconstituted version of the Pac-Man game with a new artistic direction, designed in NASM assembly language. The game consists of moving a circular character inside a maze, in order to make him eat all the pac-gums there while avoiding being hit by ghosts.
+The product tested is a reconstituted version of the Pac-Man game with a new artistic direction, designed in NASM Assembly language. The game consists of moving a circular character inside a maze, in order to make him eat all the pellets there while avoiding being hit by ghosts.
 # What software and hardware does the product use?
 | Software                    | Description | 
 |---------------------------|----------------
-| NASM                      | assembly language used to write assembly code.
+| NASM                      | Assembly language used to write assembly code.
 | Visual Studio Code        | Versatile and powerful source code editor. It is used to write and edit Assembly code. VSCode offers features like syntax highlighting, version control integration, and extensions to facilitate Assembly development.
-| Dosbox                    |A DOS environment emulator, used to run and test the game in an environment similar to that for which it was originally designed. DOSBox is essential to ensure compatibility and proper functioning of the game.
+| Dosbox                    |A DOS environment emulator, used to run and test the game in an environment similar to the one for which it was originally designed. DOSBox is essential to ensure compatibility and proper functioning of the game.
 
 | Hardware                    | Description | 
 |---------------------------|----------------
 | Laptop                      | A laptop with sufficient specifications to run the software mentioned above.
-| Graphic card        |A stable graphics card is necessary for rendering graphics, especially if working with Aseprite for pixel art.
+| Graphic card        |A stable graphic card is necessary for rendering graphics, especially if working with Aseprite for pixel art.
 | Storage space                  |A hard drive or SSD with enough space to store code, graphics resources, and development tools.
-| Input Devices (Keyboard)                    |Indispensable for precise manipulation of graphic elements.
-| Monitor                   |A screen with good resolution and an adequate refresh rate for visual comfort
+| Input devices (Keyboard)                    |Indispensable for precise manipulation of graphic elements.
+| Monitor                   |A screen with good resolution and an adequate refresh rate for visual comfort.
 
 # Testing Strategy
 --------------------
