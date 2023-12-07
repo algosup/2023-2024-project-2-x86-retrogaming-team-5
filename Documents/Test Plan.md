@@ -348,3 +348,7 @@ This test organisation ensures complete and effective coverage at every stage of
 
 
 # Screenshot
+
+
+
+**Checked and approved by Guillaume Deramchi, Project Manager**
