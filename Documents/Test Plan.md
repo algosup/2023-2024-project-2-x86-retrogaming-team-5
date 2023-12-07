@@ -104,7 +104,7 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 - **Lenovo Thinkbook 14**
   - Windows 11 Pro
   - 14 inch (1920 x 1080)
-  - Processor: Intel(R) Core(TM) i7-10565G7 CPU @ 1.30GHz
+  - Processor: 12th Gen Intel(R) Core(TM) i7-1255U   1.70 GHz
   - RAM: 16.0 GB
   - System type: 64-bit operating system, x64-based processor
 
