@@ -49,17 +49,17 @@
 | Regression Test | Regression testing is a type of software testing that seeks to uncover new software bugs, or regressions, in existing functional and non-functional areas of a system after changes such as enhancements, patches or configuration changes. |
 | Test Case     | A test case is a set of conditions or variables under which a tester will determine whether an application, software system or one of its features is working as it was originally established for it to do. |
 
-## Product Analysis
+# Product Analysis
 ---
-# Who will use the game?
+## Who will use the game?
 This slightly modified reproduction of Pac-Man will be mainly intended for ALGOSUP students. We chose this target because we think they will enjoy the challenge of this classic game. However, we do not limit our audience to this community alone. Indeed, we will also make the game available on GitHub, a platform accessible to everyone. This will allow anyone interested, whether a retro gaming fan, developer, or simply curious, to access and experience the game. We hope this will encourage an exchange of ideas and feedback, which will help us to improve and refine the game.
-# What is it used for?
+## What is it used for?
 This game aims to allow ALGOSUP students to learn programming in NASM Assembly language, thus offering them a fun way to learn the language.
 
 This project will also allow fans of retro games to discover a variation of the classic Pac-Man game, with a distinct artistic direction.
-# How does it work?
+## How does it work?
 The product tested is a reconstituted version of the Pac-Man game with a new artistic direction, designed in NASM Assembly language. The game consists of moving a circular character inside a maze, in order to make him eat all the pellets there while avoiding being hit by ghosts.
-# What software and hardware does the product use?
+## What software and hardware does the product use?
 | Software                    | Description | 
 |---------------------------|----------------
 | NASM                      | Assembly language used to write assembly code.
@@ -76,7 +76,7 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 
 # Testing Strategy
 --------------------
-# Testing Scope
+## Testing Scope
 **Hardware Tested**
 | Hardware                    | WHY ? | 
 |---------------------------|----------------
