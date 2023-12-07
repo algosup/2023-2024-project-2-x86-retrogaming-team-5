@@ -20,6 +20,7 @@
 - [Testing Strategy](#testing-strategy)
   - [Testing Scope](#testing-scope)
   - [Test Objectives](#test-objectives)
+  - [Test Cases](#test-cases)
   - [Elements Outside of the Test Scope for this Project](#elements-outside-of-the-test-scope-for-this-project)
 - [Types of Tests for Project Pac-Man](#types-of-tests-for-project-pac-man)
   - [Functional Testing](#functional-testing)
