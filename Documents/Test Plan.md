@@ -11,6 +11,7 @@
 ## Table of Contents
 
 
+- [Glossary](#Glossary)
 - [Product Analysis](#product-analysis)
   - [Who will use the game?](#who-will-use-the-game)
   - [What is it used for?](#what-is-it-used-for)
