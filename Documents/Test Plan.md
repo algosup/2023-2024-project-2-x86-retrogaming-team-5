@@ -52,13 +52,13 @@
 
 # Product Analysis
 ---
-## Who will use the game?
+## Who will use the game
 This slightly modified reproduction of Pac-Man will be mainly intended for ALGOSUP students. We chose this target because we think they will enjoy the challenge of this classic game. However, we do not limit our audience to this community alone. Indeed, we will also make the game available on GitHub, a platform accessible to everyone. This will allow anyone interested, whether a retro gaming fan, developer, or simply curious, to access and experience the game. We hope this will encourage an exchange of ideas and feedback, which will help us to improve and refine the game.
-## What is it used for?
+## What it's used for
 This game aims to allow ALGOSUP students to learn programming in NASM Assembly language, thus offering them a fun way to learn the language.
 
 This project will also allow fans of retro games to discover a variation of the classic Pac-Man game, with a distinct artistic direction.
-## How does it work?
+## How it works
 The product tested is a reconstituted version of the Pac-Man game with a new artistic direction, designed in NASM Assembly language. The game consists of moving a circular character inside a maze, in order to make him eat all the pellets there while avoiding being hit by ghosts.
 ## What software and hardware does the product use?
 | Software                    | Description | 
@@ -242,11 +242,11 @@ A combination of functional (unit, integration, and systems) and non-functional 
 - **Expertise** : Knowledge in NASM Assembly.
 
 ### 2. Software Engineer
-- **Rôle** : Unit and integration testing.
+- **Role** : Unit and integration testing.
 - **Expertise** : Knowledge of the source code and game features.
 
 ### 3. External Users
-- **Rôle** : Usability testing and user feedback.
+- **Role** : Usability testing and user feedback.
 - **Required Expertise** : No programming expertise required.
 - **Availability** : Mainly in the final, post-prototype phases.
 
@@ -274,11 +274,11 @@ This test organisation ensures complete and effective coverage at every stage of
 ## Specific objectives of the tests
 
 ### 1. Feature Testing
-- **objective** : Ensure the correct functioning of all game features.
+- **Objective** : Ensure the correct functioning of all game features.
 - **Reason** : Prevent malfunctions that affect the gaming experience.
 
 ### 2. User Interface (UI) Testing
-- **objective** : Guarantee an intuitive and responsive UI.
+- **Objective** : Guarantee an intuitive and responsive UI.
 - **Reason** : A poorly designed UI can push users away.
 
 ### 3. Performance Test
@@ -286,15 +286,15 @@ This test organisation ensures complete and effective coverage at every stage of
 - **Reason** : Performance is crucial for user engagement and satisfaction.
 
 ### 4. Compatibility Testing
-- **objective** : Confirm compatibility with different hardware configurations.
+- **Objective** : Confirm compatibility with different hardware configurations.
 - **Reason** : Have an identical user experience on different hardware configurations.
 
-### 5. Intégration Test
-- **objective** : Check the correct interaction between all the modules of the game.
+### 5. Integration Test
+- **Objective** : Check the correct interaction between all the modules of the game.
 - **Reason** : Identify and resolve integration issues to ensure overall stability.
 
-### 7. Tests de Charge et de Stress
-- **objective** : Test the resilience of the game over a long period of use.
+### 7. Load and Stress Tests
+- **Objective** : Test the resilience of the game over a long period of use.
 - **Reason** : Guarantee stable performance under intensive use conditions.
 
 ## Conclusion
@@ -314,7 +314,7 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 # Ressources Allocation
 
 ### Human ressources
-- **Quality assurance (QA)**
+- **Quality Assurance (QA)**
   - Functional testers
   - Run performance tests
   - Usability testers
@@ -324,7 +324,7 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 - **Project Manager**
   - Coordination and deadline management
 
-### Logiciels
+### Software
 - **Development Environments**
   - Visual Studio Code for writing the code
   - NASM compilers and interpreters
@@ -334,7 +334,7 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 - **Version Management Software**
   - Git, GitHub
 
-### Matérial
+### Materials
 - **Test Computers**
   - Machines with different configurations (Windows, Mac)
 - **Input Devices**
