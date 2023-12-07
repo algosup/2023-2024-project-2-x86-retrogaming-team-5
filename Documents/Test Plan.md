@@ -119,6 +119,9 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 | White box testing                   |Analysis of the game with the code.
 | Regression Testing                   |To verify that new code changes have not adversely affected existing game functionality.
 
+**These tests will ensure that the Pac-Man game, developed in NASM Assembly, not only meets the high quality standards required by our team, but also aims to ensure an optimal user experience. These standards will ensure that every player benefits from a seamless, immersive and entertaining gaming experience.**
+
+
 ## Test Cases
 ### Legend
 - **Status:** To Do, In Progress, Done
@@ -145,7 +148,6 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 | TC17 | Wall and Pipe collision         | Pipe collision:\nScenario: Pac-Man or ghosts encounter a pipe entrance or exit.\nOutcome: Facilitates movement between different sections of the maze.\nConsequence: Characters transition to the connected pipe exit.                                                                                                                                                                  | To Do       | 🔴       |
 | TC18 | Items Implementation            | • Spawn Frequency:\n    ◦ Cherry: Appears every 70 seconds.\n    ◦ Strawberry: Appears every 120 seconds.\n    ◦ Orange: Appears every 170 seconds.\n    ◦ Apple: Appears every 220 seconds.\n    ◦ Melon: Appears every 270 seconds.\n    ◦ Galaxian: Appears every 320 seconds.\n    ◦ Bell: Appears every 370 seconds.                                                                | To Do       | 🔴       |
 
-**These tests will ensure that the Pac-Man game, developed in NASM Assembly, not only meets the high quality standards required by our team, but also aims to ensure an optimal user experience. These standards will ensure that every player benefits from a seamless, immersive and entertaining gaming experience.**
 
 # Elements Outside of the Test Scope for this Project
 -----------------
