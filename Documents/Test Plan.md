@@ -41,12 +41,33 @@
 
 ## Glossary
 
-| Term          | Definition |
-|---------------|------------|
-| Smoke Test    | A smoke test is a type of software testing that comprises of a non-exhaustive set of tests that aim at ensuring that the most important functions work. |
+| Word                                     | Definition                                                                                                                                                                                                                   |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Assembly language (x86)                  | It's a low-level programming language that can directly communicate with the processor.                                                                                                                                      |
+| DOSBox emulator                          | It's a free and open-source emulator which runs software for MS-DOS compatible disk operating systems—primarily video games.                                                                                                 |
+| NASM (netwide assembler)                 | It's an assembler and disassembler for the Intel x86 architecture.                                                                                                                                                           |
+| IDE (integrated development environment) | It's a software application that provides comprehensive facilities for software development.                                                                                                                                 |
+| Sprite                                   | In computer graphics, a sprite is a two-dimensional bitmap that is part of a larger scene.                                                                                                                                   |                                                                              |
+| Ghost house                              | A designated area in the game maze where ghosts reside and regenerate, integral to the dynamics of Pac-Man gameplay.                                                                                                         |
+| Pellet                                   | Small collectible objects in the game maze that contribute to the player's score when consumed by Pac-Man.                                                                                                                  |
+| Power pellet                             | A special type of pellet that grants temporary invincibility to Pac-Man, allowing him to eat ghosts.                                                                                                                        |
+| Smoke Test               | A preliminary test to check the basic functionality of a software application.                                                                                             |
+| Regression Test          | Testing that ensures that recent program or code changes have not adversely affected existing features.                                                                   |
+| Test Case                | A specific condition or variable used to determine if a software program or system is functioning correctly.                                                               |
+| Pac-Man                  | A classic arcade game where the player navigates a maze while avoiding ghosts.                                                                                             |
+| Black Box Testing        | Testing that is based on the requirements and functionality of the software, without knowledge of its internal code structure.                                             |
+| White Box Testing        | Testing based on the internal logic and structure of the code.                                                                                                             |
+| Unit Testing             | Testing of individual units or components of a software.                                                                                                                  |
+| Integration Testing      | Testing in which individual software modules are combined and tested as a group.                                                                                           |
+| System Testing           | Testing conducted on a complete, integrated system to evaluate the system's compliance with its specified requirements.                                                    |
+| Performance Testing      | Testing to determine the responsiveness, reliability, and/or scalability of a system under a given workload.                                                               |
+| Compatibility Testing    | Testing to ensure compatibility of an application or web site with different browsers, OS, and hardware, etc.                                                              |
+| Usability Testing        | Testing to evaluate a product by testing it on users.                                                                                                                      |
+| Gameplay                 | The specific way in which players interact with a game.                                                                                                                    |
+| Game Logic             | The set of rules and mechanisms that govern the gameplay.                                                                                                                  |
+| Scoring System           | A method used in games for keeping track of players' scores.                                                                                                               |
+| Stress Testing           | Testing to evaluate how a system behaves under an extreme load.                                                                                                            |
 | Functional Test | Functional testing is a quality assurance (QA) process and a type of black-box testing that bases its test cases on the specifications of the software component under test. |
-| Regression Test | Regression testing is a type of software testing that seeks to uncover new software bugs, or regressions, in existing functional and non-functional areas of a system after changes such as enhancements, patches or configuration changes. |
-| Test Case     | A test case is a set of conditions or variables under which a tester will determine whether an application, software system or one of its features is working as it was originally established for it to do. |
 
 # Product Analysis
 ---
