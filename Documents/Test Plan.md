@@ -94,6 +94,20 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 | Input devices (Keyboard)                    |Indispensable for precise manipulation of graphic elements.
 | Monitor                   |A screen with good resolution and an adequate refresh rate for visual comfort.
 
+**Hardware**
+
+- **MacBook Air 2020**
+  - 13.3 inch (2560 x 1600)
+  - macOS Ventura 13.0
+  - Apple M1 Chip
+
+- **Lenovo Thinkbook 14**
+  - Windows 11 Pro
+  - 14 inch (1920 x 1080)
+  - Processor: Intel(R) Core(TM) i7-10565G7 CPU @ 1.30GHz
+  - RAM: 16.0 GB
+  - System type: 64-bit operating system, x64-based processor
+
 # Testing Strategy
 --------------------
 ## Testing Scope
