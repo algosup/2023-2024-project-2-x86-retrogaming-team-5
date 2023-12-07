@@ -52,11 +52,14 @@
 ## Product Analysis
 ---
 # Who will use the game?
-This game Pac-Man, will be mainly intended for students of ALGOSUP. We chose this target because we think they will enjoy the challenge of this classic game. However, we do not limit our audience to that community alone. Indeed, we will also make the game available on GitHub, a platform accessible to everyone. This will allow anyone interested, whether they are fans of retro games, developers or just curious, to access and experience the game. We hope this will encourage an exchange of ideas and feedback, which will help us improve and refine the game.”
+This slightly modified reproduction of Pac-Man will be mainly intended for ALGOSUP students. We chose this target because we think they will enjoy the challenge of this classic game. However, we do not limit our audience to this community alone. Indeed, we will also make the game available on GitHub, a platform accessible to everyone. This will allow anyone interested, whether a retro gaming fan, developer, or simply curious, to access and experience the game. We hope this will encourage an exchange of ideas and feedback, which will help us to improve and refine the game.
 # What is it used for?
-This game has a dual purpose: to offer fans of retro games the opportunity to immerse themselves in the legendary Pac-Man, and to allow ALGOSUP students to learn programming in the NASM assembler language, offering them a fun way to learn the language.
+This game aims to allow ALGOSUP students to learn programming in NASM assembly language, thus offering them a fun way to learn the language.
+
+This project will also allow fans of retro games to discover a variation of the classic Pac-Man game, with a distinct artistic direction.
 # How does it work?
-The product tested is a reconstituted version of the Pac-Man game, designed in the NASM assembly language. The game consists of moving Pac-man, a circular character inside a labyrinth, in order to make him eat all the pac-gums that are there while avoiding being hit by ghosts.
+The product tested is a reconstituted version of the Pac-Man game with a new artistic direction, designed in NASM assembly language. The game consists of moving a circular character inside a maze, in order to make him eat all the pac-gums there while avoiding being hit by ghosts.
+
 # What software and hardware does the product use?
 | Software                    | Description | 
 |---------------------------|----------------
