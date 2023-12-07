@@ -127,7 +127,7 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 
 ## Testing Objectives
 
-### Specific objectives of the tests
+### Specific objectives of the tests:
 
 ### 1. Feature Testing
 - **Objective** : Ensure the correct functioning of all game features.
