@@ -173,7 +173,7 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 
 To achieve optimal test coverage, you will need to use a combination of functional and non-functional tests. Here are the details :
 
-## Functional Testing
+## Functional Tests
 
 ### 1. Unit Testing
 - **Objective**: Test individual functions or procedures in NASM Assembly.
@@ -235,7 +235,7 @@ A combination of functional (unit, integration, and systems) and non-functional 
 
 # Test Planning
 
-## Who will test ?
+## Who will test 
 
 ### 1. Internal Testers (QA)
 - **Role** : Functional, performance and usability tests.
@@ -250,7 +250,7 @@ A combination of functional (unit, integration, and systems) and non-functional 
 - **Required Expertise** : No programming expertise required.
 - **Availability** : Mainly in the final, post-prototype phases.
 
-## When will the tests be carried out ?
+## When will the tests be carried out 
 
 ### Unit and Integration Testing
 - **When** : Continuously during development. Intensification before the prototype on December 11.
@@ -271,7 +271,7 @@ This test organisation ensures complete and effective coverage at every stage of
 ---
 # Testing Objectives
 
-## Objectifs Spécifiques des Tests
+## Specific objectives of the tests
 
 ### 1. Feature Testing
 - **objective** : Ensure the correct functioning of all game features.
@@ -307,7 +307,7 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 
 ![Test Success Criteria PlantUML Diagram](https://plantuml-server.kkeisuke.dev/png/XPFHQjj044NVzoi6IgXjA9YMbDI6D8vjWHzIIjpcVQqTALElTitERgWf_P_cE_nZdLs7e9X0z2JDlPgvSrQwugX3J9rLl2Mtqq5tOB3HoSRAk_XDTmYpGBglRtIzRODFpiozzG7UBPVLkFhSSpWVyVhKLLNLnM9-wlB1O7XoB6Qpyu_ZdaF2HOG_2k2rRd9bfTzXN2wfvl0lQt-LUW-Bm-CcHJ093EbMHdIe2e4diI57aRmJ1Wnre7Zu5-JE873Y7JeMJUNS4AYzZp9eDFg1767zBCDSNaD1DXg9_05kV428zzh1ETpeNvBeEhLy8dqQdq6ZoQOyZHniSGzH-XvzQseTDLHh5-4xXiQ7JhiQOSMSa1KwKrWgDRbDJXfYUHTgpSZJlDdTuJ6K1c_kHWqCLWowLolUl11q6E7hC0zmCDWZ3oNTP1tz3Z83SkrK2YpF2YqZ39mVvd3Kl4tNXqZuAjdbRugdJ3dLDJ93o9_79NovE2lbcRK5BjmYU_k0fbJlj2KZHWDQGArSJ1BY0U7dgiXpxneAdSXpt-s4q8OinNsVgbXaktJ4Acj2acSBMiOziz5obC9dgYOvDPTc5lFKzJ5iawpTosaKFbVINNww_m00.png)
 
-## Suivi
+## Tracking
 **Continuous Monitoring** : Regular meetings will be held to assess progress against the exit criteria.
 
 ---
