@@ -21,7 +21,7 @@
   - [Testing Scope](#testing-scope)
   - [Testing Objectives](#testing-objectives)
   - [Test Cases](#test-cases)
-  - [Elements Outside of the Test Scope for this Project](#elements-outside-of-the-test-scope-for-this-project)
+  - [Excluded elements from project testing scope](#excluded-elements-from-project-testing-scope)
 - [Types of Tests for Project Pac-Man](#types-of-tests-for-project-pac-man)
   - [Functional Testing](#functional-testing)
   - [Non-functional Tests](#non-functional-tests)
@@ -183,7 +183,7 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 | TC17 | Wall and Pipe collision         | Pipe collision:\nScenario: Pac-Man or ghosts encounter a pipe entrance or exit.\nOutcome: Facilitates movement between different sections of the maze.\nConsequence: Characters transition to the connected pipe exit.                                                                                                                                                                  | To Do       | 🔴       |
 | TC18 | Items Implementation            | • Spawn Frequency:\n    ◦ Cherry: Appears every 70 seconds.\n    ◦ Strawberry: Appears every 120 seconds.\n    ◦ Orange: Appears every 170 seconds.\n    ◦ Apple: Appears every 220 seconds.\n    ◦ Melon: Appears every 270 seconds.\n    ◦ Galaxian: Appears every 320 seconds.\n    ◦ Bell: Appears every 370 seconds. 
 
-## Elements Outside of the Test Scope for this Project
+## Excluded elements from project testing scope
 -----------------
 ### 1. Features Outside of the Functional Specifications
 - Features that have not been defined in the functional specifications will not be tested. This includes improvements or changes suggested but not approved for the current version of the game.
