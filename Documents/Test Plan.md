@@ -22,7 +22,7 @@
   - [Testing Objectives](#testing-objectives)
   - [Test Cases](#test-cases)
   - [Excluded elements from project testing scope](#excluded-elements-from-project-testing-scope)
-- [Types of Tests for Project Pac-Man](#types-of-tests-for-project-pac-man)
+- [Project Pac-Man test types](#Project-Pac-Man-test-types)
   - [Functional Testing](#functional-testing)
   - [Non-functional Tests](#non-functional-tests)
   - [Conclusion](#conclusion)
@@ -201,7 +201,7 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 - Although performance and stability testing is included, very long-term durability testing, such as continued use over several months or years, is not covered.
 
 ---
-# Types of Tests for Project Pac-Man
+# Project Pac-Man test types
 
 To achieve optimal test coverage, you will need to use a combination of functional and non-functional tests. Here are the details :
 
