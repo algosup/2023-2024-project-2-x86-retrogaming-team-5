@@ -13,9 +13,9 @@
 
 - [Glossary](#Glossary)
 - [Product Analysis](#product-analysis)
-  - [Who will use the game?](#who-will-use-the-game)
-  - [What is it used for?](#what-it's-used-for)
-  - [How does it work?](#how-does-it-work)
+  - [Who will use the game](#who-will-use-the-game)
+  - [What it's used for](#what-it's-used-for)
+  - [How it works](#how-it-works)
   - [What software and hardware does the product use?](#what-software-and-hardware-does-the-product-use)
 - [Testing Strategy](#testing-strategy)
   - [Testing Scope](#testing-scope)
