@@ -16,7 +16,7 @@
   - [Who will use the game](#who-will-use-the-game)
   - [Purpose](#purpose)
   - [How it works](#how-it-works)
-  - [What software and hardware does the product use?](#what-software-and-hardware-does-the-product-use)
+  - [Software and hardware used](#software-and-hardware-used)
 - [Testing Strategy](#testing-strategy)
   - [Testing Scope](#testing-scope)
   - [Test Objectives](#test-objectives)
