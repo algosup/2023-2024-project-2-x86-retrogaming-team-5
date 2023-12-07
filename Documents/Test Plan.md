@@ -345,7 +345,43 @@ This test organisation ensures complete and effective coverage at every stage of
 ---
 # Testing Schedule
 ---
+## **Phase 1: Preparation**
 
+- **Week 1** : Configuration of the test environment.
+    - Setting up DOSBox
+    - Configuring development environments
+
+## **Phase 2: Initial Testing and Development**
+
+- **Week 3** : Unit tests and first integration tests.
+    - First functional testing
+    - First integration tests
+
+## **Phase 3: Intermediate Testing**
+
+- **Week 4** : functionality testing and integration testing.
+    - Continue functional testing
+    - Continue integration tests
+    - test the game on DOSBox
+
+## **Phase 4: User Interface**
+
+- **Week 6** :User interface verification.
+    - Interface testing
+
+## **Phase 5: Final Testing and Launch Preparation**
+
+- **Week 7** : Final tests, fixes of the last bugs, and preparation for launch.
+    - Final regression tests
+    - Checking the DOSBox documentation and setup guides
+    - Stress test
+
+## **Phase 6: launching**
+
+- **Week 7** : Launch of the game.
+    - On GitHub
+    - Monitoring user feedback
+    - Quick bug fixes if necessary
 
 # Screenshot
 
