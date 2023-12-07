@@ -23,7 +23,7 @@
   - [Test Cases](#test-cases)
   - [Excluded elements from project testing scope](#excluded-elements-from-project-testing-scope)
 - [Project Pac-Man test types](#Project-Pac-Man-test-types)
-  - [Functional Testing](#functional-testing)
+  - [Functional Tests](#functional-tests)
   - [Non-functional Tests](#non-functional-tests)
   - [Conclusion](#conclusion)
 - [Risk Analysis for the Pac-Man Project in NASM Assembly](#risk-analysis-for-the-pac-man-project-in-nasm-assembly)
