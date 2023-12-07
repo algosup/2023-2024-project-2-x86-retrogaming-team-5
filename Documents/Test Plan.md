@@ -60,7 +60,7 @@ This game aims to allow ALGOSUP students to learn programming in NASM Assembly l
 This project will also allow fans of retro games to discover a variation of the classic Pac-Man game, with a distinct artistic direction.
 ## How it works
 The product tested is a reconstituted version of the Pac-Man game with a new artistic direction, designed in NASM Assembly language. The game consists of moving a circular character inside a maze, in order to make him eat all the pellets there while avoiding being hit by ghosts.
-## What software and hardware does the product use?
+## Software and hardware used
 | Software                    | Description | 
 |---------------------------|----------------
 | NASM                      | Assembly language used to write assembly code.
