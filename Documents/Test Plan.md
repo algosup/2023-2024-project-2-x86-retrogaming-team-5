@@ -33,7 +33,7 @@
 - [Test Planning](#test-planning)
   - [Who will test](#who-will-test)
   - [When will the tests be carried out](#when-will-the-tests-be-carried-out)
-  - [Conclusion](#conclusion-3)
+  - [Conclusion](#conclusion-4)
 - [Declare Test Success Criteria](#declare-test-success-criteria)
     - [Tracking](#tracking)
 
