@@ -53,7 +53,7 @@
 # Who will use the game?
 This slightly modified reproduction of Pac-Man will be mainly intended for ALGOSUP students. We chose this target because we think they will enjoy the challenge of this classic game. However, we do not limit our audience to this community alone. Indeed, we will also make the game available on GitHub, a platform accessible to everyone. This will allow anyone interested, whether a retro gaming fan, developer, or simply curious, to access and experience the game. We hope this will encourage an exchange of ideas and feedback, which will help us to improve and refine the game.
 # What is it used for?
-This game aims to allow ALGOSUP students to learn programming in NASM assembly language, thus offering them a fun way to learn the language.
+This game aims to allow ALGOSUP students to learn programming in NASM Assembly language, thus offering them a fun way to learn the language.
 
 This project will also allow fans of retro games to discover a variation of the classic Pac-Man game, with a distinct artistic direction.
 # How does it work?
