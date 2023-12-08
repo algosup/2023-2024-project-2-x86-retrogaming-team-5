@@ -182,7 +182,7 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 - **Objective** : Check the correct interaction between all the modules of the game.
 - **Reason** : Identify and resolve integration issues to ensure overall stability.
 
-### 7. Tests de Charge et de Stress
+### 7. Load and Stress Tests
 - **Objective** : Test the resilience of the game over a long period of use.
 - **Reason** : Guarantee stable performance under intensive use conditions.
 
