@@ -200,12 +200,12 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 | TC01 | Menu | menu displayed | In progress⌛ | 🔴 |
 | TC02 | Maze | maze displayed | Done✅ | 🔴 |
 | TC03 | Pac-man sprite | Display pac-man in the maze | Done✅ | 🔴 |
-| TC04 | Ghost Sprite | Display the ghost in the maze | In Progress⌛ | 🔴 |
+| TC04 | Ghost Sprite | Display the ghost in the maze | Done✅ | 🔴 |
 | TC05 | Pellet and power pellet sprites | display the pellet and power pellet sprites | In Progress⌛ | 🔴 |
 | TC06 | Fruits sprites | display the fruit sprites | In Progress⌛ | 🔴 |
-| TC07 | Display the ghost in the ghost house | When we launch the game the ghost must be in the ghost house | In Progress⌛ | 🔴 |
+| TC07 | Display the ghost in the ghost house | When we launch the game the ghost must be in the ghost house | Done✅ | 🔴 |
 | TC08 | player movement | Be able to control pac-man with the keyboard arrow | Done✅ | 🔴 |
-| TC09 | wall and pipe collision | Wall collision:**Scenario**: Pac-Man or ghosts attempt to move into a wall. **Outcome**: Prevents passage through the wall.**Consequence**: Character remains stationary, altering the navigation path. | In Progress⌛ | 🔴 |
+| TC09 | wall and pipe collision | Wall collision:**Scenario**: Pac-Man or ghosts attempt to move into a wall. **Outcome**: Prevents passage through the wall.**Consequence**: Character remains stationary, altering the navigation path. | Done✅ | 🔴 |
 | TC10 | wall and pipe collision | Pipe collision:**Scenario**: Pac-Man or ghosts encounter a pipe entrance or exit.**Outcome**: Facilitates movement between different sections of the maze.**Consequence**: Characters transition to the connected pipe exit. | To Do📝 | 🔴 |
 | TC11 | Ghost behavior | Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man, random movement, and specific strategies for each ghost. | To Do📝 | 🔴 |
 | TC12 | Ghost Behavior (Blinky) | **Blinky**:Always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path. | To Do📝 | 🔴 |
