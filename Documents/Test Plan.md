@@ -135,8 +135,8 @@ The product tested is a reconstituted version of the Pac-Man game with a new art
 |  Features                   | WHY ? | 
 |---------------------------|----------------
 | Gameplay                      |Verify that all game features, such as Pac-Man movements, ghost interactions, and collecting points, work.
-| Logique du Jeu      |Ensure that game logic, including ghost movement algorithms and victory or defeat conditions, conform to expectations.
-| Système de Scores               |Test the scoring system, including score display.
+| Game Logic      |Ensure that game logic, including ghost movement algorithms and victory or defeat conditions, conform to expectations.
+| Scoring System              |Test the scoring system, including score display.
 
 **Performance Test**
 |  Test                   | WHY ? | 
