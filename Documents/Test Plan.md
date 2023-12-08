@@ -263,21 +263,17 @@ To achieve optimal test coverage, you will need to use a combination of function
 
 ## Non-functional Tests
 
-### 1. Performance Testing
-- **Objective** : To assess responsiveness and fluidity of movements.
-- **Importance** : Guarantee a smooth user experience, especially for a game where responsiveness is key.
-
-### 2. Compatibility Testing
+### 1. Compatibility Testing
 - **Objective**: Ensure the game works on various operating systems and hardware configurations.
 - **Importance**: Provide a similar experience across different environments.
 
-### 3. Usability Testing
+### 2. Usability Testing
 - **Objective** : Evaluate ease of use and intuitiveness of controls.
 - **Importance** : Ensuring that the game is accessible and enjoyable for players.
 
 ## Conclusion
 
-A combination of functional (unit, integration, and systems) and non-functional (performance, compatibility, usability) testing is recommended for the Pac-Man project in NASM Assembly. This approach provides comprehensive test coverage, ensuring quality, performance and an optimal user experience.
+A combination of functional (unit, integration, and systems) and non-functional (compatibility, usability) testing is recommended for the Pac-Man project in NASM Assembly. This approach provides comprehensive test coverage, ensuring quality, performance and an optimal user experience.
 
 ---
 # Risk Analysis
