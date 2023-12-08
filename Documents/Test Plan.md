@@ -192,35 +192,35 @@ Each test is designed with a clear objective, aiming to minimize bugs and maximi
 
 ## Test Cases
 ### Legend
-- **Status:** To Do, In Progress, Done
-- **Priority:** High🔴, Medium🟠, Low🔵,Done🟢
+- **Status:** To Do📝, In Progress⌛, Done✅
+- **Priority:** High🔴, Medium🟠, Low🔵,
 
 | ID | Test Description | Expected Result | Status | Priority |
 | --- | --- | --- | --- | --- |
-| TC01 | Menu | menu displayed | In progress | 🔴 |
-| TC02 | Maze | maze displayed | Done | 🟢 |
-| TC03 | Pac-man sprite | Display pac-man in the maze | Done | 🟢 |
-| TC04 | Ghost Sprite | Display the ghost in the maze | In Progress | 🔴 |
-| TC05 | Pellet and power pellet sprites | display the pellet and power pellet sprites | In Progress | 🔴 |
-| TC06 | Fruits sprites | display the fruit sprites | In Progress | 🔴 |
-| TC07 | Display the ghost in the ghost house | When we launch the game the ghost must be in the ghost house | In Progress | 🔴 |
-| TC08 | player movement | Be able to control pac-man with the keyboard arrow | Done | 🟢 |
-| TC09 | wall and pipe collision | Wall collision:**Scenario**: Pac-Man or ghosts attempt to move into a wall. **Outcome**: Prevents passage through the wall.**Consequence**: Character remains stationary, altering the navigation path. | In Progress | 🔴 |
-| TC10 | wall and pipe collision | Pipe collision:**Scenario**: Pac-Man or ghosts encounter a pipe entrance or exit.**Outcome**: Facilitates movement between different sections of the maze.**Consequence**: Characters transition to the connected pipe exit. | To Do | 🔴 |
-| TC11 | Ghost behavior | Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man, random movement, and specific strategies for each ghost. | To Do | 🔴 |
-| TC12 | Ghost Behavior (Blinky) | **Blinky**:Always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path. | To Do | 🔴 |
-| TC13 | Ghost Behavior (pinky) | **Pinky**:Embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him. | To Do | 🔴 |
-| TC14 | Ghost Behavior (inky) | **Inky**:Exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky’s position and a set point calculated using a specific algorithm. | To Do | 🔴 |
-| TC15 | Ghost Behavior (clyde) | **Clyde**:Exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he’s too close to the player. | To Do | 🔴 |
-| TC16 | Scoring system | Recording and displaying the highest scores achieved by players. | Done | 🟢 |
-| TC17 | Scoring system | Point values: Assigning specific point values to different in-game actions, such as eating pellets or catching ghosts. | To Do | 🔴 |
-| TC18 | Object collision (pellet collision) | Pellet collision: **Scenario**: Pac-Man moves over a pellet in the maze.**Outcome**: Incremental increase in the player’s score. **Consequence**: The pellet disappears from the maze. | To Do | 🔴 |
-| TC19 | Object collision (Super Pac-Gum consumption) | Super Pac-Gum consumption: **Scenario**: Pac-Man consumes a super pac-gum.**Outcome**: Activation of temporary invulnerability and ghost-vulnerability mode. **Consequence**: Super pac-gum disappears from the maze. | To Do | 🔴 |
-| TC20 | Object collision (Fruit collection) | Fruit collision: **Scenario**: Pac-Man reaches and consumes a fruit. **Outcome**: Significant score boost. **Consequence**: The fruit disappears from the maze. | To Do | 🔴 |
-| TC21 | Ghost collision (Normal collision) | Normal collision: **Scenario**: When Pac-Man encounters a ghost without the protection of a power pellet. **Outcome**: Results in a life loss for Pac-Man, triggering a “death” state. **Consequence**: Pac-Man is respawned to a predefined location in the maze. | To Do | 🔴 |
-| TC22 | Ghost collision (Collision with Super Pac-Gum activation) | Collision with Super Pac-Gum activation: **Scenario**: Pac-Man consumes a super pac-gum, granting temporary invulnerability. **Outcome**: Ghosts become vulnerable, and Pac-Man can “eat” them upon contact. **Consequence**: Eaten ghosts return to their starting box, reactivating after a brief cooldown (3 seconds). | To Do | 🔴 |
-| TC23 | Check game over screen functionality | If the player loose all his life before collecting all the pellets on the maze, the **Game Over** animation will be displays. At this state the player can see his current score before he loose and the highest score he achieved on the game. Moreover, he can decide to leave the game, start a new game or go back to the menu. | To Do | 🔴 |
-| TC24 | DOSBox compatibility and performance | Game runs smoothly within DOSBox across different OS | To Do | 🔴 |
+| TC01 | Menu | menu displayed | In progress⌛ | 🔴 |
+| TC02 | Maze | maze displayed | Done✅ | 🔴 |
+| TC03 | Pac-man sprite | Display pac-man in the maze | Done✅ | 🔴 |
+| TC04 | Ghost Sprite | Display the ghost in the maze | In Progress⌛ | 🔴 |
+| TC05 | Pellet and power pellet sprites | display the pellet and power pellet sprites | In Progress⌛ | 🔴 |
+| TC06 | Fruits sprites | display the fruit sprites | In Progress⌛ | 🔴 |
+| TC07 | Display the ghost in the ghost house | When we launch the game the ghost must be in the ghost house | In Progress⌛ | 🔴 |
+| TC08 | player movement | Be able to control pac-man with the keyboard arrow | Done✅ | 🔴 |
+| TC09 | wall and pipe collision | Wall collision:**Scenario**: Pac-Man or ghosts attempt to move into a wall. **Outcome**: Prevents passage through the wall.**Consequence**: Character remains stationary, altering the navigation path. | In Progress⌛ | 🔴 |
+| TC10 | wall and pipe collision | Pipe collision:**Scenario**: Pac-Man or ghosts encounter a pipe entrance or exit.**Outcome**: Facilitates movement between different sections of the maze.**Consequence**: Characters transition to the connected pipe exit. | To Do📝 | 🔴 |
+| TC11 | Ghost behavior | Ghosts will follow predefined patterns according to their individual characteristics. The behavior will include chasing Pac-Man, random movement, and specific strategies for each ghost. | To Do📝 | 🔴 |
+| TC12 | Ghost Behavior (Blinky) | **Blinky**:Always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path. | To Do📝 | 🔴 |
+| TC13 | Ghost Behavior (pinky) | **Pinky**:Embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him. | To Do📝 | 🔴 |
+| TC14 | Ghost Behavior (inky) | **Inky**:Exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky’s position and a set point calculated using a specific algorithm. | To Do📝 | 🔴 |
+| TC15 | Ghost Behavior (clyde) | **Clyde**:Exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he’s too close to the player. | To Do📝 | 🔴 |
+| TC16 | Scoring system | Recording and displaying the highest scores achieved by players. | Done✅ | 🔴 |
+| TC17 | Scoring system | Point values: Assigning specific point values to different in-game actions, such as eating pellets or catching ghosts. | To Do📝 | 🔴 |
+| TC18 | Object collision (pellet collision) | Pellet collision: **Scenario**: Pac-Man moves over a pellet in the maze.**Outcome**: Incremental increase in the player’s score. **Consequence**: The pellet disappears from the maze. | To Do📝 | 🔴 |
+| TC19 | Object collision (Super Pac-Gum consumption) | Super Pac-Gum consumption: **Scenario**: Pac-Man consumes a super pac-gum.**Outcome**: Activation of temporary invulnerability and ghost-vulnerability mode. **Consequence**: Super pac-gum disappears from the maze. | To Do📝 | 🔴 |
+| TC20 | Object collision (Fruit collection) | Fruit collision: **Scenario**: Pac-Man reaches and consumes a fruit. **Outcome**: Significant score boost. **Consequence**: The fruit disappears from the maze. | To Do📝 | 🔴 |
+| TC21 | Ghost collision (Normal collision) | Normal collision: **Scenario**: When Pac-Man encounters a ghost without the protection of a power pellet. **Outcome**: Results in a life loss for Pac-Man, triggering a “death” state. **Consequence**: Pac-Man is respawned to a predefined location in the maze. | To Do📝 | 🔴 |
+| TC22 | Ghost collision (Collision with Super Pac-Gum activation) | Collision with Super Pac-Gum activation: **Scenario**: Pac-Man consumes a super pac-gum, granting temporary invulnerability. **Outcome**: Ghosts become vulnerable, and Pac-Man can “eat” them upon contact. **Consequence**: Eaten ghosts return to their starting box, reactivating after a brief cooldown (3 seconds). | To Do📝 | 🔴 |
+| TC23 | Check game over screen functionality | If the player loose all his life before collecting all the pellets on the maze, the **Game Over** animation will be displays. At this state the player can see his current score before he loose and the highest score he achieved on the game. Moreover, he can decide to leave the game, start a new game or go back to the menu. | To Do📝 | 🔴 |
+| TC24 | DOSBox compatibility and performance | Game runs smoothly within DOSBox across different OS | To Do📝 | 🔴 |
 
 
 ## Excluded elements from project testing scope
