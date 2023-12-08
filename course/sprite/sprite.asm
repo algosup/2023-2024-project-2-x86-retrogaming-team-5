@@ -7,6 +7,14 @@ org 100h
 %define SPRITEH 16
 section .data
 
+xpos_ghost1 dw 34160 - 3322
+
+xpos_ghost2 dw 34160 - 3306
+
+xpos_ghost3 dw 34160 - 3290
+
+xpos_ghost4 dw 34160 - 3274
+
 xPos dw 34000 - 960
 
 GPos dw 14500
@@ -33,16 +41,20 @@ section .bss
 keyPressed resb 1  ; Reserve a byte for the state of the key
 section .text
 start:
-
+        
+     
         call drawMaze
 ; Main game loop
     gameloop:
         int 0x1a
         cmp dx, [old_time]
-        ;je gameloop
+        ;jne gameloop
         mov [old_time], dx
-        
         call update_score
+        call draw_ghost1
+        call draw_ghost2
+        call draw_ghost3
+        call draw_ghost4
         call read_character_key_was_pressed
         call spawn_entities
    
@@ -89,7 +101,7 @@ move_right:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add word [yPos], 15
         mov cx, [yPos]                           
         mov dx, ax                          
@@ -103,7 +115,7 @@ move_right:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add ax, 8
         add word [yPos], 15
         mov cx, [yPos]                             
@@ -118,7 +130,7 @@ move_right:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add ax, 15
         add word [yPos], 15
         mov cx, [yPos]                             
@@ -161,8 +173,8 @@ move_left:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
-        add word [yPos], 15
+        mov [yPos], dx
+        add word [yPos], 0
         mov cx, [yPos]                           
         mov dx, ax                          
         call getColor 
@@ -175,9 +187,9 @@ move_left:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add ax, 8
-        add word [yPos], 15
+        add word [yPos], 0
         mov cx, [yPos]                             
         mov dx, ax                          
         call getColor 
@@ -190,9 +202,9 @@ move_left:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add ax, 15
-        add word [yPos], 15
+        add word [yPos], 0
         mov cx, [yPos]                             
         mov dx, ax                          
         call getColor 
@@ -236,8 +248,8 @@ move_up:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
-        add word [yPos], 15
+        mov [yPos], dx
+        add word [yPos], 0
         mov cx, [yPos]                           
         mov dx, ax                          
         call getColor 
@@ -250,8 +262,8 @@ move_up:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
-        add ax, 8
+        mov [yPos], dx
+        add ax, 0
         add word [yPos], 15
         mov cx, [yPos]                             
         mov dx, ax                          
@@ -265,9 +277,9 @@ move_up:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
-        add ax, 15
-        add word [yPos], 15
+        mov [yPos], dx
+        add ax, 0
+        add word [yPos], 8
         mov cx, [yPos]                             
         mov dx, ax                          
         call getColor 
@@ -306,7 +318,7 @@ move_down:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add word [yPos], 15
         mov cx, [yPos]                           
         mov dx, ax                          
@@ -320,8 +332,8 @@ move_down:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
-        add ax, 8
+        mov [yPos], dx
+        add ax, 15
         add word [yPos], 15
         mov cx, [yPos]                             
         mov dx, ax                          
@@ -335,9 +347,9 @@ move_down:
         mov cx, window_width
         xor dx, dx
         div cx
-        mov [yPos], dl
+        mov [yPos], dx
         add ax, 15
-        add word [yPos], 15
+        add word [yPos], 8
         mov cx, [yPos]                             
         mov dx, ax                          
         call getColor 
@@ -383,39 +395,39 @@ esc:
         ret
 
     boucle_changeleft:
-        cmp si, pLeftClose
+        cmp si, SantaLClose
         jne .pacmanopend
         jmp .pacmanclosed
 
     .pacmanopend:
-       mov si, pLeftOpen
+       mov si, SantaLOpen
        ret
      .pacmanclosed:
-        mov si, pLeftClose
+        mov si, SantaLClose
         ret
 
     boucle_changeUp:
-        cmp si, pUpClose
+        cmp si, SantaUClose
         jne .pacmnopend
         jmp .pacmnclosed
 
     .pacmnopend:
-       mov si, pUpOpen
+       mov si, SantaUOpen
        ret
     .pacmnclosed:
-        mov si, pUpClose
+        mov si, SantaUClose
         ret
     
     boucle_changedn:
-        cmp si, pacmanDnOpen
+        cmp si, SantaDOpen
         jne .pacmnopd
         jmp .pacmncd
 
     .pacmnopd:
-       mov si,pacmanDnOpen
+       mov si,SantaDOpen
        ret
     .pacmncd:
-        mov si, pacmanDnOpen
+        mov si, SantaDClose
         ret
 
 
@@ -439,6 +451,59 @@ draw_letter:
             mov cx, 7
             rep movsb
             add di, window_width-7
+            dec dx
+            jnz .eachLine
+        ret
+
+draw_ghost1:
+   mov si, galaxian
+   mov di, [xpos_ghost1]
+   mov ax, 0xA000
+   mov es, ax 
+   mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+draw_ghost2:
+   mov si, pomme
+   mov di, [xpos_ghost2]
+   mov ax, 0xA000
+   mov es, ax 
+   mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+draw_ghost3:
+   mov si, cerise
+   mov di, [xpos_ghost3]
+   mov ax, 0xA000
+   mov es, ax 
+   mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+draw_ghost4:
+   mov si, fraise
+   mov di, [xpos_ghost4]
+   mov ax, 0xA000
+   mov es, ax 
+   mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
             dec dx
             jnz .eachLine
         ret

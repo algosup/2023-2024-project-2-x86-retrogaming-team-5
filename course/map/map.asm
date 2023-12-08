@@ -30,14 +30,14 @@ section .data
             db 0b1111_1111,0b1111_1111,0b1111_1111,0b1111_1111,0b1111_1111
 
 drawMaze:
-
+    
     mov si, maze ;set si as the maze array
     mov cl, 0b1000_0000
     dec si ;set cl as the comparator
     mov al,[si]   ; set al as the current byte of si's array
     
     mov di, window_width*game_stats_height    ; set the start of the maze
-    xor bx, bx   
+    xor bx, bx  
     drawingloop:
 
         cmp byte [nb_tile], 8
