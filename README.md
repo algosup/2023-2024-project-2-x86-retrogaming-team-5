@@ -18,9 +18,12 @@ Clone our project.
 
 ## Step 4: Build the project
 
-Go in the main folder using the followings commands
+Go in the main folder using the followings commands:
+
 `cd algosup-workshop-master`
+
 `cd srcs`
+
 `cd main`
 
 Then build the `build-main.cmd`
@@ -30,7 +33,9 @@ This will create an executable in the `bin` folder.
 ## Step 5: Launch DOSBox
 
 Click on the `launch-dosbox.cmd` to open DOSBox. Enter the following commands on the DOSBox window:
+
 ```c:```
+
 ```main2.com```
 
 Then you can play.
