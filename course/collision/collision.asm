@@ -1,7 +1,8 @@
 org 100h
 section .data
 
-    colorWall dw 0x10;0xff                        ; color of the walls
+    colorWall dw 0x10
+    ;0xff                        ; color of the walls
     ;candyColor dw 0x43
 
 section .text
@@ -25,3 +26,4 @@ getColor:
 
     .end:
         ret
+

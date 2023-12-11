@@ -1,76 +1,11 @@
-org 100h
-
-%define SCREENW 320
-%define SCREENH 200
-
-%define SPRITEW 16
-%define SPRITEH 16
-section .data
-
-xpos_ChristmasSocks dw 24800
-xpos_BarleySugar dw 25000
-xpos_ChristmasOrnament dw 25200
-xpos_Star dw 25400
-
-xpos_ghost1 dw 34160 - 3322
-
-xpos_ghost2 dw 34160 - 3306
-
-xpos_ghost3 dw 34160 - 3290
-
-xpos_ghost4 dw 34160 - 3274
-
-xPos dw 34000 - 960
-
-GPos dw 14500
-
-xVelocity dw 1
-
-spritew dw 16
-
-spriteh dw 16
-
-old_XPOS dw 0
-
-yPos dw 0
-
-old_time equ 0xf9fe+0x06
-
-charValue db 'X$'
-
-charNoKey db 'False$'
-
 
 
 section .bss
 keyPressed resb 1  ; Reserve a byte for the state of the key
 section .text
 start:
-        
-     
-        call drawMaze
-; Main game loop
-    gameloop:
-        int 0x1a
-        cmp dx, [old_time]
-        ;jne gameloop
-        mov [old_time], dx
-        call update_score
-        call draw_ghost1
-        call draw_ghost2
-        call draw_ghost3
-        call draw_ghost4
-        call read_character_key_was_pressed
-        call spawn_entities
-   
-       
-        ; Delay to slow down animation
-        jmp gameloop
-spawn_entities:
-    mov di, [xPos]
-    call draw_sprite
-    ret
- ; End of game, return to text mode
+
+; End of game, return to text mode
 ; Function to read key pressed
 read_character_key_was_pressed:
     mov ah, 00h
@@ -460,9 +395,9 @@ draw_letter:
             jnz .eachLine
         ret
 
-draw_ghost1:
-   mov si, galaxian
-   mov di, [xpos_ghost1]
+draw_reindeer1:
+   mov si, reindeer1
+   mov di, [xpos_reindeer1]
    mov ax, 0xA000
    mov es, ax 
    mov dx, 16
@@ -473,9 +408,9 @@ draw_ghost1:
             dec dx
             jnz .eachLine
         ret
-draw_ghost2:
-   mov si, pomme
-   mov di, [xpos_ghost2]
+draw_reindeer2:
+   mov si, reindeer2
+   mov di, [xpos_reindeer2]
    mov ax, 0xA000
    mov es, ax 
    mov dx, 16
@@ -486,9 +421,9 @@ draw_ghost2:
             dec dx
             jnz .eachLine
         ret
-draw_ghost3:
-   mov si, cerise
-   mov di, [xpos_ghost3]
+draw_reindeer3:
+   mov si, reindeer3
+   mov di, [xpos_reindeer3]
    mov ax, 0xA000
    mov es, ax 
    mov dx, 16
@@ -499,68 +434,12 @@ draw_ghost3:
             dec dx
             jnz .eachLine
         ret
-draw_ghost4:
-   mov si, fraise
-   mov di, [xpos_ghost4]
+draw_reindeer4:
+   mov si, reindeer4
+   mov di, [xpos_reindeer4]
    mov ax, 0xA000
    mov es, ax 
    mov dx, 16
-        .eachLine:
-            mov cx, 16
-            rep movsb
-            add di, window_width-16
-            dec dx
-            jnz .eachLine
-        ret
-
-draw_ChristmasSocks:
-    mov si, ChristmasSocks
-    mov di, [xpos_ChristmasSocks]
-    mov ax, 0xA000
-    mov es, ax
-    mov dx, 16
-        .eachLine:
-            mov cx, 16
-            rep movsb
-            add di, window_width-16
-            dec dx
-            jnz .eachLine
-        ret
-
-draw_BarleySugar:
-    mov si, BarleySugar
-    mov di, [xpos_BarleySugar]
-    mov ax, 0xA000
-    mov es, ax
-    mov dx, 16
-        .eachLine:
-            mov cx, 16
-            rep movsb
-            add di, window_width-16
-            dec dx
-            jnz .eachLine
-        ret
-
-draw_ChristmasOrnament:
-    mov si, ChristmasOrnament
-    mov di, [xpos_ChristmasOrnament]
-    mov ax, 0xA000
-    mov es, ax
-    mov dx, 16
-        .eachLine:
-            mov cx, 16
-            rep movsb
-            add di, window_width-16
-            dec dx
-            jnz .eachLine
-        ret
-
-draw_Star:
-    mov si, Star
-    mov di, [xpos_Star]
-    mov ax, 0xA000
-    mov es, ax
-    mov dx, 16
         .eachLine:
             mov cx, 16
             rep movsb

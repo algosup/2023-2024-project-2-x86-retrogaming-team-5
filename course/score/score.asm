@@ -1,13 +1,10 @@
-; ---------------------------------------------
-; Data Section
-; ---------------------------------------------
-score1 dw 1141
-score2 dw 8907
+score1 dw 0000
+score2 dw 0000
 
 digits db 5 DUP(0) ; Array to store individual digits
 highscore_title dw 'high score', 0
-highscore1 dw 0625
-highscore2 dw 9100
+highscore1 dw 0000
+highscore2 dw 0000
 
 
 length db 0
@@ -33,10 +30,6 @@ life_count db 3
 
 %DEFINE score_offset 10
 
-; ---------------------------------------------
-; Procedures Section
-; ---------------------------------------------
-; Draw the player's current score
 draw_scoreboard:
 
     inc bx
@@ -50,7 +43,6 @@ draw_scoreboard:
     jb draw_scoreboard
     ret
 
-; Procedure to update and redraw the score, high score, and lives
 update_score:
     call draw_score
     call draw_highscore
@@ -58,7 +50,6 @@ update_score:
 
     ret
 
-; Procedure to draw the player's current score
 draw_score:
     mov ax, [score1]  ; Load the integer into AX
     mov dx, window_width*score_yoffset + score_xoffset
@@ -73,7 +64,6 @@ draw_score:
     mov word [digits_counter], 2
     ret
 
-; Procedure to count the length of a string
 count_char:
     mov byte [length], 0
 
@@ -87,8 +77,7 @@ count_char:
 
     .count_end:
         ret
-
-; Procedure to map a character to its graphic representation    
+    
 get_letter:
     cmp al, 0
     je get_letter._0
@@ -210,7 +199,7 @@ get_letter:
         ret
 
 
-; Drawing logic
+
 draw_highscore:
 
     push ax
