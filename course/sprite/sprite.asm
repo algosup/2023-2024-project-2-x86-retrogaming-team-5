@@ -7,6 +7,11 @@ org 100h
 %define SPRITEH 16
 section .data
 
+xpos_ChristmasSocks dw 24800
+xpos_BarleySugar dw 25000
+xpos_ChristmasOrnament dw 25200
+xpos_Star dw 25400
+
 xpos_ghost1 dw 34160 - 3322
 
 xpos_ghost2 dw 34160 - 3306
@@ -500,6 +505,62 @@ draw_ghost4:
    mov ax, 0xA000
    mov es, ax 
    mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+
+draw_ChristmasSocks:
+    mov si, ChristmasSocks
+    mov di, [xpos_ChristmasSocks]
+    mov ax, 0xA000
+    mov es, ax
+    mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+
+draw_BarleySugar:
+    mov si, BarleySugar
+    mov di, [xpos_BarleySugar]
+    mov ax, 0xA000
+    mov es, ax
+    mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+
+draw_ChristmasOrnament:
+    mov si, ChristmasOrnament
+    mov di, [xpos_ChristmasOrnament]
+    mov ax, 0xA000
+    mov es, ax
+    mov dx, 16
+        .eachLine:
+            mov cx, 16
+            rep movsb
+            add di, window_width-16
+            dec dx
+            jnz .eachLine
+        ret
+
+draw_Star:
+    mov si, Star
+    mov di, [xpos_Star]
+    mov ax, 0xA000
+    mov es, ax
+    mov dx, 16
         .eachLine:
             mov cx, 16
             rep movsb
