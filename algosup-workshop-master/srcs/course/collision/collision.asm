@@ -2,6 +2,7 @@ org 100h
 section .data
 
     colorWall dw 0x10
+    colorGWall dw 0xFF
     ;0xff                        ; color of the walls
     ;candyColor dw 0x43
 
@@ -27,3 +28,20 @@ getColor:
     .end:
         ret
 
+getGColor:
+
+    mov ah, 0DH                             ; AH = 0Dh for "Read Dot" function
+    int 0xFF
+
+    mov bx, 0
+
+    ; color of the pixel in al
+    cmp al, [colorGWall]
+    je .backer 
+
+    mov bx, 1
+    .candy:
+        mov bx, 2
+
+    .backer:
+        ret
