@@ -1,3 +1,13 @@
+# Prototype Launch Instructions
+Thank you for your interest in trying out our prototype! Follow the steps below to get started.
+## Step 1: Download DOSBox
+Download and install DOSBox, a DOS emulator that allows you to run our prototype on modern systems.
+- **Download Link:** [DOSBox](https://www.dosbox.com/download.php)
+## Step 2: Install DOSBox
+Follow the installation instructions provided on the DOSBox website for your specific operating system.
+## Step 3: Clone our project
+Clone our project.
+
 # Pac-Man - Rules of the Maze
 
 ## Introduction
