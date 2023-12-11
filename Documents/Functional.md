@@ -16,7 +16,7 @@
     - [Game Board](#game-board)
     - [Characters](#characters)
       - [Player](#player)
-      - [Ghosts](#ghosts)
+      - [Reindeers](#reindeers)
     - [Items](#items)
       - [Fruits](#fruits)
       - [Power Pellet](#power-pellet)
@@ -43,7 +43,7 @@
     - [Documentation](#documentation)
     - [Legal and Compliance](#legal-and-compliance)
   - [Game Behaviors](#game-behaviors)
-    - [Ghosts Behavior](#ghosts-behavior)
+    - [Reindeer Behavior](#reindeer-behavior)
     - [Items Behavior](#items-behavior)
     - [Score/High Score](#scorehigh-score)
     - [New Life](#new-life)
@@ -108,29 +108,29 @@ To lose a life, the player needs to be touched by a ghost.
 The game board is a square with maze. The walls aren't traversable. We add pipes at each side of the map.
 These pipes can teleport the player on the other side of the map.
 
-We use the same graphical charter of the original Board game of Pac-Man but we custom the design of the map.
+We design our own graphic and we custom the design of the map.
 
 ### Characters
 
 #### Player
 
-The player control Pac-Man and his objectives are to have the maximum score value and not be touched by any ghost. He can take the power pellets and fruits to have more points and bonus to kill the ghosts.
-The player can eat fruits and it will give points, and when he eats a power up he can eat the ghosts and he's faster.
+The player control Santa and his objectives are to have the maximum score value and not be touched by any reindeers. He can take the power pellets and fruits to have more points and bonus to kill the reindeers.
+The player can eat fruits and it will give points, and when he eats a power up he can eat the reindeers and he's faster.
 
-#### Ghosts
+#### Reindeers
 
-Ghosts are the enemies of the player and their objective is to kill the player. They have a random pattern to search and kill the player.  
-Behavior of the different ghosts:
+Reindeers are the enemies of the player and their objective is to kill the player. They have a random pattern to search and kill the player.  
+Behavior of the different Reindeers:
 
-- Red: Chases Pac-Man all the time, Also speeds up after you've eaten a certain amount of pellets, which gets less for each level.
+- Brown: Chases Pac-Man all the time, Also speeds up after you've eaten a certain amount of pellets, which gets less for each level.
 
-- Pink: Fast but random movement
+- Blue: Fast but random movement
 
-- Cyan: Shy and tries to stay away from pac-man, unless approached too much, after which it will chase Pac-Man too.
+- Black: Shy and tries to stay away from pac-man, unless approached too much, after which it will chase Pac-Man too.
 
-- Orange: Slow and Random Movement.  
+- Grey: Slow and Random Movement.  
 
-When the player eats a power pellet, the ghosts are scared and fleeing Pac-Man.
+When the player eats a power pellet, the Reindeers are scared and fleeing Santa.
 
 ### Items
 
@@ -197,23 +197,22 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 #### Key Considerations
 
 - The game's user interface and controls should be simple and intuitive to cater to players of all ages and experience levels.
-- The game should provide an option for local multiplayer or co-op gameplay, allowing parents and children to enjoy the game together.
 - Art and sound design should strike a balance between modern aesthetics and retro charm to appeal to both newcomers and retro gaming enthusiasts.
 
 ## Game's Features
 
 **Game Concept and Mechanics:**
 
-- Classic maze-based gameplay with Pac-Man and ghosts
-- Player-controlled Pac-Man character
-- Each ghost move according to an algorithm detailled in the [Ghosts behavior](#ghosts-behavior) section
+- Classic maze-based gameplay with Santa and reindeers
+- Player-controlled Santa character
+- Each reindeer move according to an algorithm detailled in the [Reindeer behavior](#ghosts-behavior) section
 - Collectible pellets for points
 - Power pellets to make ghosts vulnerable
 - Fruit bonus items for extra points
 
 **Player Controls:**
 
-- Keyboard input for Pac-Man movement
+- Keyboard input for Santa movement
   - ↑ : move up
   - ↓ : move down
   - ← : move left
@@ -225,12 +224,12 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 - Custom maze layouts with walls and corridors
 - Multiple levels with increasing difficulty
-- Warp tunnels for Pac-Man and ghosts
+- Warp tunnels for Santa and reindeers
 
 **Graphic and Display:**
 
 - 2D top-down view of the maze
-- Character animations (Pac-Man, ghosts, and fruit)
+- Character animations (Santa, reindeers, and fruit)
 - Score display and UI elements
 
 **Game Logic:**
@@ -246,26 +245,26 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 **Gameplay Features:**
 
-- Ghost house where ghosts respawn
-- Speed-up feature for Pac-Man
-- Different ghost personalities for variety
+- reindeer house where reindeers respawn
+- Speed-up feature for Santa
+- Different reindeer personalities for variety
   - **Blinky:** always follows directly behind Pac-Man, except if the short-sighted decision-making causes him to take an inefficient path
-  - **Pinky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
+  - **Greiky:** embushed the player by looking at his current position and orientation and selecting the location four tiles straight ahead him
   - **Inky:** exhibits unpredictable movements by alternating between direct pursuit of the player and erratic lateral shifts, influenced by a complex blend of Blinky's position and a set point calculated using a specific algorithm
   - **Clyde:** exhibits erratic behavior by alternating between chasing Pac-Man and moving to a random location when he's too close to the player
 
 **Collision Detection:**
 
-- Player and ghosts can't pass throuhg the walls
-- Collision between the player and one of the ghost
-  - the ghost is killed and respawn in the ghost house
-- Collision between one of the ghost and the player
+- Player and reindeers can't pass throuhg the walls
+- Collision between the player and one of the reindeer
+  - the reindeer is killed and respawn in the reindeer house
+- Collision between one of the reindeer and the player
   - the player loose 1 life
 
 **Audio:**
 
 - PC speaker or sound card support for simple game sounds
-- Sound effects for eating pellets, ghosts, and collecting fruit
+- Sound effects for eating pellets, reindeers, and collecting fruit
 - Background music
 
 **UX and User Friendly Requirements:**
@@ -371,11 +370,11 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 ## Game Behaviors
 
-### Ghosts Behavior
+### Reindeer Behavior
 
-- The patterns are different for all ghosts some are more agressive and others are more passive
-- The ghosts leave the room ghosts at different times
-- When the player eat a PowerUp ghosts flees Pac-Man and the patterns are random for all ghosts
+- The patterns are different for all reindeers some are more agressive and others are more passive
+- The reindeers leave the room reindeer at different times
+- When the player eat a PowerUp reindeers flees Santa and the patterns are random for all reindeers
 
 ### Items Behavior
 
@@ -396,7 +395,7 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 - **Pellet**: 10 points
 - **Power Pellet**: 50 points
-- **Eating Ghosts**: 200, 400, 800, 1600 points (eat ghosts consecutively for increasing points)
+- **Eating Reindeers**: 200, 400, 800, 1600 points (eat reindeers consecutively for increasing points)
 - **Fruits**: Varying points
   - cherry: 100 points
   - strawberry: 300 points
@@ -410,12 +409,12 @@ The game is designed to target a broad and diverse audience, aiming for a PEGI 3
 
 ### Color Scheme
 
-The game will adopt a vibrant and retro-inspired color palette to evoke a nostalgic feel while maintaining visual appeal. The primary colors include:
+The game will adopt a vibrant and christmas color palette to evoke a christmas feel while maintaining visual appeal. The primary colors include:
 
-- **Pac-Man Yellow (#FFFF00):** Main color for Pac-Man character and key elements
-- **Ghostly Blue (#00BFFF):** Color for ghost characters
+- **Santa Red (#FF0000):** Main color for Santa character and key elements
+- **reindeer Brown (#A52A2A):** Color for ghost characters
 - **Maze Green (#00FF00):** Background color for the maze
-- **Power Pellet Orange (#FFA500):** Color for power pellets
+- **Power Pellet Yellow (#00BFFF):** Color for power pellets
 - **Fruit Bonus Red (#FF0000):** Color for bonus fruit items
 
 ### Typography
@@ -437,23 +436,23 @@ Small icons and symbols will be used to represent key elements in the user inter
 
 ### Art Style
 
-The visual style will be pixel art to align with the retro theme. The resolution will be set at 8-bit, giving a classic arcade appearance. Animations will be simple but expressive to convey character movements effectively.
+The visual style will be pixel art to align with the christmas theme. The resolution will be set at 8-bit, giving a classic arcade appearance. Animations will be simple but expressive to convey character movements effectively.
 
 ### UI Elements
 
-User interface elements will have a clean and siple design, displaying essential information such as score, lives, and level progression. Buttons and menu items will maintain a consistent retro-inspired aesthetic.
+User interface elements will have a clean and simple design, displaying essential information such as score, lives, and level progression. Buttons and menu items will maintain a consistent christmas-inspired aesthetic.
 
 ### Sound and Music
 
-The game will feature simple, retro 8-bit sound effects for pellet eating, ghost encounters, and power pellet activation. Background music will also be a 8-bit retro music.
+The game will feature simple, chistmas 8-bit sound effects for pellet eating, reindeers encounters, and power pellet activation. Background music will also be a 8-bit chistmas music.
 
 ### Logo and Branding
 
-The game logo will incorporate the iconic Pac-Man character and maintain a cohesive design with the chosen color palette. The branding will reflect the game's classic arcade roots.
+The game logo will incorporate the iconic Santa character and maintain a cohesive design with the chosen color palette.
 
 ### Additional Considerations
 
-- Consistent use of retro-inspired visual elements across marketing materials
+- Consistent use of christmas-inspired visual elements across marketing materials
 - Accessibility considerations for colorblind players in the design choices
 
 ## Mock up
@@ -529,7 +528,7 @@ The game logo will incorporate the iconic Pac-Man character and maintain a cohes
 | Assembly              | In computer programming, assembly language, often referred to simply as assembly (ASM), is any low-level programming language with a strong correspondence between the instructions and machine code.                                      |
 | PEGI                  | Pan-European Game Information (PEGI) is a European video game content rating system established to help consumers make informed decisions based on age recommendations and content descriptors.  |
 | Copyright             | Copyright is a type of intellectual property that grants its owner the exclusive right to copy, distribute, adapt, display, and perform a creative work, usually for a limited time.         |
-| Ghost Room            | The ghost room is the area where ghosts appear at the start of the game and when they are respawned after being defeated by the player. |
+| Reindeer Room            | The reindeer room is the area where reindeers appear at the start of the game and when they are respawned after being defeated by the player. |
 | DOSBox                | DOSBox is an emulator simulating an MS-DOS compatible environment, allowing the running of video games developed for MS-DOS on various operating systems.                                        |
 | Emulator              | An emulator is a software or hardware that mimics the functionality of another system, enabling it to run applications or games designed for that system.                                    |
 | Frame Rate            | Frame rate refers to the number of individual frames or images displayed per second in a video game, impacting the smoothness of motion and overall visual experience.                      |
