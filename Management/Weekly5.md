@@ -102,7 +102,7 @@ Ask Garry Iglesias and maybe other people for feedback on our game. Fine-tune ou
 
 ## V. Acknowledgements
 <!--Acknowledge the contributions of team members, stakeholders, or external partners who played a significant role in the week's achievements.-->
-All the team members work well this week, we learned how to self manage and motive ourselves during non-project times.
+All the team members worked well this week, we learned how to self manage and motive ourselves during non-project times.
 
 ## VI. Attachments
 <!--Include any relevant documents, charts, graphs, or visual aids that support the information presented in the report.-->
