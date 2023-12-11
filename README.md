@@ -1,12 +1,39 @@
 # Prototype Launch Instructions
+
 Thank you for your interest in trying out our prototype! Follow the steps below to get started.
+
 ## Step 1: Download DOSBox
+
 Download and install DOSBox, a DOS emulator that allows you to run our prototype on modern systems.
-- **Download Link:** [DOSBox](https://www.dosbox.com/download.php)
+
+- **Download Link:** [DOSBox](https://www.dosbox.com/download.php?main=1)
+
 ## Step 2: Install DOSBox
+
 Follow the installation instructions provided on the DOSBox website for your specific operating system.
+
 ## Step 3: Clone our project
+
 Clone our project.
+
+## Step 4: Build the project
+
+Go in the main folder using the followings commands
+`cd algosup-workshop-master`
+`cd srcs`
+`cd main`
+
+Then build the `build-main.cmd`
+
+This will create an executable in the `bin` folder.
+
+## Step 5: Launch DOSBox
+
+Click on the `launch-dosbox.cmd` to open DOSBox. Enter the following commands on the DOSBox window:
+```c:```
+```main2.com```
+
+Then you can play.
 
 # Pac-Man - Rules of the Maze
 
