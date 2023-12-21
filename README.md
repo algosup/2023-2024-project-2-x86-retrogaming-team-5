@@ -12,6 +12,8 @@ Download and install DOSBox, a DOS emulator that allows you to run our prototype
 
 Follow the installation instructions provided on the DOSBox website for your specific operating system.
 
+``If you already have dosbox installed on your machine, we recommend you to reinstall it to be able to launch the game correctly.``
+
 ## Step 3: Clone our project
 
 Clone our project.
