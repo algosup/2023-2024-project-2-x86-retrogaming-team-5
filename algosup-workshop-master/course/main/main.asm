@@ -1,4 +1,3 @@
-
 org 100h
 
 %define SCREENW 320
@@ -20,7 +19,7 @@ xPos dw 34160 - (90-4480)
 GPos dw 14500
 
 xVelocity dw 1
-;14 
+
 spritew dw 16
 
 spriteh dw 16
@@ -29,11 +28,11 @@ old_XPOS dw 34160 - (90-4480)
 
 yPos dw 0
 
-old_time equ 0xf9fe+0x06
+old_time equ 0
 
-charValue db 'X$'
 
-charNoKey db 'False$'
+    charValue db 'X$'
+    charNoKey db 'False$'
 
 actualkeypressed dw 0
 
@@ -49,16 +48,17 @@ call drawMaze
 call drawDot
 ; Main game loop
     gameloop:
-        int 0x1a
+        mov ah, 00h
+        int 1Ah         ; Get System Time (CX:DX = number of clock ticks since midnight | AL = midnight counter, advanced each time midnight passes.)
         cmp dx, [old_time]
-        ;je gameloop
+        je gameloop
         mov [old_time], dx
         call update_score
         call draw_reindeer1
         call draw_reindeer2
         call draw_reindeer3
         call draw_reindeer4
-        call read_character_key_was_pressed
+        call keyboard_handler
         call spawn_entities
    
        
@@ -88,11 +88,10 @@ draw_tile:
     ret
 
     
-%include "../map/map.asm"
-%include "../sprite/sprite.asm"
-%include "../spritelist/spritelist.asm"
-%include "../collision/collision.asm"
-%include "../score/score.asm"
-%include "../dot/dot.asm"
-
-
+%include "../map.asm"
+%include "../spritelist.asm"
+%include "../dot.asm"
+%include "../sprite.asm"
+%include "../score.asm"
+%include "../collision.asm"
+%include "../keyboard.asm"

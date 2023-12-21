@@ -2,12 +2,12 @@ org 100h
 section .data
 
     colorWall dw 0x10
-    candy dw 0x43                       ; color of the walls
+    ;0xff                        ; color of the walls
     ;candyColor dw 0x43
 
 section .text
 
-; get the color of of pixel 
+; get the color of of pixel
 ; color in a
 
 getColor:
@@ -18,17 +18,11 @@ getColor:
 
     ; color of the pixel in al
     cmp al, [colorWall]
-    je .end
+    je .end 
 
-    cmp al, [candy]
-    je .candy
-
-        mov bx, 1
-        jmp .end
+    mov bx, 1
     .candy:
         mov bx, 2
-        jmp .end
 
     .end:
         ret
-
