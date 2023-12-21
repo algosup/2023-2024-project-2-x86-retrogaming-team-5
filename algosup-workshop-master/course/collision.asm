@@ -26,4 +26,3 @@ getColor:
 
     .end:
         ret
-

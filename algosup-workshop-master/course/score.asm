@@ -2,9 +2,8 @@ score1 dw 0000
 score2 dw 0000
 
 digits db 5 DUP(0) ; Array to store individual digits
-highscore_title dw 'high score', 0
-highscore1 dw 0000
-highscore2 dw 0000
+
+candies_remain dw 0270
 
 
 length db 0
@@ -17,11 +16,6 @@ digits_counter dw 2
 score_xoffset equ 5
 score_yoffset equ 5
 
-highscore_title_xoffset equ 130
-highscore_title_yoffset equ 4
-
-highscore_xoffset equ 137
-highscore_yoffset equ 13
 
 life_xoffset equ 10
 life_yoffset equ 4
@@ -45,7 +39,6 @@ draw_scoreboard:
 
 update_score:
     call draw_score
-    call draw_highscore
     call draw_life
 
     ret
@@ -119,25 +112,7 @@ get_letter:
     je get_letter._8
     cmp al, '9'
     je get_letter._9
-    cmp al, 'h'
-    je get_letter._h
-    cmp al, 'i'
-    je get_letter._i
-    cmp al, 'g'
-    je get_letter._g
-    cmp al, ' '
-    je get_letter._space
-    cmp al, 's'
-    je get_letter._s
-    cmp al, 'c'
-    je get_letter._c
-    cmp al, 'o'
-    je get_letter._o
-    cmp al, 'r'
-    je get_letter._r
-    cmp al, 'e'
-    je get_letter._e
-
+   
 
     ._0:
         mov si, num_0
@@ -169,86 +144,6 @@ get_letter:
     ._9:
         mov si, num_9
         ret
-
-    ._h:
-        mov si, letter_h
-        ret
-    ._i:
-        mov si, letter_i
-        ret
-    ._g:
-        mov si, letter_g
-        ret
-    ._space:
-        mov si, letter_space
-        ret
-    ._s:
-        mov si, letter_s
-        ret
-    ._c:
-        mov si, letter_c
-        ret
-    ._o:
-        mov si, letter_o
-        ret
-    ._r:
-        mov si, letter_r
-        ret
-    ._e:
-        mov si, letter_e
-        ret
-
-
-
-draw_highscore:
-
-    push ax
-    push si
-    lea si, [highscore_title]
-    call count_char
-    pop si
-    pop ax
-    xor dx, dx
-
-    mov dx, window_width*highscore_title_yoffset + highscore_title_xoffset
-
-    mov si, highscore_title
-
-    .drawingtitleloop:
-        mov al, [si]
-        push si
-
-        push dx
-        call get_letter
-        pop dx
-        mov di, dx
-        add dx, 7 + letter_space_size
-        push dx
-        call draw_letter
-        pop dx
-        pop si
-
-        dec byte [length]
-        inc si
-
-        cmp byte [length], 0
-        ja .drawingtitleloop
-
-
-    .drawing_highscore:
-        mov ax, [highscore1]  ; Load the integer into AX
-        mov dx, window_width*highscore_yoffset + highscore_xoffset
-        
-        call get_score
-
-        mov ax, [highscore2]  ; Load the integer into AX
-        mov dx, window_width*highscore_yoffset + highscore_xoffset + ((7*4) + (letter_space_size*4)) + (thousand_space_size - letter_space_size)
-        
-        call get_score
-
-        mov word [digits_counter], 2
-        ret
-
 draw_life:
 
     cmp byte [life_count], 3
@@ -386,4 +281,3 @@ add_score:
         mov [score2], si
 
     ret
-

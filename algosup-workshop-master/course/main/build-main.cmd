@@ -7,4 +7,4 @@ set "BIN_DIR=%ROOT_DIR%\bin"
 
 "%NASM%" main.asm -f bin -o "%BIN_DIR%\main2.com"
 
-pause
+
